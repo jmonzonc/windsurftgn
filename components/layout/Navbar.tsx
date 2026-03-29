@@ -73,8 +73,9 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
                 )}>{loc}</Link>
               ))}
             </div>
-            <a href={SITE.phoneHref} className="no-underline">
-              <button className="btn-primary px-6 py-2.5 text-sm">📞 {SITE.phone}</button>
+         <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline mt-2">
+  <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
+</a>
             </a>
           </div>
 
@@ -104,8 +105,9 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             )}>{localeNames[loc]}</Link>
           ))}
         </div>
-        <a href={SITE.phoneHref} className="no-underline mt-4">
-          <button className="btn-primary px-8 py-4 text-lg">📞 {SITE.phone}</button>
+        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline mt-2">
+  <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
+</a>
         </a>
       </div>
     </>
