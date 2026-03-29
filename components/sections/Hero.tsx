@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useScroll } from "@/lib/hooks";
 import WaterParticles from "@/components/ui/WaterParticles";
+import { SITE } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
 
 type HeroDict = {
@@ -53,7 +54,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         </p>
         <div className="flex gap-3.5 flex-wrap justify-center"
           style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.9s` }}>
-          <Link href={`/${locale}#banana`} className="btn-primary py-[15px] px-[34px] text-[15px] no-underline">{dict.cta1}</Link>
+          <Link href={`/${locale}/actividades/banana-boat`} className="btn-primary py-[15px] px-[34px] text-[15px] no-underline">{dict.cta1}</Link>
           <Link href={`/${locale}#escuela`} className="btn-ghost py-[15px] px-[34px] text-[15px] no-underline">{dict.cta2}</Link>
           <Link href={`/${locale}#actividades`} className="btn-ghost py-[15px] px-[34px] text-[15px] no-underline">{dict.cta3}</Link>
         </div>
