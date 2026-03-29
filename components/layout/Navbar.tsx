@@ -61,6 +61,7 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             </div>
           </Link>
 
+          {/* Desktop */}
           <div className="hidden md:flex gap-8 items-center">
             {links.map((l) => (
               <Link key={l.label} href={l.href} className="font-body text-sm font-medium text-white/65 no-underline hover:text-white transition-colors duration-300">{l.label}</Link>
@@ -73,12 +74,15 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
                 )}>{loc}</Link>
               ))}
             </div>
-         <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline mt-2">
-  <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
-</a>
+            <a href={SITE.phoneHref} className="no-underline">
+              <button className="btn-primary px-6 py-2.5 text-sm">📞 {SITE.phone}</button>
+            </a>
+            <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline">
+              <button className="btn-wa px-5 py-2.5 text-sm">💬 WhatsApp</button>
             </a>
           </div>
 
+          {/* Hamburger */}
           <button onClick={() => setOpen(!open)} className="md:hidden relative z-[1001] w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-transparent border-none" aria-label="Menu">
             <span className={cn("block w-6 h-0.5 bg-white rounded transition-all duration-300", open && "rotate-45 translate-y-2")} />
             <span className={cn("block w-6 h-0.5 bg-white rounded transition-all duration-300", open && "opacity-0")} />
@@ -87,6 +91,7 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
         </div>
       </nav>
 
+      {/* Mobile menu */}
       <div className={cn(
         "fixed inset-0 z-[999] bg-abyss/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-6 transition-all duration-500 ease-expo md:hidden",
         open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -105,9 +110,11 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             )}>{localeNames[loc]}</Link>
           ))}
         </div>
-        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline mt-2">
-  <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
-</a>
+        <a href={SITE.phoneHref} className="no-underline mt-4">
+          <button className="btn-primary px-8 py-4 text-lg">📞 {SITE.phone}</button>
+        </a>
+        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline">
+          <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
         </a>
       </div>
     </>
