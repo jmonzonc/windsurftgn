@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Windsurf Tarragona · Escola Nàutica & Activitats Aquàtiques a Platja Llarga",
+    "description": "Escola nàutica i centre d'activitats aquàtiques a Platja Llarga, Tarragona. Cursos de windsurf, vela, surf, catamarà, patí català. Banana boat, caiac, passejades en vaixell. +20 anys a la Costa Daurada.",
+    "ogTitle": "Windsurf Tarragona · Viu l'Aigua"
+  },
+  "nav": {
+    "escuela": "Escola",
+    "actividades": "Activitats",
+    "grupos": "Grups",
+    "contacto": "Contacte"
+  },
+  "hero": {
+    "location": "Platja Llarga · Tarragona · Costa Daurada",
+    "pre": "Escola Nàutica & Centre d'Activitats Aquàtiques",
+    "title1": "VIU",
+    "title2": "L'AIGUA",
+    "sub1": "Windsurf · Vela · Surf · Catamarà · Patí Català",
+    "sub2": "Banana Boat · Caiac · Passejades en vaixell",
+    "sub3": "+20 anys a la Costa Daurada",
+    "cta1": "🍌 Banana Boat",
+    "cta2": "🏄 Cursos",
+    "cta3": "🛶 Activitats",
+    "scroll": "Descobreix"
+  },
+  "banana": {
+    "pill": "⭐ Producte estrella · Nº1 en diversió",
+    "title1": "🍌 BANANA",
+    "title2": "BOAT",
+    "desc": "L'experiència més divertida del Mediterrani. Agafa't fort, riu sense parar i crea records que duren tota la vida.",
+    "allAges": "Totes les edats.",
+    "cta": "El vull! 🎉",
+    "price": "Veure preu"
+  },
+  "stats": {
+    "years": "+20",
+    "yearsLabel": "Anys de passió",
+    "people": "10K+",
+    "peopleLabel": "Persones feliços",
+    "activities": "12",
+    "activitiesLabel": "Activitats",
+    "days": "365",
+    "daysLabel": "Dies a l'any"
+  },
+  "escuela": {
+    "pill": "🎓 Escola Nàutica · Monitors FVE/RFEV",
+    "title1": "APRÈN A",
+    "title2": "NAVEGAR",
+    "allLevels": "Tots els nivells",
+    "book": "Reservar classe →",
+    "moreInfo": "Més info",
+    "courses": {
+      "windsurf": { "name": "Windsurf", "desc": "El clàssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat." },
+      "vela": { "name": "Navegació / Vela", "desc": "Aprèn les tècniques de navegació a vela. Estratègia, vent i el mar com a mestre." },
+      "surf": { "name": "Surf", "desc": "Cavalca les ones del Mediterrani. Classes per a tots els nivells a Platja Llarga." },
+      "wakesurf": { "name": "Wakesurf", "desc": "Surfeja l'ona que genera la nostra llanxa. Sense corda. La sensació més addictiva de l'aigua." },
+      "catamaran": { "name": "Catamarà", "desc": "Navega en un catamarà de vela lleugera. Velocitat, treball en equip i adrenalina." },
+      "patin-catalan": { "name": "Patí Català", "desc": "L'embarcació tradicional de la nostra costa. Única al món, identitat mediterrània pura." }
+    }
+  },
+  "actividades": {
+    "pill": "🎉 Lloguer & diversió · Totes les edats",
+    "title1": "PASSA-T'HO",
+    "title2": "INCREÏBLE",
+    "discover": "Descobrir",
+    "items": {
+      "banana-boat": { "name": "Banana Boat" },
+      "kayak": { "name": "Caiac" },
+      "alquiler-windsurf": { "name": "Lloguer Windsurf" },
+      "alquiler-surf": { "name": "Lloguer Surf" },
+      "paseos-barco": { "name": "Passejades en Vaixell" },
+      "donut": { "name": "Donut" }
+    },
+    "star": "⭐ Nº1"
+  },
+  "grupos": {
+    "title1": "VENIU EN",
+    "title2": "GRUP",
+    "title3": "? 🎊",
+    "cta": "Demana pressupost 🤙",
+    "items": {
+      "colegios": { "title": "Col·legis", "desc": "Sortides de fi de curs pedagògiques i divertides" },
+      "team-building": { "title": "Team Building", "desc": "Reforça el teu equip amb el desafiament del mar" },
+      "amigos": { "title": "Amics", "desc": "Aventura nàutica a mida per al grup" },
+      "despedidas": { "title": "Comiats", "desc": "El comiat més diferent i memorable" }
+    }
+  },
+  "reviews": {
+    "title1": "+10.000 PERSONES",
+    "title2": "FELIÇOS",
+    "title3": "🌊",
+    "rating": "⭐ 4.8/5 a Google · +150 ressenyes verificades",
+    "items": [
+      { "text": "Vaig fer el curs de windsurf a l'agost i va ser INCREÏBLE. Els monitors són super pacients i professionals. Tornem segur!", "name": "María G.", "from": "Barcelona", "emoji": "🏄" },
+      { "text": "Vam portar els nens al banana boat i al caiac. S'ho van passar GENIAL. L'organització perfecta i Platja Llarga espectacular.", "name": "Jordi P.", "from": "Tarragona", "emoji": "🍌" },
+      { "text": "Fantastic windsurfing school. Professional instructors, great equipment, beautiful location. Can't recommend it enough!", "name": "Sophie M.", "from": "Lyon", "emoji": "⛵" },
+      { "text": "El comiat de soltera perfecte! Banana boat, caiac i passeig en llanxa. Riures assegurats. Repetirem!", "name": "Laura R.", "from": "Madrid", "emoji": "💍" }
+    ]
+  },
+  "contacto": {
+    "title1": "ENS",
+    "title2": "VEIEM",
+    "title3": "? 🌊",
+    "subtitle": "Vine a Platja Llarga. T'estem esperant.",
+    "phone": { "title": "Truca'ns", "text": "977 23 27 15", "sub": "De 9h a 20h" },
+    "location": { "title": "Vine a veure'ns", "text": "Camping Las Palmeras", "sub": "Platja Llarga, Tarragona" },
+    "social": { "title": "Segueix-nos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
+    "whatsapp": { "title": "WhatsApp", "text": "Escriu-nos", "sub": "Resposta ràpida" },
+    "mapLabel": "📍 Windsurf Tarragona",
+    "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapCta": "Com arribar →"
+  },
+  "footer": {
+    "tagline": "Platja Llarga, Tarragona · Costa Daurada · Des de 2004",
+    "copy": "© 2026 Windsurf Tarragona · Fet amb aigua, sol i passió pel mar 🌊☀️",
+    "privacy": "Privacitat",
+    "legal": "Avís Legal"
+  },
+  "privacy": {
+    "title": "Política de Privacitat",
+    "content": "Contingut de política de privacitat pendent de redacció legal."
+  },
+  "gruposPage": {
+    "title": "Grups",
+    "subtitle": "Activitats nàutiques per a grups de totes les edats",
+    "cta": "Sol·licitar pressupost"
+  },
+  "contactoPage": {
+    "title": "Contacte",
+    "subtitle": "Som a Platja Llarga, Tarragona",
+    "formName": "Nom",
+    "formEmail": "Email",
+    "formPhone": "Telèfon",
+    "formMessage": "Missatge",
+    "formSend": "Enviar missatge",
+    "formSuccess": "Missatge enviat correctament"
+  }
+}

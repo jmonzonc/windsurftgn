@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: #000B18;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(0, 212, 170, 0.27);
+    color: #001428;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000B18;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 212, 170, 0.27);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 212, 170, 0.4);
+  }
+}
+
+@layer components {
+  .gradient-text-turq {
+    @apply bg-gradient-to-r from-turq via-aqua to-cyan bg-clip-text text-transparent;
+    background-size: 300% 100%;
+  }
+
+  .gradient-text-ocean {
+    @apply bg-gradient-to-r from-turq to-ocean bg-clip-text text-transparent;
+  }
+
+  .gradient-text-gold {
+    @apply bg-gradient-to-r from-gold to-sun bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply font-body font-bold px-8 py-3.5 rounded-full border-none cursor-pointer
+           bg-gradient-to-br from-turq to-ocean text-white
+           shadow-[0_8px_32px_rgba(0,212,170,0.16)]
+           transition-all duration-300 ease-expo
+           hover:translate-y-[-3px] hover:scale-[1.03]
+           hover:shadow-[0_16px_48px_rgba(0,212,170,0.27)];
+  }
+
+  .btn-outline {
+    @apply font-body font-semibold px-7 py-3.5 rounded-full cursor-pointer
+           border-[1.5px] border-turq/20 bg-white/[0.04]
+           text-white backdrop-blur-lg
+           transition-all duration-400 ease-expo
+           hover:bg-turq/[0.07] hover:translate-y-[-3px] hover:scale-[1.03];
+  }
+
+  .section-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2 mb-4
+           text-xs font-bold tracking-[2.5px] uppercase;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-expo
+           hover:translate-y-[-6px] hover:shadow-xl;
+  }
+}
