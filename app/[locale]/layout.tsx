@@ -21,9 +21,11 @@ export async function generateMetadata({
   if (!isValidLocale(locale)) return {};
   const dict = await getDictionary(locale);
 
-  const alternates: Record<string, string> = {};
+  const languageAlternates: Record<string, string> = {
+    "x-default": "https://windsurftarragona.com/es",
+  };
   for (const loc of locales) {
-    alternates[loc] = `https://windsurftarragona.com/${loc}`;
+    languageAlternates[loc] = `https://windsurftarragona.com/${loc}`;
   }
 
   return {
@@ -31,7 +33,7 @@ export async function generateMetadata({
     description: dict.meta.description,
     alternates: {
       canonical: `https://windsurftarragona.com/${locale}`,
-      languages: alternates,
+      languages: languageAlternates,
     },
     openGraph: {
       title: dict.meta.ogTitle,
@@ -40,17 +42,25 @@ export async function generateMetadata({
       siteName: "Windsurf Tarragona",
       locale: locale === "ca" ? "ca_ES" : locale === "en" ? "en_US" : "es_ES",
       type: "website",
+      images: [
+        {
+          url: "https://windsurftarragona.com/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: dict.meta.ogTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.ogTitle,
+      description: dict.meta.description,
+      images: ["https://windsurftarragona.com/og-image.jpg"],
     },
   };
 }
 
 function buildJsonLd(locale: Locale, dict: Record<string, any>) {
-  const descriptions: Record<Locale, string> = {
-    es: "Escuela náutica y centro de actividades acuáticas en Playa Larga, Tarragona. Cursos de windsurf, vela, surf, catamarán y patín catalán. Banana boat, kayak y paseos en barco.",
-    ca: "Escola nàutica i centre d'activitats aquàtiques a Platja Llarga, Tarragona. Cursos de windsurf, vela, surf, catamarà i patí català. Banana boat, caiac i passejades en vaixell.",
-    en: "Nautical school and water sports center in Playa Larga, Tarragona. Windsurf, sailing, surfing, catamaran and Catalan boat courses. Banana boat, kayak, boat rides.",
-  };
-
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -59,14 +69,16 @@ function buildJsonLd(locale: Locale, dict: Record<string, any>) {
         "@id": "https://windsurftarragona.com/#business",
         name: "Windsurf Tarragona",
         alternateName: ["Escola Nàutica Tarragona", "Escuela Náutica Tarragona"],
-        description: descriptions[locale],
-        url: SITE.url,
+        description: dict.meta.description,
+        url: `${SITE.url}/${locale}`,
         telephone: "+34977232715",
         email: SITE.email,
         foundingDate: "2004",
         priceRange: "€€",
         currenciesAccepted: "EUR",
         paymentAccepted: "Cash, Credit Card",
+        inLanguage: locale === "ca" ? "ca" : locale === "en" ? "en" : "es",
+        availableLanguage: ["es", "ca", "en"],
         logo: {
           "@type": "ImageObject",
           url: "https://windsurftarragona.com/logo.png",
