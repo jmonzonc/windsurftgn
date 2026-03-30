@@ -24,13 +24,13 @@
     "scroll": "Descobreix"
   },
   "banana": {
-    "pill": "⭐ Producte estrella · Nº1 en diversió",
+    "pill": "🍌 L'experiència més divertida del Mediterrani",
     "title1": "🍌 BANANA",
     "title2": "BOAT",
     "desc": "L'experiència més divertida del Mediterrani. Agafa't fort, riu sense parar i crea records que duren tota la vida.",
     "allAges": "Totes les edats.",
     "cta": "El vull! 🎉",
-    "price": "Veure preu"
+    "price": "Més info"
   },
   "stats": {
     "years": "+20",
@@ -63,6 +63,7 @@
     "title1": "PASSA-T'HO",
     "title2": "INCREÏBLE",
     "discover": "Descobrir",
+    "star": "⭐ Nº1",
     "items": {
       "banana-boat": { "name": "Banana Boat" },
       "kayak": { "name": "Caiac" },
@@ -70,8 +71,7 @@
       "alquiler-surf": { "name": "Lloguer Surf" },
       "paseos-barco": { "name": "Passejades en Vaixell" },
       "donut": { "name": "Donut" }
-    },
-    "star": "⭐ Nº1"
+    }
   },
   "grupos": {
     "title1": "VENIU EN",

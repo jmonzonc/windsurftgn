@@ -24,13 +24,13 @@
     "scroll": "Discover"
   },
   "banana": {
-    "pill": "⭐ Star product · #1 in fun",
+    "pill": "🍌 The most fun experience in the Mediterranean",
     "title1": "🍌 BANANA",
     "title2": "BOAT",
     "desc": "The most fun experience in the Mediterranean. Hold on tight, laugh non-stop and create memories that last a lifetime.",
     "allAges": "All ages.",
     "cta": "I want it! 🎉",
-    "price": "See price"
+    "price": "More info"
   },
   "stats": {
     "years": "+20",
@@ -63,6 +63,7 @@
     "title1": "HAVE AN",
     "title2": "AMAZING TIME",
     "discover": "Discover",
+    "star": "⭐ #1",
     "items": {
       "banana-boat": { "name": "Banana Boat" },
       "kayak": { "name": "Kayak" },
@@ -70,8 +71,7 @@
       "alquiler-surf": { "name": "Surf Rental" },
       "paseos-barco": { "name": "Boat Rides" },
       "donut": { "name": "Donut" }
-    },
-    "star": "⭐ #1"
+    }
   },
   "grupos": {
     "title1": "COMING AS A",

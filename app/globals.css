@@ -71,6 +71,24 @@
            hover:bg-turq/[0.07] hover:translate-y-[-3px] hover:scale-[1.03];
   }
 
+  .btn-ghost {
+    @apply font-body font-semibold rounded-full cursor-pointer
+           border-[1.5px] border-white/30 bg-white/[0.07]
+           text-white backdrop-blur-lg
+           transition-all duration-300 ease-expo
+           hover:bg-white/[0.15] hover:border-white/50
+           hover:translate-y-[-3px] hover:scale-[1.03];
+  }
+
+  .btn-wa {
+    @apply font-body font-bold px-8 py-3.5 rounded-full border-none cursor-pointer
+           bg-[#25D366] text-white
+           shadow-[0_8px_32px_rgba(37,211,102,0.25)]
+           transition-all duration-300 ease-expo
+           hover:translate-y-[-3px] hover:scale-[1.03]
+           hover:shadow-[0_16px_48px_rgba(37,211,102,0.35)];
+  }
+
   .section-pill {
     @apply inline-flex items-center gap-2 rounded-full px-5 py-2 mb-4
            text-xs font-bold tracking-[2.5px] uppercase;
@@ -80,22 +98,4 @@
     @apply transition-all duration-500 ease-expo
            hover:translate-y-[-6px] hover:shadow-xl;
   }
- /* Añadir dentro de @layer components */
-.btn-ghost {
-  @apply font-body font-semibold px-[34px] py-[15px] rounded-full cursor-pointer
-         border-[1.5px] border-white/30 bg-white/[0.07]
-         text-white backdrop-blur-lg
-         transition-all duration-300 ease-expo
-         hover:bg-white/[0.15] hover:border-white/50
-         hover:translate-y-[-3px] hover:scale-[1.03];
-}
-
-.btn-wa {
-  @apply font-body font-bold px-8 py-3.5 rounded-full border-none cursor-pointer
-         bg-[#25D366] text-white
-         shadow-[0_8px_32px_rgba(37,211,102,0.25)]
-         transition-all duration-300 ease-expo
-         hover:translate-y-[-3px] hover:scale-[1.03]
-         hover:shadow-[0_16px_48px_rgba(37,211,102,0.35)];
-}
 }

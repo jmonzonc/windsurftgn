@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Windsurf Tarragona · Escuela Náutica & Actividades Acuáticas en Playa Larga",
+    "title": "Windsurf Tarragona · Escola Náutica & Actividades Acuáticas en Playa Larga",
     "description": "Escuela náutica y centro de actividades acuáticas en Playa Larga, Tarragona. Cursos de windsurf, vela, surf, catamarán, patín catalán. Banana boat, kayak, paseos en barco. +20 años en la Costa Dorada.",
     "ogTitle": "Windsurf Tarragona · Vive el Agua"
   },
@@ -24,13 +24,13 @@
     "scroll": "Descubre"
   },
   "banana": {
-    "pill": "⭐ Producto estrella · Nº1 en diversión",
+    "pill": "🍌 La experiencia más divertida del Mediterráneo",
     "title1": "🍌 BANANA",
     "title2": "BOAT",
     "desc": "La experiencia más divertida del Mediterráneo. Agárrate fuerte, ríe sin parar y crea recuerdos que duran toda la vida.",
     "allAges": "Todas las edades.",
     "cta": "¡Lo quiero! 🎉",
-    "price": "Ver precio"
+    "price": "Ver más info"
   },
   "stats": {
     "years": "+20",
@@ -63,6 +63,7 @@
     "title1": "PÁSALO",
     "title2": "INCREÍBLE",
     "discover": "Descubrir",
+    "star": "⭐ Nº1",
     "items": {
       "banana-boat": { "name": "Banana Boat" },
       "kayak": { "name": "Kayak" },
@@ -70,8 +71,7 @@
       "alquiler-surf": { "name": "Alquiler Surf" },
       "paseos-barco": { "name": "Paseos en Barco" },
       "donut": { "name": "Donut" }
-    },
-    "star": "⭐ Nº1"
+    }
   },
   "grupos": {
     "title1": "¿VENÍS EN",
@@ -94,7 +94,7 @@
       { "text": "Hice el curso de windsurf en agosto y fue INCREÍBLE. Los monitores son super pacientes y profesionales. ¡Volvemos seguro!", "name": "María G.", "from": "Barcelona", "emoji": "🏄" },
       { "text": "Llevamos a los niños al banana boat y al kayak. Se lo pasaron GENIAL. La organización perfecta y Playa Larga espectacular.", "name": "Jordi P.", "from": "Tarragona", "emoji": "🍌" },
       { "text": "Fantastic windsurfing school. Professional instructors, great equipment, beautiful location. Can't recommend it enough!", "name": "Sophie M.", "from": "Lyon", "emoji": "⛵" },
-      { "text": "La despedida de soltera perfecta! Banana boat, kayak y paseo en lancha. Risas aseguradas. Repetiremos!", "name": "Laura R.", "from": "Madrid", "emoji": "💍" }
+      { "text": "¡La despedida de soltera perfecta! Banana boat, kayak y paseo en lancha. Risas aseguradas. ¡Repetiremos!", "name": "Laura R.", "from": "Madrid", "emoji": "💍" }
     ]
   },
   "contacto": {
