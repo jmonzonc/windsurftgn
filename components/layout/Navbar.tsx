@@ -86,11 +86,11 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
                 )}>{loc}</Link>
               ))}
             </div>
-            <a href={SITE.phoneHref} className="no-underline">
-              <button className="btn-primary px-5 py-2.5 text-sm">📞 {SITE.phone}</button>
+            <a href={SITE.phoneHref} className="btn-primary px-5 py-2.5 text-sm no-underline">
+              📞 {SITE.phone}
             </a>
-            <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline">
-              <button className="btn-wa px-5 py-2.5 text-sm">💬 WhatsApp</button>
+            <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="btn-wa px-5 py-2.5 text-sm no-underline">
+              💬 WhatsApp
             </a>
           </div>
 
@@ -138,11 +138,11 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             </Link>
           ))}
         </div>
-        <a href={SITE.phoneHref} className="no-underline mt-4">
-          <button className="btn-primary px-8 py-4 text-lg">📞 {SITE.phone}</button>
+        <a href={SITE.phoneHref} className="btn-primary px-8 py-4 text-lg no-underline mt-4">
+          📞 {SITE.phone}
         </a>
-        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="no-underline">
-          <button className="btn-wa px-8 py-4 text-lg">💬 WhatsApp</button>
+        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="btn-wa px-8 py-4 text-lg no-underline">
+          💬 WhatsApp
         </a>
       </div>
     </>
