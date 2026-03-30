@@ -28,6 +28,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
     <section className="relative h-screen min-h-[700px] overflow-hidden bg-abyss">
       <video
         autoPlay muted loop playsInline
+        preload="metadata"
         onCanPlay={() => setVidLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover brightness-[0.38] saturate-[1.3] contrast-[1.1] transition-opacity duration-[1500ms]"
         style={{ transform: `translateY(${scrollY * 0.25}px) scale(1.15)`, opacity: vidLoaded ? 1 : 0 }}
