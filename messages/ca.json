@@ -50,12 +50,36 @@
     "book": "Reservar classe →",
     "moreInfo": "Més info",
     "courses": {
-      "windsurf": { "name": "Windsurf", "desc": "El clàssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat." },
-      "vela": { "name": "Navegació / Vela", "desc": "Aprèn les tècniques de navegació a vela. Estratègia, vent i el mar com a mestre." },
-      "surf": { "name": "Surf", "desc": "Cavalca les ones del Mediterrani. Classes per a tots els nivells a Platja Llarga." },
-      "wakesurf": { "name": "Wakesurf", "desc": "Surfeja l'ona que genera la nostra llanxa. Sense corda. La sensació més addictiva de l'aigua." },
-      "catamaran": { "name": "Catamarà", "desc": "Navega en un catamarà de vela lleugera. Velocitat, treball en equip i adrenalina." },
-      "patin-catalan": { "name": "Patí Català", "desc": "L'embarcació tradicional de la nostra costa. Única al món, identitat mediterrània pura." }
+      "windsurf": {
+        "name": "Windsurf",
+        "desc": "El clàssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat.",
+        "seoDesc": "Curs de windsurf a Platja Llarga, Tarragona. Monitors titulats FVE/RFEV, tots els nivells. Aprèn a navegar a la Costa Daurada amb +20 anys d'experiència."
+      },
+      "vela": {
+        "name": "Navegació / Vela",
+        "desc": "Aprèn les tècniques de navegació a vela. Estratègia, vent i el mar com a mestre.",
+        "seoDesc": "Curs de vela a Tarragona. Aprèn navegació a vela a Platja Llarga amb instructors titulats. Classes per a principiants i avançats a la Costa Daurada."
+      },
+      "surf": {
+        "name": "Surf",
+        "desc": "Cavalca les ones del Mediterrani. Classes per a tots els nivells a Platja Llarga.",
+        "seoDesc": "Classes de surf a Platja Llarga, Tarragona. Cursos per a tots els nivells amb material inclòs. Escola nàutica amb +20 anys a la Costa Daurada."
+      },
+      "wakesurf": {
+        "name": "Wakesurf",
+        "desc": "Surfeja l'ona que genera la nostra llanxa. Sense corda. La sensació més addictiva de l'aigua.",
+        "seoDesc": "Wakesurf a Tarragona. Surfeja sense corda l'ona de la nostra llanxa a Platja Llarga. Experiència única a la Costa Daurada per a tots els nivells."
+      },
+      "catamaran": {
+        "name": "Catamarà",
+        "desc": "Navega en un catamarà de vela lleugera. Velocitat, treball en equip i adrenalina.",
+        "seoDesc": "Curs de catamarà a Platja Llarga, Tarragona. Navega en vela lleugera amb monitors titulats. Classes individuals i en grup a la Costa Daurada."
+      },
+      "patin-catalan": {
+        "name": "Patí Català",
+        "desc": "L'embarcació tradicional de la nostra costa. Única al món, identitat mediterrània pura.",
+        "seoDesc": "Curs de patí català a Tarragona. Aprèn a navegar l'embarcació tradicional de la Costa Daurada a Platja Llarga. Experiència única i autèntica."
+      }
     }
   },
   "actividades": {
@@ -65,12 +89,30 @@
     "discover": "Descobrir",
     "star": "⭐ Nº1",
     "items": {
-      "banana-boat": { "name": "Banana Boat" },
-      "kayak": { "name": "Caiac" },
-      "alquiler-windsurf": { "name": "Lloguer Windsurf" },
-      "alquiler-surf": { "name": "Lloguer Surf" },
-      "paseos-barco": { "name": "Passejades en Vaixell" },
-      "donut": { "name": "Donut" }
+      "banana-boat": {
+        "name": "Banana Boat",
+        "seoDesc": "Banana boat a Platja Llarga, Tarragona. L'activitat aquàtica més divertida de la Costa Daurada. Totes les edats, reserva per WhatsApp o telèfon."
+      },
+      "kayak": {
+        "name": "Caiac",
+        "seoDesc": "Lloguer de caiac a Platja Llarga, Tarragona. Explora la costa de Tarragona en caiac. Sense experiència prèvia, totes les edats."
+      },
+      "alquiler-windsurf": {
+        "name": "Lloguer Windsurf",
+        "seoDesc": "Lloguer de material de windsurf a Platja Llarga, Tarragona. Taules i veles per a tots els nivells a la Costa Daurada."
+      },
+      "alquiler-surf": {
+        "name": "Lloguer Surf",
+        "seoDesc": "Lloguer de taules de surf a Platja Llarga, Tarragona. Material de qualitat per hores a la Costa Daurada."
+      },
+      "paseos-barco": {
+        "name": "Passejades en Vaixell",
+        "seoDesc": "Passejades en vaixell a Tarragona. Excursions en llanxa per la costa de Platja Llarga i la Costa Daurada. Grups, famílies i comiats."
+      },
+      "donut": {
+        "name": "Donut",
+        "seoDesc": "Donut aquàtic a Platja Llarga, Tarragona. Diversió i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
+      }
     }
   },
   "grupos": {

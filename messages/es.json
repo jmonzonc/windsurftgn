@@ -50,12 +50,36 @@
     "book": "Reservar clase →",
     "moreInfo": "Más info",
     "courses": {
-      "windsurf": { "name": "Windsurf", "desc": "El clásico. Tú, una tabla y el viento. Domina el equilibrio y navega con total libertad." },
-      "vela": { "name": "Navegación / Vela", "desc": "Aprende las técnicas de navegación a vela. Estrategia, viento y el mar como maestro." },
-      "surf": { "name": "Surf", "desc": "Cabalga las olas del Mediterráneo. Clases para todos los niveles en Playa Larga." },
-      "wakesurf": { "name": "Wakesurf", "desc": "Surfea la ola que genera nuestra lancha. Sin cuerda. La sensación más adictiva del agua." },
-      "catamaran": { "name": "Catamarán", "desc": "Navega en un catamarán de vela ligera. Velocidad, trabajo en equipo y adrenalina." },
-      "patin-catalan": { "name": "Patín Catalán", "desc": "La embarcación tradicional de nuestra costa. Única en el mundo, identidad mediterránea pura." }
+      "windsurf": {
+        "name": "Windsurf",
+        "desc": "El clásico. Tú, una tabla y el viento. Domina el equilibrio y navega con total libertad.",
+        "seoDesc": "Curso de windsurf en Playa Larga, Tarragona. Monitores titulados FVE/RFEV, todos los niveles. Aprende a navegar en la Costa Dorada con +20 años de experiencia."
+      },
+      "vela": {
+        "name": "Navegación / Vela",
+        "desc": "Aprende las técnicas de navegación a vela. Estrategia, viento y el mar como maestro.",
+        "seoDesc": "Curso de vela en Tarragona. Aprende navegación a vela en Playa Larga con instructores titulados. Clases para principiantes y avanzados en la Costa Dorada."
+      },
+      "surf": {
+        "name": "Surf",
+        "desc": "Cabalga las olas del Mediterráneo. Clases para todos los niveles en Playa Larga.",
+        "seoDesc": "Clases de surf en Playa Larga, Tarragona. Cursos para todos los niveles con material incluido. Escuela náutica con +20 años en la Costa Dorada."
+      },
+      "wakesurf": {
+        "name": "Wakesurf",
+        "desc": "Surfea la ola que genera nuestra lancha. Sin cuerda. La sensación más adictiva del agua.",
+        "seoDesc": "Wakesurf en Tarragona. Surfea sin cuerda la ola de nuestra lancha en Playa Larga. Experiencia única en la Costa Dorada para todos los niveles."
+      },
+      "catamaran": {
+        "name": "Catamarán",
+        "desc": "Navega en un catamarán de vela ligera. Velocidad, trabajo en equipo y adrenalina.",
+        "seoDesc": "Curso de catamarán en Playa Larga, Tarragona. Navega en vela ligera con monitores titulados. Clases individuales y en grupo en la Costa Dorada."
+      },
+      "patin-catalan": {
+        "name": "Patín Catalán",
+        "desc": "La embarcación tradicional de nuestra costa. Única en el mundo, identidad mediterránea pura.",
+        "seoDesc": "Curso de patín catalán en Tarragona. Aprende a navegar la embarcación tradicional de la Costa Dorada en Playa Larga. Experiencia única y auténtica."
+      }
     }
   },
   "actividades": {
@@ -65,12 +89,30 @@
     "discover": "Descubrir",
     "star": "⭐ Nº1",
     "items": {
-      "banana-boat": { "name": "Banana Boat" },
-      "kayak": { "name": "Kayak" },
-      "alquiler-windsurf": { "name": "Alquiler Windsurf" },
-      "alquiler-surf": { "name": "Alquiler Surf" },
-      "paseos-barco": { "name": "Paseos en Barco" },
-      "donut": { "name": "Donut" }
+      "banana-boat": {
+        "name": "Banana Boat",
+        "seoDesc": "Banana boat en Playa Larga, Tarragona. La actividad acuática más divertida de la Costa Dorada. Todas las edades, reserva por WhatsApp o teléfono."
+      },
+      "kayak": {
+        "name": "Kayak",
+        "seoDesc": "Alquiler de kayak en Playa Larga, Tarragona. Explora la costa de Tarragona en kayak. Sin experiencia previa, todas las edades."
+      },
+      "alquiler-windsurf": {
+        "name": "Alquiler Windsurf",
+        "seoDesc": "Alquiler de material de windsurf en Playa Larga, Tarragona. Tablas y velas para todos los niveles en la Costa Dorada."
+      },
+      "alquiler-surf": {
+        "name": "Alquiler Surf",
+        "seoDesc": "Alquiler de tablas de surf en Playa Larga, Tarragona. Material de calidad por horas en la Costa Dorada."
+      },
+      "paseos-barco": {
+        "name": "Paseos en Barco",
+        "seoDesc": "Paseos en barco en Tarragona. Excursiones en lancha por la costa de Playa Larga y la Costa Dorada. Grupos, familias y despedidas."
+      },
+      "donut": {
+        "name": "Donut",
+        "seoDesc": "Donut acuático en Playa Larga, Tarragona. Diversión y adrenalina arrastrado por lancha en la Costa Dorada. Todas las edades."
+      }
     }
   },
   "grupos": {
