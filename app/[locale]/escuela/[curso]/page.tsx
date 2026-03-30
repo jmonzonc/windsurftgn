@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { COURSE_IMAGES, SITE } from "@/lib/constants";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const COURSE_KEYS = ["windsurf", "vela", "surf", "wakesurf", "catamaran", "patin-catalan"] as const;
 const EMOJIS: Record<string, string> = { windsurf: "🏄", vela: "⛵", surf: "🌊", wakesurf: "🏂", catamaran: "🛥️", "patin-catalan": "🚩" };
@@ -26,12 +27,40 @@ export async function generateMetadata({
   const { locale, curso } = await params;
   if (!isValidLocale(locale)) return {};
   const dict = await getDictionary(locale);
-  const courses = dict.escuela.courses as Record<string, { name: string; desc: string }>;
+  const courses = dict.escuela.courses as Record<string, { name: string; desc: string; seoDesc?: string }>;
   const course = courses[curso];
   if (!course) return {};
+
+  const languageAlternates: Record<string, string> = {
+    "x-default": `https://windsurftarragona.com/es/escuela/${curso}`,
+  };
+  for (const loc of locales) {
+    languageAlternates[loc] = `https://windsurftarragona.com/${loc}/escuela/${curso}`;
+  }
+
   return {
     title: `${course.name} · Windsurf Tarragona`,
-    description: course.desc,
+    description: course.seoDesc || course.desc,
+    alternates: {
+      canonical: `https://windsurftarragona.com/${locale}/escuela/${curso}`,
+      languages: languageAlternates,
+    },
+    openGraph: {
+      title: `${course.name} · Windsurf Tarragona`,
+      description: course.seoDesc || course.desc,
+      url: `https://windsurftarragona.com/${locale}/escuela/${curso}`,
+      siteName: "Windsurf Tarragona",
+      locale: locale === "ca" ? "ca_ES" : locale === "en" ? "en_US" : "es_ES",
+      type: "website",
+      images: [
+        {
+          url: COURSE_IMAGES[curso] || COURSE_IMAGES["windsurf"],
+          width: 900,
+          height: 600,
+          alt: course.name,
+        },
+      ],
+    },
   };
 }
 
@@ -43,18 +72,68 @@ export default async function CursoPage({
   const { locale, curso } = await params;
   if (!isValidLocale(locale)) notFound();
   const dict = await getDictionary(locale);
-  const courses = dict.escuela.courses as Record<string, { name: string; desc: string }>;
+  const courses = dict.escuela.courses as Record<string, { name: string; desc: string; seoDesc?: string }>;
   const course = courses[curso];
   if (!course) notFound();
 
   const img = COURSE_IMAGES[curso] || COURSE_IMAGES["windsurf"];
   const emoji = EMOJIS[curso] || "🏄";
+  const pageUrl = `https://windsurftarragona.com/${locale}/escuela/${curso}`;
 
   const backLabel = locale === "en" ? "Back to courses" : locale === "ca" ? "Tornar als cursos" : "Volver a cursos";
   const priceLabel = locale === "en" ? "Prices and schedules — contact us for more info" : locale === "ca" ? "Preus i horaris — contacta'ns per a més info" : "Precios y horarios — contáctanos para más info";
 
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.name,
+    description: course.seoDesc || course.desc,
+    url: pageUrl,
+    image: img,
+    provider: {
+      "@type": "SportsActivityLocation",
+      "@id": "https://windsurftarragona.com/#business",
+      name: "Windsurf Tarragona",
+      sameAs: SITE.url,
+    },
+    courseMode: "onsite",
+    availableLanguage: ["es", "ca", "en"],
+    inLanguage: locale === "ca" ? "ca" : locale === "en" ? "en" : "es",
+    locationCreated: {
+      "@type": "Place",
+      name: "Playa Larga",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
+        addressLocality: "Tarragona",
+        addressRegion: "Cataluña",
+        postalCode: "43007",
+        addressCountry: "ES",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: SITE.coords.lat,
+        longitude: SITE.coords.lng,
+      },
+    },
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Windsurf Tarragona", url: `https://windsurftarragona.com/${locale}` },
+    { name: dict.nav.escuela, url: `https://windsurftarragona.com/${locale}#escuela` },
+    { name: course.name, url: pageUrl },
+  ]);
+
   return (
     <div className="min-h-screen bg-ice">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="relative h-[50vh] min-h-[360px] overflow-hidden">
         <img src={img} alt={course.name} className="w-full h-full object-cover brightness-[0.4]" />
         <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 to-transparent" />
