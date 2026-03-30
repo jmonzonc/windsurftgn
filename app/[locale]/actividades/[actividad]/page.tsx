@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
 import { ACTIVITY_IMAGES, SITE } from "@/lib/constants";
+import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const ITEM_KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut"] as const;
 const EMOJIS: Record<string, string> = { "banana-boat": "🍌", kayak: "🛶", "alquiler-windsurf": "🏄", "alquiler-surf": "🌊", "paseos-barco": "🚤", donut: "🍩" };
@@ -27,12 +28,36 @@ export async function generateMetadata({
   const { locale, actividad } = await params;
   if (!isValidLocale(locale)) return {};
   const dict = await getDictionary(locale);
-  const items = dict.actividades.items as Record<string, { name: string }>;
+  const items = dict.actividades.items as Record<string, { name: string; seoDesc?: string }>;
   const item = items[actividad];
   if (!item) return {};
+
+  const img = ACTIVITY_IMAGES[IMG_MAP[actividad]] || ACTIVITY_IMAGES["banana"];
+  const description = item.seoDesc || `${item.name} en Playa Larga, Tarragona`;
+
+  const languageAlternates: Record<string, string> = {
+    "x-default": `https://windsurftarragona.com/es/actividades/${actividad}`,
+  };
+  for (const loc of locales) {
+    languageAlternates[loc] = `https://windsurftarragona.com/${loc}/actividades/${actividad}`;
+  }
+
   return {
     title: `${item.name} · Windsurf Tarragona`,
-    description: `${item.name} en Playa Larga, Tarragona`,
+    description,
+    alternates: {
+      canonical: `https://windsurftarragona.com/${locale}/actividades/${actividad}`,
+      languages: languageAlternates,
+    },
+    openGraph: {
+      title: `${item.name} · Windsurf Tarragona`,
+      description,
+      url: `https://windsurftarragona.com/${locale}/actividades/${actividad}`,
+      siteName: "Windsurf Tarragona",
+      locale: locale === "ca" ? "ca_ES" : locale === "en" ? "en_US" : "es_ES",
+      type: "website",
+      images: [{ url: img, width: 600, height: 400, alt: item.name }],
+    },
   };
 }
 
@@ -44,18 +69,63 @@ export default async function ActividadPage({
   const { locale, actividad } = await params;
   if (!isValidLocale(locale)) notFound();
   const dict = await getDictionary(locale);
-  const items = dict.actividades.items as Record<string, { name: string }>;
+  const items = dict.actividades.items as Record<string, { name: string; seoDesc?: string }>;
   const item = items[actividad];
   if (!item) notFound();
 
   const img = ACTIVITY_IMAGES[IMG_MAP[actividad]] || ACTIVITY_IMAGES["banana"];
   const emoji = EMOJIS[actividad] || "🎉";
+  const pageUrl = `https://windsurftarragona.com/${locale}/actividades/${actividad}`;
 
   const backLabel = locale === "en" ? "Back to activities" : locale === "ca" ? "Tornar a activitats" : "Volver a actividades";
   const priceLabel = locale === "en" ? "Prices and availability — contact us for more info" : locale === "ca" ? "Preus i disponibilitat — contacta'ns per a més info" : "Precios y disponibilidad — contáctanos para más info";
 
+  const activityJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: item.name,
+    description: item.seoDesc || `${item.name} en Playa Larga, Tarragona`,
+    url: pageUrl,
+    image: img,
+    isAccessibleForFree: false,
+    availableLanguage: ["es", "ca", "en"],
+    touristType: ["Adventure tourism", "Beach tourism", "Water sports"],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE.coords.lat,
+      longitude: SITE.coords.lng,
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
+      addressLocality: "Tarragona",
+      addressRegion: "Cataluña",
+      postalCode: "43007",
+      addressCountry: "ES",
+    },
+    containedInPlace: {
+      "@type": "SportsActivityLocation",
+      "@id": "https://windsurftarragona.com/#business",
+      name: "Windsurf Tarragona",
+    },
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Windsurf Tarragona", url: `https://windsurftarragona.com/${locale}` },
+    { name: dict.nav.actividades, url: `https://windsurftarragona.com/${locale}#actividades` },
+    { name: item.name, url: pageUrl },
+  ]);
+
   return (
     <div className="min-h-screen bg-ice">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(activityJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="relative h-[50vh] min-h-[360px] overflow-hidden">
         <img src={img} alt={item.name} className="w-full h-full object-cover brightness-[0.4]" />
         <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 to-transparent" />
