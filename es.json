@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Windsurf Tarragona · Escuela Náutica & Actividades Acuáticas en Playa Larga",
+    "description": "Escuela náutica y centro de actividades acuáticas en Playa Larga, Tarragona. Cursos de windsurf, vela, surf, catamarán, patín catalán. Banana boat, kayak, paseos en barco. +20 años en la Costa Dorada.",
+    "ogTitle": "Windsurf Tarragona · Vive el Agua"
+  },
+  "nav": {
+    "escuela": "Escuela",
+    "actividades": "Actividades",
+    "grupos": "Grupos",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "location": "Playa Larga · Tarragona · Costa Dorada",
+    "pre": "Escuela Náutica & Centro de Actividades Acuáticas",
+    "title1": "VIVE EL",
+    "title2": "AGUA",
+    "sub1": "Windsurf · Vela · Surf · Catamarán · Patín Catalán",
+    "sub2": "Banana Boat · Kayak · Paseos en barco",
+    "sub3": "+20 años en la Costa Dorada",
+    "cta1": "🍌 Banana Boat",
+    "cta2": "🏄 Cursos",
+    "cta3": "🛶 Actividades",
+    "scroll": "Descubre"
+  },
+  "banana": {
+    "pill": "🍌 La experiencia más divertida del Mediterráneo",
+    "title1": "🍌 BANANA",
+    "title2": "BOAT",
+    "desc": "La experiencia más divertida del Mediterráneo. Agárrate fuerte, ríe sin parar y crea recuerdos que duran toda la vida.",
+    "allAges": "Todas las edades.",
+    "cta": "¡Lo quiero! 🎉",
+    "price": "Ver más info"
+  },
+  "stats": {
+    "years": "+20",
+    "yearsLabel": "Años de pasión",
+    "people": "10K+",
+    "peopleLabel": "Personas felices",
+    "activities": "12",
+    "activitiesLabel": "Actividades",
+    "days": "365",
+    "daysLabel": "Días al año"
+  },
+  "escuela": {
+    "pill": "🎓 Escuela Náutica · Monitores FVE/RFEV",
+    "title1": "APRENDE A",
+    "title2": "NAVEGAR",
+    "allLevels": "Todos los niveles",
+    "book": "Reservar clase →",
+    "moreInfo": "Más info",
+    "courses": {
+      "windsurf": { "name": "Windsurf", "desc": "El clásico. Tú, una tabla y el viento. Domina el equilibrio y navega con total libertad." },
+      "vela": { "name": "Navegación / Vela", "desc": "Aprende las técnicas de navegación a vela. Estrategia, viento y el mar como maestro." },
+      "surf": { "name": "Surf", "desc": "Cabalga las olas del Mediterráneo. Clases para todos los niveles en Playa Larga." },
+      "wakesurf": { "name": "Wakesurf", "desc": "Surfea la ola que genera nuestra lancha. Sin cuerda. La sensación más adictiva del agua." },
+      "catamaran": { "name": "Catamarán", "desc": "Navega en un catamarán de vela ligera. Velocidad, trabajo en equipo y adrenalina." },
+      "patin-catalan": { "name": "Patín Catalán", "desc": "La embarcación tradicional de nuestra costa. Única en el mundo, identidad mediterránea pura." }
+    }
+  },
+  "actividades": {
+    "pill": "🎉 Alquiler & diversión · Todas las edades",
+    "title1": "PÁSALO",
+    "title2": "INCREÍBLE",
+    "discover": "Descubrir",
+    "star": "⭐ Nº1",
+    "items": {
+      "banana-boat": { "name": "Banana Boat" },
+      "kayak": { "name": "Kayak" },
+      "alquiler-windsurf": { "name": "Alquiler Windsurf" },
+      "alquiler-surf": { "name": "Alquiler Surf" },
+      "paseos-barco": { "name": "Paseos en Barco" },
+      "donut": { "name": "Donut" }
+    }
+  },
+  "grupos": {
+    "title1": "¿VENÍS EN",
+    "title2": "GRUPO",
+    "title3": "? 🎊",
+    "cta": "Pide presupuesto 🤙",
+    "items": {
+      "colegios": { "title": "Colegios", "desc": "Salidas de fin de curso pedagógicas y divertidas" },
+      "team-building": { "title": "Team Building", "desc": "Refuerza tu equipo con el desafío del mar" },
+      "amigos": { "title": "Amigos", "desc": "Aventura náutica a medida para el grupo" },
+      "despedidas": { "title": "Despedidas", "desc": "La despedida más diferente y memorable" }
+    }
+  },
+  "reviews": {
+    "title1": "+10.000 PERSONAS",
+    "title2": "FELICES",
+    "title3": "🌊",
+    "rating": "⭐ 4.8/5 en Google · +150 reseñas verificadas",
+    "items": [
+      { "text": "Hice el curso de windsurf en agosto y fue INCREÍBLE. Los monitores son super pacientes y profesionales. ¡Volvemos seguro!", "name": "María G.", "from": "Barcelona", "emoji": "🏄" },
+      { "text": "Llevamos a los niños al banana boat y al kayak. Se lo pasaron GENIAL. La organización perfecta y Playa Larga espectacular.", "name": "Jordi P.", "from": "Tarragona", "emoji": "🍌" },
+      { "text": "Fantastic windsurfing school. Professional instructors, great equipment, beautiful location. Can't recommend it enough!", "name": "Sophie M.", "from": "Lyon", "emoji": "⛵" },
+      { "text": "¡La despedida de soltera perfecta! Banana boat, kayak y paseo en lancha. Risas aseguradas. ¡Repetiremos!", "name": "Laura R.", "from": "Madrid", "emoji": "💍" }
+    ]
+  },
+  "contacto": {
+    "title1": "¿NOS",
+    "title2": "VEMOS",
+    "title3": "? 🌊",
+    "subtitle": "Ven a Playa Larga. Te estamos esperando.",
+    "phone": { "title": "Llámanos", "text": "977 23 27 15", "sub": "De 9h a 20h" },
+    "location": { "title": "Ven a vernos", "text": "Camping Las Palmeras", "sub": "Playa Larga, Tarragona" },
+    "social": { "title": "Síguenos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
+    "whatsapp": { "title": "WhatsApp", "text": "Escríbenos", "sub": "Respuesta rápida" },
+    "mapLabel": "📍 Windsurf Tarragona",
+    "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapCta": "Cómo llegar →"
+  },
+  "footer": {
+    "tagline": "Playa Larga, Tarragona · Costa Dorada · Desde 2004",
+    "copy": "© 2026 Windsurf Tarragona · Hecho con agua, sol y pasión por el mar 🌊☀️",
+    "privacy": "Privacidad",
+    "legal": "Aviso Legal"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "content": "Contenido de política de privacidad pendiente de redacción legal."
+  },
+  "gruposPage": {
+    "title": "Grupos",
+    "subtitle": "Actividades náuticas para grupos de todas las edades",
+    "cta": "Solicitar presupuesto"
+  },
+  "contactoPage": {
+    "title": "Contacto",
+    "subtitle": "Estamos en Playa Larga, Tarragona",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formPhone": "Teléfono",
+    "formMessage": "Mensaje",
+    "formSend": "Enviar mensaje",
+    "formSuccess": "Mensaje enviado correctamente"
+  }
+}

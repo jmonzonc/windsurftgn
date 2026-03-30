@@ -24,14 +24,12 @@ const config: Config = {
         gold: "#FFCF40",
       },
       fontFamily: {
-        display: ["var(--font-dela)", "cursive"],
-        body: ["var(--font-outfit)", "sans-serif"],
+        display: ["var(--font-display)", "cursive"],
+        body: ["var(--font-body)", "sans-serif"],
       },
       animation: {
         "hero-shimmer": "heroShimmer 5s ease-in-out infinite",
         "scroll-down": "scrollDown 2.2s ease-in-out infinite",
-        "wave-1": "wave1 7s ease-in-out infinite",
-        "wave-2": "wave2 9s ease-in-out infinite",
         "float-0": "float0 6s ease-in-out infinite",
         "float-1": "float1 8s ease-in-out infinite",
         "float-2": "float2 7s ease-in-out infinite",
