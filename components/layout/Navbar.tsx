@@ -44,8 +44,8 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
   const links = [
     { label: dict.escuela, href: `/${locale}#escuela` },
     { label: dict.actividades, href: `/${locale}#actividades` },
-    { label: dict.grupos, href: `/${locale}/grupos` },
-    { label: dict.contacto, href: `/${locale}/contacto` },
+    { label: dict.grupos, href: `/${locale}/#grupos` },
+    { label: dict.contacto, href: `/${locale}/#contacto` },
   ];
 
   function localeSwitchPath(target: Locale) {
