@@ -6,8 +6,8 @@ import WaterParticles from "@/components/ui/WaterParticles";
 
 type ReviewItem = { text: string; name: string; from: string; emoji: string };
 type ReviewsDict = {
-  title1: string; title2: string; title3: string;
-  rating: string; more: string; less: string;
+  title1: string; title2: string; title3: string; rating: string;
+  more: string; less: string;
   items: ReviewItem[];
 };
 
@@ -32,7 +32,7 @@ function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
       }}
     >
       <div className="flex justify-between items-center mb-3 sm:mb-4">
-        <span className="text-sm sm:text-base" aria-label="5 estrellas">⭐⭐⭐⭐⭐</span>
+        <span className="text-sm sm:text-base">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
         <span className="text-[22px] sm:text-[28px]">{r.emoji}</span>
       </div>
       <p className="font-body text-[13px] sm:text-[15px] text-white/[0.78] leading-[1.5] sm:leading-[1.6] mb-1 flex-1">
@@ -54,7 +54,7 @@ function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
         </div>
         <div>
           <div className="font-body font-bold text-white text-[13px] sm:text-sm">{r.name}</div>
-          <div className="font-body text-white/30 text-[11px] sm:text-xs">{r.from} · ✓ Google</div>
+          <div className="font-body text-white/30 text-[11px] sm:text-xs">{r.from} &middot; &#10003; Google</div>
         </div>
       </div>
     </div>
