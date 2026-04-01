@@ -134,10 +134,17 @@
     "rating": "⭐ 4.8/5 on Google · +150 verified reviews",
     "more": "Read more",
     "less": "Read less",
+   "reviews": {
+    "title1": "+10,000 HAPPY",
+    "title2": "PEOPLE",
+    "title3": "🌊",
+    "rating": "⭐ 4.8/5 on Google · +150 verified reviews",
+    "more": "Read more",
+    "less": "Less",
     "items": [
       { "text": "We were a school group of 40 people, 16 of whom were French. The pre-activity coordination was fantastic, 100% trust. The activity was spectacular — great treatment, very professional staff and so much fun! I recommend it 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
       { "text": "We did several family activities with the kids — Banana Boat and paddle surf — and it was great! Very well organised, the explanations, everything! The guys are lovely!!! Jose is amazing!! Congrats to your team!! We'll be back!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
-      { "text": "Fantastic windsurfing school. Professional instructors, great equipment, beautiful location. Can't recommend it enough!", "name": "artoleta", "from": "Tarragona", "emoji": "⛵" },
+      { "text": "We spent a fantastic morning practising foil with the motorboat. The instructors were very professional and always attentive to making sure we all learned as much as possible. Highly recommended!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
       { "text": "Excellent team. I found them on Google, sent a message and Eneko replied — very kind, explained everything perfectly and recommended where to park. When we arrived the whole team was wonderful. We had an amazing time. I highly recommend the Big Paddle, just as Eneko suggested — it was brilliant. We were lucky to find Eneko on the water too, who filmed a great video we'll treasure forever. A hen party to remember thanks to them. Thank you guys, can't wait to come back.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
     ]
   },
