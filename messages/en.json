@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Windsurf Tarragona · Nautical School & Water Activities in Playa Larga",
+    "title": "Windsurf Tarragona \u00b7 Nautical School & Water Activities in Playa Larga",
     "description": "Nautical school and water sports center in Playa Larga, Tarragona. Windsurf, sailing, surfing, catamaran and Catalan boat courses. Banana boat, kayak, boat rides. +20 years on the Costa Dorada.",
-    "ogTitle": "Windsurf Tarragona · Live the Water"
+    "ogTitle": "Windsurf Tarragona \u00b7 Live the Water"
   },
   "nav": {
     "escuela": "School",
@@ -11,25 +11,25 @@
     "contacto": "Contact"
   },
   "hero": {
-    "location": "Playa Larga · Tarragona · Costa Dorada",
+    "location": "Playa Larga \u00b7 Tarragona \u00b7 Costa Dorada",
     "pre": "Nautical School & Water Activities Center",
     "title1": "LIVE THE",
     "title2": "WATER",
-    "sub1": "Windsurf · Sailing · Surf · Catamaran · Catalan Boat",
-    "sub2": "Banana Boat · Kayak · Boat rides",
+    "sub1": "Windsurf \u00b7 Sailing \u00b7 Surf \u00b7 Catamaran \u00b7 Catalan Boat",
+    "sub2": "Banana Boat \u00b7 Kayak \u00b7 Boat rides",
     "sub3": "+20 years on the Costa Dorada",
-    "cta1": "🍌 Banana Boat",
-    "cta2": "🏄 Courses",
-    "cta3": "🛶 Activities",
+    "cta1": "\ud83c\udf4c Banana Boat",
+    "cta2": "\ud83c\udfc4 Courses",
+    "cta3": "\ud83d\udef6 Activities",
     "scroll": "Discover"
   },
   "banana": {
-    "pill": "🍌 The most fun experience in the Mediterranean",
-    "title1": "🍌 BANANA",
+    "pill": "\ud83c\udf4c The most fun experience in the Mediterranean",
+    "title1": "\ud83c\udf4c BANANA",
     "title2": "BOAT",
     "desc": "The most fun experience in the Mediterranean. Hold on tight, laugh non-stop and create memories that last a lifetime.",
     "allAges": "All ages.",
-    "cta": "I want it! 🎉",
+    "cta": "I want it! \ud83c\udf89",
     "price": "More info"
   },
   "stats": {
@@ -43,11 +43,11 @@
     "daysLabel": "Days a year"
   },
   "escuela": {
-    "pill": "🎓 Nautical School · FVE/RFEV Instructors",
+    "pill": "\ud83c\udf93 Nautical School \u00b7 FVE/RFEV Instructors",
     "title1": "LEARN TO",
     "title2": "SAIL",
     "allLevels": "All levels",
-    "book": "Book a class →",
+    "book": "Book a class \u2192",
     "moreInfo": "More info",
     "courses": {
       "windsurf": {
@@ -78,16 +78,16 @@
       "patin-catalan": {
         "name": "Catalan Boat",
         "desc": "The traditional boat of our coast. Unique in the world, pure Mediterranean identity.",
-        "seoDesc": "Catalan boat (patí català) course in Tarragona. Learn to sail this traditional Costa Dorada vessel in Playa Larga. Unique and authentic experience."
+        "seoDesc": "Catalan boat course in Tarragona. Learn to sail this traditional Costa Dorada vessel in Playa Larga. Unique and authentic experience."
       }
     }
   },
   "actividades": {
-    "pill": "🎉 Rental & fun · All ages",
+    "pill": "\ud83c\udf89 Rental & fun \u00b7 All ages",
     "title1": "HAVE AN",
     "title2": "AMAZING TIME",
     "discover": "Discover",
-    "star": "⭐ #1",
+    "star": "\u2b50 #1",
     "items": {
       "banana-boat": {
         "name": "Banana Boat",
@@ -118,8 +118,8 @@
   "grupos": {
     "title1": "COMING AS A",
     "title2": "GROUP",
-    "title3": "? 🎊",
-    "cta": "Get a quote 🤙",
+    "title3": "? \ud83c\udf8a",
+    "cta": "Get a quote \ud83e\udd19",
     "items": {
       "colegios": { "title": "Schools", "desc": "Fun and educational end-of-year outings" },
       "team-building": { "title": "Team Building", "desc": "Strengthen your team with the challenge of the sea" },
@@ -130,40 +130,33 @@
   "reviews": {
     "title1": "+10,000 HAPPY",
     "title2": "PEOPLE",
-    "title3": "🌊",
-    "rating": "⭐ 4.8/5 on Google · +150 verified reviews",
+    "title3": "\ud83c\udf0a",
+    "rating": "\u2b50 4.8/5 on Google \u00b7 +150 verified reviews",
     "more": "Read more",
     "less": "Read less",
-   "reviews": {
-    "title1": "+10,000 HAPPY",
-    "title2": "PEOPLE",
-    "title3": "🌊",
-    "rating": "⭐ 4.8/5 on Google · +150 verified reviews",
-    "more": "Read more",
-    "less": "Less",
     "items": [
-      { "text": "We were a school group of 40 people, 16 of whom were French. The pre-activity coordination was fantastic, 100% trust. The activity was spectacular — great treatment, very professional staff and so much fun! I recommend it 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
-      { "text": "We did several family activities with the kids — Banana Boat and paddle surf — and it was great! Very well organised, the explanations, everything! The guys are lovely!!! Jose is amazing!! Congrats to your team!! We'll be back!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
-      { "text": "We spent a fantastic morning practising foil with the motorboat. The instructors were very professional and always attentive to making sure we all learned as much as possible. Highly recommended!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
-      { "text": "Excellent team. I found them on Google, sent a message and Eneko replied — very kind, explained everything perfectly and recommended where to park. When we arrived the whole team was wonderful. We had an amazing time. I highly recommend the Big Paddle, just as Eneko suggested — it was brilliant. We were lucky to find Eneko on the water too, who filmed a great video we'll treasure forever. A hen party to remember thanks to them. Thank you guys, can't wait to come back.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
+      { "text": "We were a school group of 40 people, 16 of whom were French. The pre-activity coordination was fantastic, 100% trust. The activity was spectacular \u2014 great treatment, very professional staff and so much fun! I recommend it 100%", "name": "Anna L\u00f3pez", "from": "Barcelona", "emoji": "\ud83c\udfc4" },
+      { "text": "We did several family activities with the kids \u2014 Banana Boat and paddle surf \u2014 and it was great! Very well organised, the explanations, everything! The guys are lovely!!! Jose is amazing!! Congrats to your team!! We'll be back!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "\ud83c\udf4c" },
+      { "text": "We spent a fantastic morning practising foil with the motorboat. The instructors were very professional and always attentive to making sure we all learned as much as possible. Highly recommended!", "name": "artoleta", "from": "Tarragona", "emoji": "\u2708\ufe0f" },
+      { "text": "Excellent team. I found them on Google, sent a message and Eneko replied \u2014 very kind, explained everything perfectly and recommended where to park. When we arrived the whole team was wonderful. We had an amazing time. I highly recommend the Big Paddle, just as Eneko suggested \u2014 it was brilliant. We were lucky to find Eneko on the water too, who filmed a great video we'll treasure forever. A hen party to remember thanks to them. Thank you guys, can't wait to come back.", "name": "Gloria Gonz\u00e1lez", "from": "Madrid", "emoji": "\ud83d\udc8d" }
     ]
   },
   "contacto": {
     "title1": "SHALL WE",
     "title2": "MEET",
-    "title3": "? 🌊",
+    "title3": "? \ud83c\udf0a",
     "subtitle": "Come to Playa Larga. We're waiting for you.",
     "phone": { "title": "Call us", "text": "977 23 27 15", "sub": "9am to 8pm" },
     "location": { "title": "Visit us", "text": "Camping Las Palmeras", "sub": "Playa Larga, Tarragona" },
     "social": { "title": "Follow us", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
     "whatsapp": { "title": "WhatsApp", "text": "Write to us", "sub": "Quick response" },
-    "mapLabel": "📍 Windsurf Tarragona",
-    "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
-    "mapCta": "Get directions →"
+    "mapLabel": "\ud83d\udccd Windsurf Tarragona",
+    "mapAddress": "Ctra. N-340, Km 1168 \u00b7 Camping Las Palmeras",
+    "mapCta": "Get directions \u2192"
   },
   "footer": {
-    "tagline": "Playa Larga, Tarragona · Costa Dorada · Since 2004",
-    "copy": "© 2026 Windsurf Tarragona · Made with water, sun and passion for the sea 🌊☀️",
+    "tagline": "Playa Larga, Tarragona \u00b7 Costa Dorada \u00b7 Since 2004",
+    "copy": "\u00a9 2026 Windsurf Tarragona \u00b7 Made with water, sun and passion for the sea \ud83c\udf0a\u2600\ufe0f",
     "privacy": "Privacy",
     "legal": "Legal Notice"
   },
