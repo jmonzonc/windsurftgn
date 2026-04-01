@@ -21,11 +21,11 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
 
   const isLightPage =
     [
-      `/${locale}/grupos`,
-      `/${locale}/contacto`,
       `/${locale}/privacidad`,
     ].includes(pathname) ||
     pathname.startsWith(`/${locale}/escuela/`) ||
+    pathname.startsWith(`/${locale}/grupos/`) ||
+    pathname.startsWith(`/${locale}/contacto/`) ||
     pathname.startsWith(`/${locale}/actividades/`);
 
   useEffect(() => {
