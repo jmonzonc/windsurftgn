@@ -127,39 +127,19 @@
       "despedidas": { "title": "Comiats", "desc": "El comiat més diferent i memorable" }
     }
   },
-  "reviews": {
+ "reviews": {
     "title1": "+10.000 PERSONES",
-    "title2": "FELIÇOS",
+    "title2": "FELICES",
     "title3": "🌊",
     "rating": "⭐ 4.8/5 a Google · +150 ressenyes verificades",
-    "more": "Veure més",
-    "less": "Veure menys",
+    "more": "Llegir més",
+    "less": "Menys",
     "items": [
-  {
-    "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals s\u00f3n francesos. El tracte de gesti\u00f3 previ a l\u0027activitat fant\u00e0stic, confian\u00e7a al 100%. L\u0027activitat espectacular, molt bon tracte, molt bons professionals i l\u0027activitat molt divertida! La recomano al 100%",
-    "name": "Anna L\u00f3pez",
-    "from": "Barcelona",
-    "emoji": "\ud83c\udfc4"
-  },
-  {
-    "text": "Vam fer amb ells diverses activitats en fam\u00edlia amb els nens: Banana Boat i p\u00e0del surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose \u00e9s una passada!! Enhorabona pel vostre equip!! Repetirem!!!!",
-    "name": "Olivia Pereda",
-    "from": "Tarragona",
-    "emoji": "\ud83c\udf4c"
-  },
-  {
-    "text": "Vam passar un mat\u00ed fant\u00e0stic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprengu\u00e9ssim al m\u00e0xim, molt recomanable!",
-    "name": "artoleta",
-    "from": "Tarragona",
-    "emoji": "\u2708\ufe0f"
-  },
-  {
-    "text": "Exce\u00b7lent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l\u0027Eneko, molt amable, m\u0027ho va explicar tot genial i ens va recomanar on aparcar. Un tracte exce\u00b7lent. En arribar ens vam trobar un equip fant\u00e0stic que ens va tractar s\u00faper b\u00e9. Vam passar una estona s\u00faper divertida, recomano molt\u00edssim el Big Paddle, tal com em va recomanar l\u0027Eneko, va ser genial. Vam tenir la sort de trobar l\u0027Eneko al mar, el qual ens va gravar un s\u00faper v\u00eddeo que portarem al record. Un comiat de soltera per tot el alt gr\u00e0cies a ells. Gr\u00e0cies nois, amb ganes de repetir.",
-    "name": "Gloria Gonz\u00e1lez",
-    "from": "Madrid",
-    "emoji": "\ud83d\udc8d"
-  }
-]
+      { "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals són francesos. El tracte de gestió previ a l'activitat fantàstic, confiança al 100%. L'activitat espectacular, molt bon tracte, molt bons professionals i l'activitat molt divertida! La recomano al 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
+      { "text": "Vam fer amb ells diverses activitats en família amb els nens: Banana Boat i pàdel surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose és una passada!! Enhorabona pel vostre equip!! Repetirem!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
+      { "text": "Vam passar un matí fantàstic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprenguéssim al màxim, molt recomanable!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
+      { "text": "Excellent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l'Eneko, molt amable, m'ho va explicar tot genial i ens va recomanar on aparcar. Un tracte excellent. En arribar ens vam trobar un equip fantàstic que ens va tractar súper bé. Vam passar una estona súper divertida, recomano moltíssim el Big Paddle, tal com em va recomanar l'Eneko, va ser genial. Vam tenir la sort de trobar l'Eneko al mar, el qual ens va gravar un súper vídeo que portarem al record. Un comiat de soltera per tot el alt gràcies a ells. Gràcies nois, amb ganes de repetir.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
+    ]
   },
   "contacto": {
     "title1": "ENS",
