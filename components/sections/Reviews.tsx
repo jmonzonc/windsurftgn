@@ -11,12 +11,13 @@ type ReviewsDict = {
   items: ReviewItem[];
 };
 
-const MAX_CHARS = 160;
+const MAX_CHARS = 170;
 
-function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
-  r: ReviewItem; vis: boolean; delay: number; moreLabel: string; lessLabel: string;
+function ReviewCard({ r, vis, delay, expanded, onToggle, moreLabel, lessLabel }: {
+  r: ReviewItem; vis: boolean; delay: number;
+  expanded: boolean; onToggle: () => void;
+  moreLabel: string; lessLabel: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
   const isLong = r.text.length > MAX_CHARS;
   const displayText = isLong && !expanded
     ? r.text.slice(0, MAX_CHARS).trimEnd() + "..."
@@ -40,7 +41,7 @@ function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
       </p>
       {isLong ? (
         <button
-          onClick={() => setExpanded(!expanded)}
+          onClick={onToggle}
           className="font-body text-[12px] sm:text-[13px] font-semibold text-turq bg-transparent border-none cursor-pointer text-left p-0 mb-4 sm:mb-5 hover:text-aqua transition-colors"
         >
           {expanded ? lessLabel : moreLabel}
@@ -63,6 +64,7 @@ function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
 
 export default function Reviews({ dict }: { dict: ReviewsDict }) {
   const [ref, vis] = useReveal();
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="bg-gradient-to-b from-deep to-midnight py-14 sm:py-20 md:py-28 px-4 sm:px-5 relative overflow-hidden">
@@ -81,6 +83,8 @@ export default function Reviews({ dict }: { dict: ReviewsDict }) {
               r={r}
               vis={vis}
               delay={0.15 + i * 0.1}
+              expanded={expanded}
+              onToggle={() => setExpanded(!expanded)}
               moreLabel={dict.more}
               lessLabel={dict.less}
             />
