@@ -132,11 +132,11 @@
     "title2": "FELICES",
     "title3": "🌊",
     "rating": "⭐ 4.8/5 en Google · +150 reseñas verificadas",
-    "items": [
-      { "text": "Hice el curso de windsurf en agosto y fue INCREÍBLE. Los monitores son super pacientes y profesionales. ¡Volvemos seguro!", "name": "María G.", "from": "Barcelona", "emoji": "🏄" },
-      { "text": "Llevamos a los niños al banana boat y al kayak. Se lo pasaron GENIAL. La organización perfecta y Playa Larga espectacular.", "name": "Jordi P.", "from": "Tarragona", "emoji": "🍌" },
-      { "text": "Fantastic windsurfing school. Professional instructors, great equipment, beautiful location. Can't recommend it enough!", "name": "Sophie M.", "from": "Lyon", "emoji": "⛵" },
-      { "text": "¡La despedida de soltera perfecta! Banana boat, kayak y paseo en lancha. Risas aseguradas. ¡Repetiremos!", "name": "Laura R.", "from": "Madrid", "emoji": "💍" }
+    "items": 
+    { "text": "Hemos sido un grupo escolar de 40 personas. 16 de los cuales son franceses. El trato de gestión anterior a la actividad estupendo, confianza al 100%. La actividad espectacular, muy buen trato, muy buenos profesionales y la actividad muy divertida! La recomiendo al 100%", "name": "Anna López", "emoji": "🏄" },
+      { "text": "hicimos con ellos varias  actividades en familia con los niños  Banana Boat y pádel surf y genial ! muy bien  orgsnizado las explicaciones todo! los chicos majisimos !!! Jose es una pasada !! enhorabuena por vuestro equipo !! repetiremos !!!!", "name": "Olivia Pereda", "emoji": "🍌" },
+      { "text": "Pasamos una mañana fantastica practicando foil con la lancha, los monitores muy profesionales y siempre muy atentos a que todos aprendiaramos al maximo, muy recomendable!", "name": "artoleta", "emoji": "✈️" },
+      { "text": "Excelente equipo, contacté con ellos buscando en Google, envié un mensaje y me contestó Eneko, muy amable, me lo explicó todo genial y nos recomendó dnd aparcar y un trato excelente, al llegar nos encontramos con un equipo estupendo el cuál nos trató súper bien, pasamos un rato súper divertido, recomiendo muchísimo el Big paddle, tal cómo me recomendó Eneko, fue genial,pasamos un rato súper divertido, tuvimos suerte de encontrar en el mar a Eneko el cuál nos grabó un súper vídeo que llevaremos en el recuerdo, una despedida de soltera por todo lo alto gracias a ellos.  Gracias chicos, con ganas de repetir.", "name": "Gloria González", "emoji": "💍" }
     ]
   },
   "contacto": {
