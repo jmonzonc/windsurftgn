@@ -134,25 +134,25 @@ export default async function CursoPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="relative h-[50vh] min-h-[360px] overflow-hidden">
-        <img src={img} alt={course.name} className="w-full h-full object-cover brightness-[0.4]" />
+      <div className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[320px] md:min-h-[360px] overflow-hidden">
+        <img src={img} alt={course.name} width={900} height={600} className="w-full h-full object-cover brightness-[0.4]" />
         <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 to-transparent" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <span className="text-6xl mb-4">{emoji}</span>
-          <h1 className="font-display text-white" style={{ fontSize: "clamp(40px, 8vw, 80px)" }}>{course.name}</h1>
-          <p className="font-body text-white/60 mt-4 max-w-lg text-lg">{course.desc}</p>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
+          <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">{emoji}</span>
+          <h1 className="font-display text-white" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{course.name}</h1>
+          <p className="font-body text-white/60 mt-3 sm:mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-relaxed">{course.desc}</p>
         </div>
       </div>
-      <div className="max-w-[800px] mx-auto px-6 py-16">
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_32px_rgba(0,104,214,0.06)]">
-          <h2 className="font-display text-2xl text-midnight mb-4">{dict.escuela.allLevels}</h2>
-          <p className="font-body text-gray-500 leading-relaxed mb-8">{course.desc}</p>
-          <div className="bg-ice rounded-2xl p-6 mb-8 border border-ocean/10">
-            <p className="font-body text-sm text-gray-400 text-center">{priceLabel}</p>
+      <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-[0_8px_32px_rgba(0,104,214,0.06)]">
+          <h2 className="font-display text-xl sm:text-2xl text-midnight mb-3 sm:mb-4">{dict.escuela.allLevels}</h2>
+          <p className="font-body text-sm sm:text-base text-gray-500 leading-relaxed mb-6 sm:mb-8">{course.desc}</p>
+          <div className="bg-ice rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 border border-ocean/10">
+            <p className="font-body text-[13px] sm:text-sm text-gray-400 text-center">{priceLabel}</p>
           </div>
-          <div className="flex gap-3 flex-wrap">
-            <a href={SITE.phoneHref} className="btn-primary py-3.5 px-8 text-base no-underline">📞 {SITE.phone}</a>
-            <Link href={`/${locale}#escuela`} className="font-body py-3.5 px-6 rounded-full border-2 border-ocean/15 text-ocean font-semibold no-underline transition-all hover:bg-ocean/5">← {backLabel}</Link>
+          <div className="flex gap-2.5 sm:gap-3 flex-wrap">
+            <a href={SITE.phoneHref} className="btn-primary py-3 sm:py-3.5 px-6 sm:px-8 text-sm sm:text-base no-underline">📞 {SITE.phone}</a>
+            <Link href={`/${locale}#escuela`} className="font-body py-3 sm:py-3.5 px-5 sm:px-6 rounded-full border-2 border-ocean/15 text-ocean font-semibold text-[13px] sm:text-base no-underline transition-all hover:bg-ocean/5">← {backLabel}</Link>
           </div>
         </div>
       </div>

@@ -46,18 +46,18 @@ function AnimatedStat({
 
   return (
     <div
-      className="py-14 px-6 text-center md:border-r md:last:border-r-0 border-turq/[0.08] border-b last:border-b-0 md:border-b-0"
+      className="py-8 sm:py-10 md:py-14 px-4 md:px-6 text-center md:border-r md:last:border-r-0 border-turq/[0.08] border-b last:border-b-0 md:border-b-0"
       style={{
         opacity: vis ? 1 : 0,
         transform: vis ? "translateY(0)" : "translateY(35px)",
         transition: `all 0.8s cubic-bezier(0.16,1,0.3,1) ${delay}s`,
       }}
     >
-      <div className="text-[34px] mb-2.5">{icon}</div>
-      <div className="font-display text-white leading-none" style={{ fontSize: "clamp(36px, 5vw, 54px)" }}>
+      <div className="text-[26px] sm:text-[30px] md:text-[34px] mb-1.5 sm:mb-2.5">{icon}</div>
+      <div className="font-display text-white leading-none" style={{ fontSize: "clamp(30px, 5vw, 54px)" }}>
         {prefix}{count}{suffix}
       </div>
-      <div className="font-body text-xs font-semibold text-turq mt-2.5 tracking-[2px] uppercase">{label}</div>
+      <div className="font-body text-[10px] sm:text-xs font-semibold text-turq mt-1.5 sm:mt-2.5 tracking-[1.5px] sm:tracking-[2px] uppercase">{label}</div>
     </div>
   );
 }

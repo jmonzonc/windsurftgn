@@ -27,10 +27,10 @@ export default async function PrivacidadPage({
   const dict = await getDictionary(locale);
 
   return (
-    <div className="min-h-screen bg-ice pt-32 pb-20 px-6">
+    <div className="min-h-screen bg-ice pt-24 sm:pt-32 pb-14 sm:pb-20 px-4 sm:px-6">
       <div className="max-w-[700px] mx-auto">
-        <h1 className="font-display text-3xl text-midnight mb-8">{dict.privacy.title}</h1>
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_20px_rgba(0,104,214,0.04)] font-body text-gray-500 leading-relaxed space-y-6">
+        <h1 className="font-display text-2xl sm:text-3xl text-midnight mb-6 sm:mb-8">{dict.privacy.title}</h1>
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-[0_4px_20px_rgba(0,104,214,0.04)] font-body text-sm sm:text-base text-gray-500 leading-relaxed space-y-4 sm:space-y-6">
           {locale === "en" ? (
             <>
               <p>Windsurf Tarragona, located at Ctra. N-340, Km 1168, Tarragona (Spain), is committed to protecting the privacy of its users in accordance with Regulation (EU) 2016/679 (GDPR) and Organic Law 3/2018 on Personal Data Protection (LOPDGDD).</p>

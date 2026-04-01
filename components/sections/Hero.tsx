@@ -25,7 +25,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
   const tr = (delay: string) => `all 0.9s cubic-bezier(0.16,1,0.3,1) ${delay}`;
 
   return (
-    <section className="relative h-screen min-h-[700px] overflow-hidden bg-abyss">
+    <section className="relative min-h-svh min-h-[600px] overflow-hidden bg-abyss">
       <video
         autoPlay muted loop playsInline
         preload="metadata"
@@ -53,33 +53,33 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       />
       <WaterParticles count={24} />
 
-      <div className="relative z-10 h-full flex flex-col justify-center items-center px-6 text-center">
+      <div className="relative z-10 h-full min-h-svh min-h-[600px] flex flex-col justify-center items-center px-4 sm:px-6 text-center pt-16 pb-20">
         <div
-          className="inline-flex items-center gap-2 bg-turq/[0.07] backdrop-blur-[20px] border border-turq/[0.16] rounded-full px-6 py-2.5"
+          className="inline-flex items-center gap-1.5 sm:gap-2 bg-turq/[0.07] backdrop-blur-[20px] border border-turq/[0.16] rounded-full px-4 sm:px-6 py-2"
           style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(25px)", transition: tr("0.2s") }}
         >
-          <span className="text-base">📍</span>
-          <span className="font-body text-xs font-semibold text-turq tracking-[3px] uppercase">{dict.location}</span>
+          <span className="text-sm sm:text-base">📍</span>
+          <span className="font-body text-[10px] sm:text-xs font-semibold text-turq tracking-[2px] sm:tracking-[3px] uppercase">{dict.location}</span>
         </div>
 
         <div
-          className="font-body font-light text-white/45 tracking-[6px] uppercase mt-7 mb-3"
-          style={{ fontSize: "clamp(13px, 1.8vw, 17px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: tr("0.35s") }}
+          className="font-body font-light text-white/45 tracking-[4px] sm:tracking-[6px] uppercase mt-4 sm:mt-7 mb-2 sm:mb-3"
+          style={{ fontSize: "clamp(11px, 1.8vw, 17px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: tr("0.35s") }}
         >
           {dict.pre}
         </div>
 
         <h1
           className="font-display text-white leading-[0.88] mb-2 max-w-[950px]"
-          style={{ fontSize: "clamp(48px, 10vw, 130px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(50px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.5s` }}
+          style={{ fontSize: "clamp(44px, 10vw, 130px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(50px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.5s` }}
         >
           <span className="block">{dict.title1}</span>
           <span className="inline-block gradient-text-turq animate-hero-shimmer">{dict.title2}</span>
         </h1>
 
         <p
-          className="font-body text-white/60 leading-[1.7] max-w-[520px] mt-4 mb-10"
-          style={{ fontSize: "clamp(15px, 2vw, 19px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(35px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.7s` }}
+          className="font-body text-white/60 leading-[1.6] sm:leading-[1.7] max-w-[520px] mt-3 sm:mt-4 mb-6 sm:mb-10"
+          style={{ fontSize: "clamp(13px, 2vw, 19px)", opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(35px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.7s` }}
         >
           {dict.sub1}<br />
           <strong className="text-white/85">{dict.sub2}</strong><br />
@@ -87,23 +87,23 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         </p>
 
         <div
-          className="flex gap-3.5 flex-wrap justify-center"
+          className="flex gap-2.5 sm:gap-3.5 flex-wrap justify-center"
           style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: `all 1s cubic-bezier(0.16,1,0.3,1) 0.9s` }}
         >
-          <Link href={`/${locale}/actividades/banana-boat`} className="btn-primary py-[15px] px-[34px] text-[15px] no-underline">
+          <Link href={`/${locale}/actividades/banana-boat`} className="btn-primary py-3 sm:py-[15px] px-5 sm:px-[34px] text-[13px] sm:text-[15px] no-underline">
             {dict.cta1}
           </Link>
-          <Link href={`/${locale}#escuela`} className="btn-ghost py-[15px] px-[34px] text-[15px] no-underline">
+          <Link href={`/${locale}#escuela`} className="btn-ghost py-3 sm:py-[15px] px-5 sm:px-[34px] text-[13px] sm:text-[15px] no-underline">
             {dict.cta2}
           </Link>
-          <Link href={`/${locale}#actividades`} className="btn-ghost py-[15px] px-[34px] text-[15px] no-underline">
+          <Link href={`/${locale}#actividades`} className="btn-ghost py-3 sm:py-[15px] px-5 sm:px-[34px] text-[13px] sm:text-[15px] no-underline">
             {dict.cta3}
           </Link>
         </div>
 
         <div
-          className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-2.5"
-          style={{ bottom: "clamp(80px, 12vh, 130px)", opacity: loaded ? 0.5 : 0, transition: "opacity 2s ease 2s" }}
+          className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidden sm:flex"
+          style={{ bottom: "clamp(60px, 10vh, 130px)", opacity: loaded ? 0.5 : 0, transition: "opacity 2s ease 2s" }}
         >
           <span className="font-body text-[11px] text-white tracking-[3px] uppercase">{dict.scroll}</span>
           <div className="w-px h-11 relative overflow-hidden">
@@ -113,7 +113,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       </div>
 
       <div className="absolute -bottom-0.5 left-0 right-0 z-20">
-        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className="w-full block" style={{ height: "clamp(40px, 7vw, 90px)" }}>
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className="w-full block" style={{ height: "clamp(30px, 5vw, 80px)" }}>
           <path fill="#F4FAFF" opacity="0.4">
             <animate attributeName="d" dur="6s" repeatCount="indefinite"
               values="M0,45 Q360,90 720,45 T1440,45 L1440,90 L0,90Z;M0,55 Q360,15 720,55 T1440,35 L1440,90 L0,90Z;M0,35 Q360,75 720,35 T1440,55 L1440,90 L0,90Z;M0,45 Q360,90 720,45 T1440,45 L1440,90 L0,90Z" />

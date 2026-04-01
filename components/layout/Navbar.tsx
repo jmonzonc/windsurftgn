@@ -44,8 +44,8 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
   const links = [
     { label: dict.escuela, href: `/${locale}#escuela` },
     { label: dict.actividades, href: `/${locale}#actividades` },
-    { label: dict.grupos, href: `/${locale}/#grupos` },
-    { label: dict.contacto, href: `/${locale}/#contacto` },
+    { label: dict.grupos, href: `/${locale}/grupos` },
+    { label: dict.contacto, href: `/${locale}/contacto` },
   ];
 
   function localeSwitchPath(target: Locale) {
@@ -54,20 +54,20 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
   }
 
   const navBg = scrolled
-    ? "py-2 px-5 bg-abyss/[0.92] backdrop-blur-2xl saturate-[1.4] border-b border-turq/[0.08]"
+    ? "py-2 px-4 sm:px-5 bg-abyss/[0.92] backdrop-blur-2xl saturate-[1.4] border-b border-turq/[0.08]"
     : isLightPage
-      ? "py-4 px-5 bg-abyss/[0.88] backdrop-blur-xl border-b border-turq/[0.06]"
-      : "py-4 px-5 bg-transparent";
+      ? "py-3 sm:py-4 px-4 sm:px-5 bg-abyss/[0.88] backdrop-blur-xl border-b border-turq/[0.06]"
+      : "py-3 sm:py-4 px-4 sm:px-5 bg-transparent";
 
   return (
     <>
       <nav className={cn("fixed top-0 inset-x-0 z-[1000] transition-all duration-500", navBg)}>
         <div className="max-w-[1200px] mx-auto flex justify-between items-center">
-          <Link href={`/${locale}`} className="flex items-center gap-2.5 z-10 no-underline">
-            <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-turq to-ocean flex items-center justify-center text-[22px] shadow-[0_4px_16px_rgba(0,212,170,0.2)]">🌊</div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-display text-[15px] text-white tracking-wider">WINDSURF</span>
-              <span className="font-display text-[15px] text-turq tracking-wider">TARRAGONA</span>
+          <Link href={`/${locale}`} className="flex items-center gap-2 sm:gap-2.5 z-10 no-underline">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[12px] sm:rounded-[14px] bg-gradient-to-br from-turq to-ocean flex items-center justify-center text-[20px] sm:text-[22px] shadow-[0_4px_16px_rgba(0,212,170,0.2)]">🌊</div>
+            <div className="flex items-baseline gap-1 sm:gap-1.5">
+              <span className="font-display text-[13px] sm:text-[15px] text-white tracking-wider">WINDSURF</span>
+              <span className="font-display text-[13px] sm:text-[15px] text-turq tracking-wider">TARRAGONA</span>
             </div>
           </Link>
 
@@ -109,7 +109,7 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
 
       {/* Mobile menu */}
       <div className={cn(
-        "fixed inset-0 z-[999] bg-abyss/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-6 transition-all duration-500 ease-expo md:hidden",
+        "fixed inset-0 z-[999] bg-abyss/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-5 transition-all duration-500 ease-expo md:hidden",
         open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       )}>
         {links.map((l, i) => (
@@ -117,20 +117,20 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             key={l.label}
             href={l.href}
             onClick={() => setOpen(false)}
-            className="font-display text-3xl text-white no-underline hover:text-turq transition-colors duration-300"
+            className="font-display text-2xl sm:text-3xl text-white no-underline hover:text-turq transition-colors duration-300"
             style={{ opacity: open ? 1 : 0, transform: open ? "translateY(0)" : "translateY(20px)", transition: `all 0.5s cubic-bezier(0.16,1,0.3,1) ${i * 60}ms` }}
           >
             {l.label}
           </Link>
         ))}
-        <div className="flex gap-3 mt-4">
+        <div className="flex gap-2.5 mt-3">
           {locales.map((loc) => (
             <Link
               key={loc}
               href={localeSwitchPath(loc)}
               onClick={() => setOpen(false)}
               className={cn(
-                "font-body text-base font-bold px-4 py-2 rounded-full no-underline uppercase transition-all",
+                "font-body text-sm font-bold px-3.5 py-1.5 rounded-full no-underline uppercase transition-all",
                 loc === locale ? "bg-turq/20 text-turq border border-turq/30" : "text-white/40 border border-white/10 hover:text-white/70"
               )}
             >
@@ -138,10 +138,10 @@ export default function Navbar({ dict, locale }: { dict: NavDict; locale: Locale
             </Link>
           ))}
         </div>
-        <a href={SITE.phoneHref} className="btn-primary px-8 py-4 text-lg no-underline mt-4">
+        <a href={SITE.phoneHref} className="btn-primary px-7 py-3.5 text-base no-underline mt-3">
           📞 {SITE.phone}
         </a>
-        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="btn-wa px-8 py-4 text-lg no-underline">
+        <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="btn-wa px-7 py-3.5 text-base no-underline">
           💬 WhatsApp
         </a>
       </div>

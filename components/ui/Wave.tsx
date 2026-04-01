@@ -9,8 +9,8 @@ export default function Wave({
     <div
       className="relative z-[3] pointer-events-none leading-[0]"
       style={{
-        marginTop: flip ? 0 : -1,
-        marginBottom: flip ? -1 : 0,
+        marginTop: flip ? 0 : -2,
+        marginBottom: flip ? -2 : 0,
         transform: flip ? "scaleY(-1)" : "none",
       }}
     >
@@ -18,7 +18,7 @@ export default function Wave({
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
         className="w-full block"
-        style={{ height: "clamp(36px, 6vw, 80px)" }}
+        style={{ height: "clamp(24px, 4vw, 60px)" }}
       >
         <path fill={color} opacity="0.5">
           <animate
