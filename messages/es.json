@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Windsurf Tarragona \u00b7 Escuela N\u00e1utica & Actividades Acu\u00e1ticas en Playa Larga",
-    "description": "Escuela n\u00e1utica y centro de actividades acu\u00e1ticas en Playa Larga, Tarragona. Cursos de windsurf, vela, surf, catamar\u00e1n, pat\u00edn catal\u00e1n. Banana boat, kayak, paseos en barco. +20 a\u00f1os en la Costa Dorada.",
-    "ogTitle": "Windsurf Tarragona \u00b7 Vive el Agua"
+    "title": "Windsurf Tarragona · Escuela Náutica & Actividades Acuáticas en Playa Larga",
+    "description": "Escuela náutica y centro de actividades acuáticas en Playa Larga, Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarán, patín catalán, esquí náutico y wake. Banana boat, kayak, paseos en barco. +20 años en la Costa Dorada.",
+    "ogTitle": "Windsurf Tarragona · Vive el Agua"
   },
   "nav": {
     "escuela": "Escuela",
@@ -11,162 +11,198 @@
     "contacto": "Contacto"
   },
   "hero": {
-    "location": "Playa Larga \u00b7 Tarragona \u00b7 Costa Dorada",
-    "pre": "Escuela N\u00e1utica & Centro de Actividades Acu\u00e1ticas",
+    "location": "Playa Larga · Tarragona · Costa Dorada",
+    "pre": "Escuela Náutica & Centro de Actividades Acuáticas",
     "title1": "VIVE EL",
     "title2": "AGUA",
-    "sub1": "Windsurf \u00b7 Vela \u00b7 Surf \u00b7 Catamar\u00e1n \u00b7 Pat\u00edn Catal\u00e1n",
-    "sub2": "Banana Boat \u00b7 Kayak \u00b7 Paseos en barco",
-    "sub3": "+20 a\u00f1os en la Costa Dorada",
-    "cta1": "\ud83c\udf4c Banana Boat",
-    "cta2": "\ud83c\udfc4 Cursos",
-    "cta3": "\ud83d\udef6 Actividades",
+    "sub1": "Windsurf · Wing-Foil · Paddle Surf · Vela · Catamarán · Patín Catalán",
+    "sub2": "Banana Boat · Kayak · Esquí Náutico · Paseos en barco",
+    "sub3": "+20 años en la Costa Dorada",
+    "cta1": "🍌 Banana Boat",
+    "cta2": "🏄 Cursos",
+    "cta3": "🛶 Actividades",
     "scroll": "Descubre"
   },
   "banana": {
-    "pill": "\ud83c\udf4c La experiencia m\u00e1s divertida del Mediterr\u00e1neo",
-    "title1": "\ud83c\udf4c BANANA",
+    "pill": "🍌 La experiencia más divertida del Mediterráneo",
+    "title1": "🍌 BANANA",
     "title2": "BOAT",
-    "desc": "La experiencia m\u00e1s divertida del Mediterr\u00e1neo. Ag\u00e1rrate fuerte, r\u00ede sin parar y crea recuerdos que duran toda la vida.",
+    "desc": "La experiencia más divertida del Mediterráneo. Agárrate fuerte, ríe sin parar y crea recuerdos que duran toda la vida.",
     "allAges": "Todas las edades.",
-    "cta": "\u00a1Lo quiero! \ud83c\udf89",
-    "price": "Ver m\u00e1s info"
+    "cta": "¡Lo quiero! 🎉",
+    "price": "18€/pers · 12 min"
   },
   "stats": {
     "years": "+20",
-    "yearsLabel": "A\u00f1os de pasi\u00f3n",
+    "yearsLabel": "Años de pasión",
     "people": "10K+",
     "peopleLabel": "Personas felices",
-    "activities": "12",
+    "activities": "15",
     "activitiesLabel": "Actividades",
     "days": "365",
-    "daysLabel": "D\u00edas al a\u00f1o"
+    "daysLabel": "Días al año"
   },
   "escuela": {
-    "pill": "\ud83c\udf93 Escuela N\u00e1utica \u00b7 Monitores FVE/RFEV",
+    "pill": "🎓 Escuela Náutica · Monitores FVE/RFEV",
     "title1": "APRENDE A",
     "title2": "NAVEGAR",
     "allLevels": "Todos los niveles",
-    "book": "Reservar clase \u2192",
-    "moreInfo": "M\u00e1s info",
+    "book": "Reservar clase →",
+    "moreInfo": "Más info",
     "courses": {
       "windsurf": {
         "name": "Windsurf",
-        "desc": "El cl\u00e1sico. T\u00fa, una tabla y el viento. Domina el equilibrio y navega con total libertad.",
-        "seoDesc": "Curso de windsurf en Playa Larga, Tarragona. Monitores titulados FVE/RFEV, todos los niveles. Aprende a navegar en la Costa Dorada con +20 a\u00f1os de experiencia."
+        "desc": "El clásico. Tú, una tabla y el viento. Domina el equilibrio y navega con total libertad.",
+        "price": "25€/h",
+        "seoDesc": "Curso de windsurf en Playa Larga, Tarragona. Monitores titulados FVE/RFEV, todos los niveles. Aprende a navegar en la Costa Dorada con +20 años de experiencia."
+      },
+      "wing-foil": {
+        "name": "Wing-Foil",
+        "desc": "¡Nuevo! Vuela sobre el agua con un wing y un foil. Curso en 3 fases: wing + tabla grande, foil + lancha, wing + foil. La sensación más nueva del mar.",
+        "price": "Consultar",
+        "seoDesc": "Curso de wing-foil en Playa Larga, Tarragona. Aprende wing-foil en 3 fases progresivas con monitores titulados. Escuela náutica con +20 años en la Costa Dorada."
+      },
+      "paddle-surf": {
+        "name": "Paddle Surf / Surf",
+        "desc": "Descubre el paddle surf, el deporte de moda. También clases de surf y body-surf. Para todos los niveles en Playa Larga.",
+        "price": "Consultar",
+        "seoDesc": "Clases de paddle surf y surf en Playa Larga, Tarragona. Cursos de SUP, surf y body-surf para todos los niveles con material incluido. +20 años en la Costa Dorada."
+      },
+      "esqui-wake": {
+        "name": "Esquí / Wake",
+        "desc": "Esquí náutico y wakeboard arrastrado por nuestra lancha. Adrenalina pura sobre el agua, para principiantes y avanzados.",
+        "price": "75€/estirada 10 min · Micro-curso 150€",
+        "seoDesc": "Esquí náutico y wakeboard en Playa Larga, Tarragona. Estiradas de 10 min y micro-cursos con lancha profesional. Todos los niveles en la Costa Dorada."
       },
       "vela": {
-        "name": "Navegaci\u00f3n / Vela",
-        "desc": "Aprende las t\u00e9cnicas de navegaci\u00f3n a vela. Estrategia, viento y el mar como maestro.",
-        "seoDesc": "Curso de vela en Tarragona. Aprende navegaci\u00f3n a vela en Playa Larga con instructores titulados. Clases para principiantes y avanzados en la Costa Dorada."
-      },
-      "surf": {
-        "name": "Surf",
-        "desc": "Cabalga las olas del Mediterr\u00e1neo. Clases para todos los niveles en Playa Larga.",
-        "seoDesc": "Clases de surf en Playa Larga, Tarragona. Cursos para todos los niveles con material incluido. Escuela n\u00e1utica con +20 a\u00f1os en la Costa Dorada."
-      },
-      "wakesurf": {
-        "name": "Wakesurf",
-        "desc": "Surfea la ola que genera nuestra lancha. Sin cuerda. La sensaci\u00f3n m\u00e1s adictiva del agua.",
-        "seoDesc": "Wakesurf en Tarragona. Surfea sin cuerda la ola de nuestra lancha en Playa Larga. Experiencia \u00fanica en la Costa Dorada para todos los niveles."
+        "name": "Navegación / Vela",
+        "desc": "Aprende las técnicas de navegación a vela. Estrategia, viento y el mar como maestro.",
+        "price": "Consultar",
+        "seoDesc": "Curso de vela en Tarragona. Aprende navegación a vela en Playa Larga con instructores titulados. Clases para principiantes y avanzados en la Costa Dorada."
       },
       "catamaran": {
-        "name": "Catamar\u00e1n",
-        "desc": "Navega en un catamar\u00e1n de vela ligera. Velocidad, trabajo en equipo y adrenalina.",
-        "seoDesc": "Curso de catamar\u00e1n en Playa Larga, Tarragona. Navega en vela ligera con monitores titulados. Clases individuales y en grupo en la Costa Dorada."
+        "name": "Catamarán",
+        "desc": "Navega en un catamarán de vela ligera. Velocidad, trabajo en equipo y adrenalina.",
+        "price": "Consultar",
+        "seoDesc": "Curso de catamarán en Playa Larga, Tarragona. Navega en vela ligera con monitores titulados. Clases individuales y en grupo en la Costa Dorada."
       },
       "patin-catalan": {
-        "name": "Pat\u00edn Catal\u00e1n",
-        "desc": "La embarcaci\u00f3n tradicional de nuestra costa. \u00danica en el mundo, identidad mediterr\u00e1nea pura.",
-        "seoDesc": "Curso de pat\u00edn catal\u00e1n en Tarragona. Aprende a navegar la embarcaci\u00f3n tradicional de la Costa Dorada en Playa Larga. Experiencia \u00fanica y aut\u00e9ntica."
+        "name": "Patín Catalán",
+        "desc": "La embarcación tradicional de nuestra costa. Única en el mundo, identidad mediterránea pura.",
+        "price": "Consultar",
+        "seoDesc": "Curso de patín catalán en Tarragona. Aprende a navegar la embarcación tradicional de la Costa Dorada en Playa Larga. Experiencia única y auténtica."
       }
     }
   },
   "actividades": {
-    "pill": "\ud83c\udf89 Alquiler & diversi\u00f3n \u00b7 Todas las edades",
-    "title1": "P\u00c1SALO",
-    "title2": "INCRE\u00cdBLE",
+    "pill": "🎉 Alquiler & diversión · Todas las edades",
+    "title1": "PÁSALO",
+    "title2": "INCREÍBLE",
     "discover": "Descubrir",
-    "star": "\u2b50 N\u00ba1",
+    "star": "⭐ Nº1",
     "items": {
       "banana-boat": {
         "name": "Banana Boat",
-        "seoDesc": "Banana boat en Playa Larga, Tarragona. La actividad acu\u00e1tica m\u00e1s divertida de la Costa Dorada. Todas las edades, reserva por WhatsApp o tel\u00e9fono."
+        "price": "18€/pers · 12 min",
+        "capacity": "Hasta 10 personas",
+        "seoDesc": "Banana boat en Playa Larga, Tarragona. 18€/persona, 12 minutos de diversión. Hasta 10 personas. La actividad acuática más divertida de la Costa Dorada."
       },
       "kayak": {
         "name": "Kayak",
-        "seoDesc": "Alquiler de kayak en Playa Larga, Tarragona. Explora la costa de Tarragona en kayak. Sin experiencia previa, todas las edades."
+        "price": "25€/h · Medio día 70€ · 1 día 100€",
+        "capacity": "Hasta 4 plazas",
+        "seoDesc": "Alquiler de kayak en Playa Larga, Tarragona. Desde 25€/h, hasta 4 plazas. Explora la costa de Tarragona en kayak. Sin experiencia previa, todas las edades."
       },
       "alquiler-windsurf": {
         "name": "Alquiler Windsurf",
-        "seoDesc": "Alquiler de material de windsurf en Playa Larga, Tarragona. Tablas y velas para todos los niveles en la Costa Dorada."
+        "price": "25€/h",
+        "capacity": "",
+        "seoDesc": "Alquiler de material de windsurf en Playa Larga, Tarragona. 25€/hora. Tablas y velas para todos los niveles en la Costa Dorada."
       },
       "alquiler-surf": {
-        "name": "Alquiler Surf",
-        "seoDesc": "Alquiler de tablas de surf en Playa Larga, Tarragona. Material de calidad por horas en la Costa Dorada."
+        "name": "Alquiler Paddle Surf / Surf",
+        "price": "22€/h · Medio día 70€ · 1 día 100€",
+        "capacity": "",
+        "seoDesc": "Alquiler de paddle surf y tablas de surf en Playa Larga, Tarragona. Desde 22€/hora. Material de calidad para SUP, surf y body-surf en la Costa Dorada."
       },
       "paseos-barco": {
         "name": "Paseos en Barco",
-        "seoDesc": "Paseos en barco en Tarragona. Excursiones en lancha por la costa de Playa Larga y la Costa Dorada. Grupos, familias y despedidas."
+        "price": "185€/h",
+        "capacity": "Hasta 6 personas · Con patrón",
+        "seoDesc": "Paseos en barco en Tarragona. 185€/hora, hasta 6 personas con patrón. Excursiones en lancha por Playa Larga y la Costa Dorada. Grupos, familias y despedidas."
       },
       "donut": {
         "name": "Donut",
-        "seoDesc": "Donut acu\u00e1tico en Playa Larga, Tarragona. Diversi\u00f3n y adrenalina arrastrado por lancha en la Costa Dorada. Todas las edades."
+        "price": "Consultar",
+        "capacity": "",
+        "seoDesc": "Donut acuático en Playa Larga, Tarragona. Diversión y adrenalina arrastrado por lancha en la Costa Dorada. Todas las edades."
+      },
+      "big-paddle-surf": {
+        "name": "Big Paddle Surf",
+        "price": "100€/h",
+        "capacity": "Hasta 12 personas",
+        "seoDesc": "Big Paddle Surf en Playa Larga, Tarragona. 100€/hora para hasta 12 personas. Actividad grupal perfecta para amigos, empresas y despedidas en la Costa Dorada."
+      },
+      "aquamarina": {
+        "name": "Aquamarina",
+        "price": "75€/h",
+        "capacity": "5 personas",
+        "seoDesc": "Aquamarina en Playa Larga, Tarragona. 75€/hora para 5 personas. Diversión acuática para grupos en la Costa Dorada. Todas las edades."
       }
     }
   },
   "grupos": {
-    "title1": "\u00bfVEN\u00cdS EN",
+    "title1": "¿VENÍS EN",
     "title2": "GRUPO",
-    "title3": "? \ud83c\udf8a",
-    "cta": "Pide presupuesto \ud83e\udd19",
+    "title3": "? 🎊",
+    "cta": "Pide presupuesto 🤙",
     "items": {
-      "colegios": { "title": "Colegios", "desc": "Salidas de fin de curso pedag\u00f3gicas y divertidas" },
-      "team-building": { "title": "Team Building", "desc": "Refuerza tu equipo con el desaf\u00edo del mar" },
-      "amigos": { "title": "Amigos", "desc": "Aventura n\u00e1utica a medida para el grupo" },
-      "despedidas": { "title": "Despedidas", "desc": "La despedida m\u00e1s diferente y memorable" }
+      "colegios": { "title": "Colegios", "desc": "Salidas de fin de curso pedagógicas y divertidas" },
+      "team-building": { "title": "Team Building", "desc": "Refuerza tu equipo con el desafío del mar" },
+      "amigos": { "title": "Amigos", "desc": "Aventura náutica a medida para el grupo" },
+      "despedidas": { "title": "Despedidas", "desc": "La despedida más diferente y memorable" }
     }
   },
   "reviews": {
     "title1": "+10.000 PERSONAS",
     "title2": "FELICES",
-    "title3": "\ud83c\udf0a",
-    "rating": "\u2b50 4.8/5 en Google \u00b7 +150 rese\u00f1as verificadas",
-    "more": "Leer m\u00e1s",
+    "title3": "🌊",
+    "rating": "⭐ 4.8/5 en Google · +150 reseñas verificadas",
+    "more": "Leer más",
     "less": "Menos",
     "items": [
-      { "text": "Hemos sido un grupo escolar de 40 personas. 16 de los cuales son franceses. El trato de gesti\u00f3n anterior a la actividad estupendo, confianza al 100%. La actividad espectacular, muy buen trato, muy buenos profesionales y la actividad muy divertida! La recomiendo al 100%", "name": "Anna L\u00f3pez", "from": "Barcelona", "emoji": "\ud83c\udfc4" },
-      { "text": "Hicimos con ellos varias actividades en familia con los ni\u00f1os: Banana Boat y p\u00e1del surf y genial! Muy bien organizado, las explicaciones, todo! Los chicos maj\u00edsimos!!! Jose es una pasada!! Enhorabuena por vuestro equipo!! Repetiremos!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "\ud83c\udf4c" },
-      { "text": "Pasamos una ma\u00f1ana fant\u00e1stica practicando foil con la lancha, los monitores muy profesionales y siempre muy atentos a que todos aprendieramos al m\u00e1ximo, muy recomendable!", "name": "artoleta", "from": "Tarragona", "emoji": "\u2708\ufe0f" },
-      { "text": "Excelente equipo, contact\u00e9 con ellos buscando en Google, envi\u00e9 un mensaje y me contest\u00f3 Eneko, muy amable, me lo explic\u00f3 todo genial y nos recomend\u00f3 d\u00f3nde aparcar y un trato excelente. Al llegar nos encontramos con un equipo estupendo el cual nos trat\u00f3 s\u00faper bien. Pasamos un rato s\u00faper divertido, recomiendo much\u00edsimo el Big Paddle, tal como me recomend\u00f3 Eneko, fue genial. Tuvimos suerte de encontrar en el mar a Eneko el cual nos grab\u00f3 un s\u00faper v\u00eddeo que llevaremos en el recuerdo. Una despedida de soltera por todo lo alto gracias a ellos. Gracias chicos, con ganas de repetir.", "name": "Gloria Gonz\u00e1lez", "from": "Madrid", "emoji": "\ud83d\udc8d" }
+      { "text": "Hemos sido un grupo escolar de 40 personas. 16 de los cuales son franceses. El trato de gestión anterior a la actividad estupendo, confianza al 100%. La actividad espectacular, muy buen trato, muy buenos profesionales y la actividad muy divertida! La recomiendo al 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
+      { "text": "Hicimos con ellos varias actividades en familia con los niños: Banana Boat y pádel surf y genial! Muy bien organizado, las explicaciones, todo! Los chicos majísimos!!! Jose es una pasada!! Enhorabuena por vuestro equipo!! Repetiremos!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
+      { "text": "Pasamos una mañana fantástica practicando foil con la lancha, los monitores muy profesionales y siempre muy atentos a que todos aprendieramos al máximo, muy recomendable!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
+      { "text": "Excelente equipo, contacté con ellos buscando en Google, envié un mensaje y me contestó Eneko, muy amable, me lo explicó todo genial y nos recomendó dónde aparcar y un trato excelente. Al llegar nos encontramos con un equipo estupendo el cual nos trató súper bien. Pasamos un rato súper divertido, recomiendo muchísimo el Big Paddle, tal como me recomendó Eneko, fue genial. Tuvimos suerte de encontrar en el mar a Eneko el cual nos grabó un súper vídeo que llevaremos en el recuerdo. Una despedida de soltera por todo lo alto gracias a ellos. Gracias chicos, con ganas de repetir.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
     ]
   },
   "contacto": {
-    "title1": "\u00bfNOS",
+    "title1": "¿NOS",
     "title2": "VEMOS",
-    "title3": "? \ud83c\udf0a",
+    "title3": "? 🌊",
     "subtitle": "Ven a Playa Larga. Te estamos esperando.",
-    "phone": { "title": "Ll\u00e1manos", "text": "977 23 27 15", "sub": "De 9h a 20h" },
+    "phone": { "title": "Llámanos", "text": "977 23 27 15", "sub": "L-V 10h-14h · Finde 11h-14h / 16h-19h" },
     "location": { "title": "Ven a vernos", "text": "Camping Las Palmeras", "sub": "Playa Larga, Tarragona" },
-    "social": { "title": "S\u00edguenos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
-    "whatsapp": { "title": "WhatsApp", "text": "Escr\u00edbenos", "sub": "Respuesta r\u00e1pida" },
-    "mapLabel": "\ud83d\udccd Windsurf Tarragona",
-    "mapAddress": "Ctra. N-340, Km 1168 \u00b7 Camping Las Palmeras",
-    "mapCta": "C\u00f3mo llegar \u2192"
+    "social": { "title": "Síguenos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
+    "whatsapp": { "title": "WhatsApp", "text": "609 874 869", "sub": "Respuesta rápida" },
+    "mapLabel": "📍 Windsurf Tarragona",
+    "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapCta": "Cómo llegar →"
   },
   "footer": {
-    "tagline": "Playa Larga, Tarragona \u00b7 Costa Dorada \u00b7 Desde 2004",
-    "copy": "\u00a9 2026 Windsurf Tarragona \u00b7 Hecho con agua, sol y pasi\u00f3n por el mar \ud83c\udf0a\u2600\ufe0f",
+    "tagline": "Playa Larga, Tarragona · Costa Dorada · Desde 2004",
+    "copy": "© 2026 Windsurf Tarragona · Hecho con agua, sol y pasión por el mar 🌊☀️",
     "privacy": "Privacidad",
     "legal": "Aviso Legal"
   },
   "privacy": {
-    "title": "Pol\u00edtica de Privacidad",
-    "content": "Contenido de pol\u00edtica de privacidad pendiente de redacci\u00f3n legal."
+    "title": "Política de Privacidad",
+    "content": "Contenido de política de privacidad pendiente de redacción legal."
   },
   "gruposPage": {
     "title": "Grupos",
-    "subtitle": "Actividades n\u00e1uticas para grupos de todas las edades",
+    "subtitle": "Actividades náuticas para grupos de todas las edades",
     "cta": "Solicitar presupuesto"
   },
   "contactoPage": {
@@ -174,7 +210,7 @@
     "subtitle": "Estamos en Playa Larga, Tarragona",
     "formName": "Nombre",
     "formEmail": "Email",
-    "formPhone": "Tel\u00e9fono",
+    "formPhone": "Teléfono",
     "formMessage": "Mensaje",
     "formSend": "Enviar mensaje",
     "formSuccess": "Mensaje enviado correctamente"

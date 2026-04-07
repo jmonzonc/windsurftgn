@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Windsurf Tarragona \u00b7 Escola N\u00e0utica & Activitats Aqu\u00e0tiques a Platja Llarga",
-    "description": "Escola n\u00e0utica i centre d'activitats aqu\u00e0tiques a Platja Llarga, Tarragona. Cursos de windsurf, vela, surf, catamar\u00e0, pat\u00ed catal\u00e0. Banana boat, caiac, passejades en vaixell. +20 anys a la Costa Daurada.",
-    "ogTitle": "Windsurf Tarragona \u00b7 Viu l'Aigua"
+    "title": "Windsurf Tarragona · Escola Nàutica & Activitats Aquàtiques a Platja Llarga",
+    "description": "Escola nàutica i centre d'activitats aquàtiques a Platja Llarga, Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarà, patí català, esquí nàutic i wake. Banana boat, caiac, passejades en vaixell. +20 anys a la Costa Daurada.",
+    "ogTitle": "Windsurf Tarragona · Viu l'Aigua"
   },
   "nav": {
     "escuela": "Escola",
@@ -11,170 +11,206 @@
     "contacto": "Contacte"
   },
   "hero": {
-    "location": "Platja Llarga \u00b7 Tarragona \u00b7 Costa Daurada",
-    "pre": "Escola N\u00e0utica & Centre d'Activitats Aqu\u00e0tiques",
+    "location": "Platja Llarga · Tarragona · Costa Daurada",
+    "pre": "Escola Nàutica & Centre d'Activitats Aquàtiques",
     "title1": "VIU",
     "title2": "L'AIGUA",
-    "sub1": "Windsurf \u00b7 Vela \u00b7 Surf \u00b7 Catamar\u00e0 \u00b7 Pat\u00ed Catal\u00e0",
-    "sub2": "Banana Boat \u00b7 Caiac \u00b7 Passejades en vaixell",
+    "sub1": "Windsurf · Wing-Foil · Paddle Surf · Vela · Catamarà · Patí Català",
+    "sub2": "Banana Boat · Caiac · Esquí Nàutic · Passejades en vaixell",
     "sub3": "+20 anys a la Costa Daurada",
-    "cta1": "\ud83c\udf4c Banana Boat",
-    "cta2": "\ud83c\udfc4 Cursos",
-    "cta3": "\ud83d\udef6 Activitats",
+    "cta1": "🍌 Banana Boat",
+    "cta2": "🏄 Cursos",
+    "cta3": "🛶 Activitats",
     "scroll": "Descobreix"
   },
   "banana": {
-    "pill": "\ud83c\udf4c L'experi\u00e8ncia m\u00e9s divertida del Mediterrani",
-    "title1": "\ud83c\udf4c BANANA",
+    "pill": "🍌 L'experiència més divertida del Mediterrani",
+    "title1": "🍌 BANANA",
     "title2": "BOAT",
-    "desc": "L'experi\u00e8ncia m\u00e9s divertida del Mediterrani. Agafa't fort, riu sense parar i crea records que duren tota la vida.",
+    "desc": "L'experiència més divertida del Mediterrani. Agafa't fort, riu sense parar i crea records que duren tota la vida.",
     "allAges": "Totes les edats.",
-    "cta": "El vull! \ud83c\udf89",
-    "price": "M\u00e9s info"
+    "cta": "El vull! 🎉",
+    "price": "18€/pers · 12 min"
   },
   "stats": {
     "years": "+20",
-    "yearsLabel": "Anys de passi\u00f3",
+    "yearsLabel": "Anys de passió",
     "people": "10K+",
     "peopleLabel": "Persones felices",
-    "activities": "12",
+    "activities": "15",
     "activitiesLabel": "Activitats",
     "days": "365",
     "daysLabel": "Dies a l'any"
   },
   "escuela": {
-    "pill": "\ud83c\udf93 Escola N\u00e0utica \u00b7 Monitors FVE/RFEV",
-    "title1": "APR\u00c8N A",
+    "pill": "🎓 Escola Nàutica · Monitors FVE/RFEV",
+    "title1": "APRÈN A",
     "title2": "NAVEGAR",
     "allLevels": "Tots els nivells",
-    "book": "Reservar classe \u2192",
-    "moreInfo": "M\u00e9s info",
+    "book": "Reservar classe →",
+    "moreInfo": "Més info",
     "courses": {
       "windsurf": {
         "name": "Windsurf",
-        "desc": "El cl\u00e0ssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat.",
-        "seoDesc": "Curs de windsurf a Platja Llarga, Tarragona. Monitors titulats FVE/RFEV, tots els nivells. Apr\u00e8n a navegar a la Costa Daurada amb +20 anys d'experi\u00e8ncia."
+        "desc": "El clàssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat.",
+        "price": "25€/h",
+        "seoDesc": "Curs de windsurf a Platja Llarga, Tarragona. Monitors titulats FVE/RFEV, tots els nivells. Aprèn a navegar a la Costa Daurada amb +20 anys d'experiència."
+      },
+      "wing-foil": {
+        "name": "Wing-Foil",
+        "desc": "Nou! Vola sobre l'aigua amb un wing i un foil. Curs en 3 fases: wing + taula gran, foil + llanxa, wing + foil. La sensació més nova del mar.",
+        "price": "Consultar",
+        "seoDesc": "Curs de wing-foil a Platja Llarga, Tarragona. Aprèn wing-foil en 3 fases progressives amb monitors titulats. Escola nàutica amb +20 anys a la Costa Daurada."
+      },
+      "paddle-surf": {
+        "name": "Paddle Surf / Surf",
+        "desc": "Descobreix el paddle surf, l'esport de moda. També classes de surf i body-surf. Per a tots els nivells a Platja Llarga.",
+        "price": "Consultar",
+        "seoDesc": "Classes de paddle surf i surf a Platja Llarga, Tarragona. Cursos de SUP, surf i body-surf per a tots els nivells amb material inclòs. +20 anys a la Costa Daurada."
+      },
+      "esqui-wake": {
+        "name": "Esquí / Wake",
+        "desc": "Esquí nàutic i wakeboard arrossegat per la nostra llanxa. Adrenalina pura sobre l'aigua, per a principiants i avançats.",
+        "price": "75€/estirada 10 min · Micro-curs 150€",
+        "seoDesc": "Esquí nàutic i wakeboard a Platja Llarga, Tarragona. Estirades de 10 min i micro-cursos amb llanxa professional. Tots els nivells a la Costa Daurada."
       },
       "vela": {
-        "name": "Navegaci\u00f3 / Vela",
-        "desc": "Apr\u00e8n les t\u00e8cniques de navegaci\u00f3 a vela. Estrat\u00e8gia, vent i el mar com a mestre.",
-        "seoDesc": "Curs de vela a Tarragona. Apr\u00e8n navegaci\u00f3 a vela a Platja Llarga amb instructors titulats. Classes per a principiants i avan\u00e7ats a la Costa Daurada."
-      },
-      "surf": {
-        "name": "Surf",
-        "desc": "Cavalca les ones del Mediterrani. Classes per a tots els nivells a Platja Llarga.",
-        "seoDesc": "Classes de surf a Platja Llarga, Tarragona. Cursos per a tots els nivells amb material incl\u00f2s. Escola n\u00e0utica amb +20 anys a la Costa Daurada."
-      },
-      "wakesurf": {
-        "name": "Wakesurf",
-        "desc": "Surfeja l'ona que genera la nostra llanxa. Sense corda. La sensaci\u00f3 m\u00e9s addictiva de l'aigua.",
-        "seoDesc": "Wakesurf a Tarragona. Surfeja sense corda l'ona de la nostra llanxa a Platja Llarga. Experi\u00e8ncia \u00fanica a la Costa Daurada per a tots els nivells."
+        "name": "Navegació / Vela",
+        "desc": "Aprèn les tècniques de navegació a vela. Estratègia, vent i el mar com a mestre.",
+        "price": "Consultar",
+        "seoDesc": "Curs de vela a Tarragona. Aprèn navegació a vela a Platja Llarga amb instructors titulats. Classes per a principiants i avançats a la Costa Daurada."
       },
       "catamaran": {
-        "name": "Catamar\u00e0",
-        "desc": "Navega en un catamar\u00e0 de vela lleugera. Velocitat, treball en equip i adrenalina.",
-        "seoDesc": "Curs de catamar\u00e0 a Platja Llarga, Tarragona. Navega en vela lleugera amb monitors titulats. Classes individuals i en grup a la Costa Daurada."
+        "name": "Catamarà",
+        "desc": "Navega en un catamarà de vela lleugera. Velocitat, treball en equip i adrenalina.",
+        "price": "Consultar",
+        "seoDesc": "Curs de catamarà a Platja Llarga, Tarragona. Navega en vela lleugera amb monitors titulats. Classes individuals i en grup a la Costa Daurada."
       },
       "patin-catalan": {
-        "name": "Pat\u00ed Catal\u00e0",
-        "desc": "L'embarcaci\u00f3 tradicional de la nostra costa. \u00danica al m\u00f3n, identitat mediterr\u00e0nia pura.",
-        "seoDesc": "Curs de pat\u00ed catal\u00e0 a Tarragona. Apr\u00e8n a navegar l'embarcaci\u00f3 tradicional de la Costa Daurada a Platja Llarga. Experi\u00e8ncia \u00fanica i aut\u00e8ntica."
+        "name": "Patí Català",
+        "desc": "L'embarcació tradicional de la nostra costa. Única al món, identitat mediterrània pura.",
+        "price": "Consultar",
+        "seoDesc": "Curs de patí català a Tarragona. Aprèn a navegar l'embarcació tradicional de la Costa Daurada a Platja Llarga. Experiència única i autèntica."
       }
     }
   },
   "actividades": {
-    "pill": "\ud83c\udf89 Lloguer & diversi\u00f3 \u00b7 Totes les edats",
+    "pill": "🎉 Lloguer & diversió · Totes les edats",
     "title1": "PASSA-T'HO",
-    "title2": "INCRE\u00cfBLE",
+    "title2": "INCREÏBLE",
     "discover": "Descobrir",
-    "star": "\u2b50 N\u00ba1",
+    "star": "⭐ Nº1",
     "items": {
       "banana-boat": {
         "name": "Banana Boat",
-        "seoDesc": "Banana boat a Platja Llarga, Tarragona. L'activitat aqu\u00e0tica m\u00e9s divertida de la Costa Daurada. Totes les edats, reserva per WhatsApp o tel\u00e8fon."
+        "price": "18€/pers · 12 min",
+        "capacity": "Fins a 10 persones",
+        "seoDesc": "Banana boat a Platja Llarga, Tarragona. 18€/persona, 12 minuts de diversió. Fins a 10 persones. L'activitat aquàtica més divertida de la Costa Daurada."
       },
       "kayak": {
         "name": "Caiac",
-        "seoDesc": "Lloguer de caiac a Platja Llarga, Tarragona. Explora la costa de Tarragona en caiac. Sense experi\u00e8ncia pr\u00e8via, totes les edats."
+        "price": "25€/h · Mig dia 70€ · 1 dia 100€",
+        "capacity": "Fins a 4 places",
+        "seoDesc": "Lloguer de caiac a Platja Llarga, Tarragona. Des de 25€/h, fins a 4 places. Explora la costa de Tarragona en caiac. Sense experiència prèvia, totes les edats."
       },
       "alquiler-windsurf": {
         "name": "Lloguer Windsurf",
-        "seoDesc": "Lloguer de material de windsurf a Platja Llarga, Tarragona. Taules i veles per a tots els nivells a la Costa Daurada."
+        "price": "25€/h",
+        "capacity": "",
+        "seoDesc": "Lloguer de material de windsurf a Platja Llarga, Tarragona. 25€/hora. Taules i veles per a tots els nivells a la Costa Daurada."
       },
       "alquiler-surf": {
-        "name": "Lloguer Surf",
-        "seoDesc": "Lloguer de taules de surf a Platja Llarga, Tarragona. Material de qualitat per hores a la Costa Daurada."
+        "name": "Lloguer Paddle Surf / Surf",
+        "price": "22€/h · Mig dia 70€ · 1 dia 100€",
+        "capacity": "",
+        "seoDesc": "Lloguer de paddle surf i taules de surf a Platja Llarga, Tarragona. Des de 22€/hora. Material de qualitat per a SUP, surf i body-surf a la Costa Daurada."
       },
       "paseos-barco": {
         "name": "Passejades en Vaixell",
-        "seoDesc": "Passejades en vaixell a Tarragona. Excursions en llanxa per la costa de Platja Llarga i la Costa Daurada. Grups, fam\u00edlies i comiats."
+        "price": "185€/h",
+        "capacity": "Fins a 6 persones · Amb patró",
+        "seoDesc": "Passejades en vaixell a Tarragona. 185€/hora, fins a 6 persones amb patró. Excursions en llanxa per Platja Llarga i la Costa Daurada."
       },
       "donut": {
         "name": "Donut",
-        "seoDesc": "Donut aqu\u00e0tic a Platja Llarga, Tarragona. Diversi\u00f3 i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
+        "price": "Consultar",
+        "capacity": "",
+        "seoDesc": "Donut aquàtic a Platja Llarga, Tarragona. Diversió i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
+      },
+      "big-paddle-surf": {
+        "name": "Big Paddle Surf",
+        "price": "100€/h",
+        "capacity": "Fins a 12 persones",
+        "seoDesc": "Big Paddle Surf a Platja Llarga, Tarragona. 100€/hora per a fins a 12 persones. Activitat grupal perfecta per a amics, empreses i comiats a la Costa Daurada."
+      },
+      "aquamarina": {
+        "name": "Aquamarina",
+        "price": "75€/h",
+        "capacity": "5 persones",
+        "seoDesc": "Aquamarina a Platja Llarga, Tarragona. 75€/hora per a 5 persones. Diversió aquàtica per a grups a la Costa Daurada. Totes les edats."
       }
     }
   },
   "grupos": {
     "title1": "VENIU EN",
     "title2": "GRUP",
-    "title3": "? \ud83c\udf8a",
-    "cta": "Demana pressupost \ud83e\udd19",
+    "title3": "? 🎊",
+    "cta": "Demana pressupost 🤙",
     "items": {
-      "colegios": { "title": "Col\u00b7legis", "desc": "Sortides de fi de curs pedag\u00f2giques i divertides" },
-      "team-building": { "title": "Team Building", "desc": "Refor\u00e7a el teu equip amb el desafiament del mar" },
-      "amigos": { "title": "Amics", "desc": "Aventura n\u00e0utica a mida per al grup" },
-      "despedidas": { "title": "Comiats", "desc": "El comiat m\u00e9s diferent i memorable" }
+      "colegios": { "title": "Col·legis", "desc": "Sortides de fi de curs pedagògiques i divertides" },
+      "team-building": { "title": "Team Building", "desc": "Reforça el teu equip amb el desafiament del mar" },
+      "amigos": { "title": "Amics", "desc": "Aventura nàutica a mida per al grup" },
+      "despedidas": { "title": "Comiats", "desc": "El comiat més diferent i memorable" }
     }
   },
   "reviews": {
     "title1": "+10.000 PERSONES",
     "title2": "FELICES",
-    "title3": "\ud83c\udf0a",
-    "rating": "\u2b50 4.8/5 a Google \u00b7 +150 ressenyes verificades",
-    "more": "Llegir m\u00e9s",
+    "title3": "🌊",
+    "rating": "⭐ 4.8/5 a Google · +150 ressenyes verificades",
+    "more": "Llegir més",
     "less": "Menys",
     "items": [
-      { "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals s\u00f3n francesos. El tracte de gesti\u00f3 previ a l'activitat fant\u00e0stic, confian\u00e7a al 100%. L'activitat espectacular, molt bon tracte, molt bons professionals i l'activitat molt divertida! La recomano al 100%", "name": "Anna L\u00f3pez", "from": "Barcelona", "emoji": "\ud83c\udfc4" },
-      { "text": "Vam fer amb ells diverses activitats en fam\u00edlia amb els nens: Banana Boat i p\u00e0del surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose \u00e9s una passada!! Enhorabona pel vostre equip!! Repetirem!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "\ud83c\udf4c" },
-      { "text": "Vam passar un mat\u00ed fant\u00e0stic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprengu\u00e9ssim al m\u00e0xim, molt recomanable!", "name": "artoleta", "from": "Tarragona", "emoji": "\u2708\ufe0f" },
-      { "text": "Excellent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l'Eneko, molt amable, m'ho va explicar tot genial i ens va recomanar on aparcar. Un tracte excellent. En arribar ens vam trobar un equip fant\u00e0stic que ens va tractar s\u00faper b\u00e9. Vam passar una estona s\u00faper divertida, recomano molt\u00edssim el Big Paddle, tal com em va recomanar l'Eneko, va ser genial. Vam tenir la sort de trobar l'Eneko al mar, el qual ens va gravar un s\u00faper v\u00eddeo que portarem al record. Un comiat de soltera per tot el alt gr\u00e0cies a ells. Gr\u00e0cies nois, amb ganes de repetir.", "name": "Gloria Gonz\u00e1lez", "from": "Madrid", "emoji": "\ud83d\udc8d" }
+      { "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals són francesos. El tracte de gestió previ a l'activitat fantàstic, confiança al 100%. L'activitat espectacular, molt bon tracte, molt bons professionals i l'activitat molt divertida! La recomano al 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
+      { "text": "Vam fer amb ells diverses activitats en família amb els nens: Banana Boat i pàdel surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose és una passada!! Enhorabona pel vostre equip!! Repetirem!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
+      { "text": "Vam passar un matí fantàstic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprenguéssim al màxim, molt recomanable!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
+      { "text": "Excellent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l'Eneko, molt amable, m'ho va explicar tot genial i ens va recomanar on aparcar. Un tracte excellent. En arribar ens vam trobar un equip fantàstic que ens va tractar súper bé. Vam passar una estona súper divertida, recomano moltíssim el Big Paddle, tal com em va recomanar l'Eneko, va ser genial. Vam tenir la sort de trobar l'Eneko al mar, el qual ens va gravar un súper vídeo que portarem al record. Un comiat de soltera per tot el alt gràcies a ells. Gràcies nois, amb ganes de repetir.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
     ]
   },
   "contacto": {
     "title1": "ENS",
     "title2": "VEIEM",
-    "title3": "? \ud83c\udf0a",
+    "title3": "? 🌊",
     "subtitle": "Vine a Platja Llarga. T'estem esperant.",
-    "phone": { "title": "Truca'ns", "text": "977 23 27 15", "sub": "De 9h a 20h" },
+    "phone": { "title": "Truca'ns", "text": "977 23 27 15", "sub": "Dl-Dv 10h-14h · Cap de setmana 11h-14h / 16h-19h" },
     "location": { "title": "Vine a veure'ns", "text": "Camping Las Palmeras", "sub": "Platja Llarga, Tarragona" },
     "social": { "title": "Segueix-nos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
-    "whatsapp": { "title": "WhatsApp", "text": "Escriu-nos", "sub": "Resposta r\u00e0pida" },
-    "mapLabel": "\ud83d\udccd Windsurf Tarragona",
-    "mapAddress": "Ctra. N-340, Km 1168 \u00b7 Camping Las Palmeras",
-    "mapCta": "Com arribar \u2192"
+    "whatsapp": { "title": "WhatsApp", "text": "609 874 869", "sub": "Resposta ràpida" },
+    "mapLabel": "📍 Windsurf Tarragona",
+    "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapCta": "Com arribar →"
   },
   "footer": {
-    "tagline": "Platja Llarga, Tarragona \u00b7 Costa Daurada \u00b7 Des de 2004",
-    "copy": "\u00a9 2026 Windsurf Tarragona \u00b7 Fet amb aigua, sol i passi\u00f3 pel mar \ud83c\udf0a\u2600\ufe0f",
+    "tagline": "Platja Llarga, Tarragona · Costa Daurada · Des de 2004",
+    "copy": "© 2026 Windsurf Tarragona · Fet amb aigua, sol i passió pel mar 🌊☀️",
     "privacy": "Privacitat",
-    "legal": "Av\u00eds Legal"
+    "legal": "Avís Legal"
   },
   "privacy": {
-    "title": "Pol\u00edtica de Privacitat",
-    "content": "Contingut de pol\u00edtica de privacitat pendent de redacci\u00f3 legal."
+    "title": "Política de Privacitat",
+    "content": "Contingut de política de privacitat pendent de redacció legal."
   },
   "gruposPage": {
     "title": "Grups",
-    "subtitle": "Activitats n\u00e0utiques per a grups de totes les edats",
-    "cta": "Sol\u00b7licitar pressupost"
+    "subtitle": "Activitats nàutiques per a grups de totes les edats",
+    "cta": "Sol·licitar pressupost"
   },
   "contactoPage": {
     "title": "Contacte",
     "subtitle": "Som a Platja Llarga, Tarragona",
     "formName": "Nom",
     "formEmail": "Email",
-    "formPhone": "Tel\u00e8fon",
+    "formPhone": "Telèfon",
     "formMessage": "Missatge",
     "formSend": "Enviar missatge",
     "formSuccess": "Missatge enviat correctament"
