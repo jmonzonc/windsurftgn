@@ -150,7 +150,33 @@ function buildJsonLd(locale: Locale, dict: Record<string, any>) {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
+                name: "Curso de Wing-Foil",
+                url: `https://windsurftarragona.com/${locale}/escuela/wing-foil`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Paddle Surf / Surf",
+                url: `https://windsurftarragona.com/${locale}/escuela/paddle-surf`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Esquí Náutico / Wakeboard",
+                description: "75€/estirada 10 min · Micro-curso 150€",
+                url: `https://windsurftarragona.com/${locale}/escuela/esqui-wake`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
                 name: "Banana Boat",
+                description: "18€/persona, 12 minutos, hasta 10 personas",
                 url: `https://windsurftarragona.com/${locale}/actividades/banana-boat`,
               },
             },
@@ -159,6 +185,7 @@ function buildJsonLd(locale: Locale, dict: Record<string, any>) {
               itemOffered: {
                 "@type": "Service",
                 name: "Kayak",
+                description: "25€/hora, hasta 4 plazas",
                 url: `https://windsurftarragona.com/${locale}/actividades/kayak`,
               },
             },
@@ -166,8 +193,18 @@ function buildJsonLd(locale: Locale, dict: Record<string, any>) {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Curso de Surf",
-                url: `https://windsurftarragona.com/${locale}/escuela/surf`,
+                name: "Big Paddle Surf",
+                description: "100€/hora, hasta 12 personas",
+                url: `https://windsurftarragona.com/${locale}/actividades/big-paddle-surf`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Paseos en Barco",
+                description: "185€/hora, hasta 6 personas con patrón",
+                url: `https://windsurftarragona.com/${locale}/actividades/paseos-barco`,
               },
             },
             {
@@ -176,14 +213,6 @@ function buildJsonLd(locale: Locale, dict: Record<string, any>) {
                 "@type": "Service",
                 name: "Catamarán",
                 url: `https://windsurftarragona.com/${locale}/escuela/catamaran`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Paseos en Barco",
-                url: `https://windsurftarragona.com/${locale}/actividades/paseos-barco`,
               },
             },
           ],
