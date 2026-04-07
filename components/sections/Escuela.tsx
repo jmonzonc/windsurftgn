@@ -6,16 +6,16 @@ import { useReveal } from "@/lib/hooks";
 import { COURSE_IMAGES } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
 
-type CourseData = { name: string; desc: string };
+type CourseData = { name: string; desc: string; price?: string };
 type EscuelaDict = {
   pill: string; title1: string; title2: string; allLevels: string;
   book: string; moreInfo: string;
   courses: Record<string, CourseData>;
 };
 
-const KEYS = ["windsurf", "vela", "surf", "wakesurf", "catamaran", "patin-catalan"] as const;
-const EMOJIS: Record<string, string> = { windsurf: "🏄", vela: "⛵", surf: "🌊", wakesurf: "🏂", catamaran: "🛥️", "patin-catalan": "🚩" };
-const ACCENT: Record<string, string> = { windsurf: "from-turq to-ocean", vela: "from-ocean to-deep", surf: "from-blue-500 to-ocean", wakesurf: "from-coral to-sun", catamaran: "from-gold to-sun", "patin-catalan": "from-sun to-coral" };
+const KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"] as const;
+const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "paddle-surf": "🏄", "esqui-wake": "🎿", vela: "⛵", catamaran: "🛥️", "patin-catalan": "🚩" };
+const ACCENT: Record<string, string> = { windsurf: "from-turq to-ocean", "wing-foil": "from-cyan to-turq", "paddle-surf": "from-blue-500 to-ocean", "esqui-wake": "from-coral to-sun", vela: "from-ocean to-deep", catamaran: "from-gold to-sun", "patin-catalan": "from-sun to-coral" };
 
 export default function Escuela({ dict, locale }: { dict: EscuelaDict; locale: Locale }) {
   const [ref, vis] = useReveal();
@@ -59,10 +59,20 @@ export default function Escuela({ dict, locale }: { dict: EscuelaDict; locale: L
               <img src={COURSE_IMAGES[key]} alt={course.name} width={900} height={600} className="w-full h-full object-cover animate-img-zoom" />
               <div className="absolute inset-0 bg-gradient-to-t from-midnight/40 to-transparent" />
               <div className={`absolute top-4 left-4 sm:top-5 sm:left-5 bg-gradient-to-br ${accent} text-white py-1.5 sm:py-2 px-4 sm:px-5 rounded-full font-body font-extrabold text-[10px] sm:text-[11px] tracking-[1.5px] sm:tracking-[2px] uppercase shadow-lg`}>{dict.allLevels}</div>
+              {key === "wing-foil" && (
+                <div className="absolute top-4 right-4 sm:top-5 sm:right-5 bg-coral text-white py-1.5 sm:py-2 px-4 sm:px-5 rounded-full font-body font-extrabold text-[10px] sm:text-[11px] tracking-[1.5px] sm:tracking-[2px] uppercase shadow-lg animate-pulse">
+                  ¡Nuevo!
+                </div>
+              )}
             </div>
             <div className="p-5 sm:p-7 md:p-9">
               <h3 className="font-display text-[24px] sm:text-[30px] text-midnight mb-2">{EMOJIS[key]} {course.name}</h3>
-              <p className="font-body text-sm sm:text-base text-gray-500 leading-[1.55] sm:leading-[1.65] mb-5 sm:mb-7">{course.desc}</p>
+              <p className="font-body text-sm sm:text-base text-gray-500 leading-[1.55] sm:leading-[1.65] mb-4 sm:mb-5">{course.desc}</p>
+              {course.price && (
+                <div className="bg-ice rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-5 sm:mb-7 border border-ocean/10">
+                  <p className="font-body font-bold text-sm sm:text-base text-ocean text-center">{course.price}</p>
+                </div>
+              )}
               <div className="flex gap-2.5 sm:gap-3 flex-wrap">
                 <Link href={`/${locale}/escuela/${key}`} className={`btn-primary py-2.5 sm:py-[13px] px-5 sm:px-[30px] text-[13px] sm:text-[15px] no-underline bg-gradient-to-br ${accent}`}>{dict.book}</Link>
                 <Link href={`/${locale}/escuela/${key}`} className="font-body py-2.5 sm:py-[13px] px-4 sm:px-6 rounded-full border-2 border-ocean/[0.1] bg-transparent text-ocean font-semibold text-[12px] sm:text-sm no-underline transition-all duration-300 hover:bg-ocean/[0.04]">{dict.moreInfo}</Link>

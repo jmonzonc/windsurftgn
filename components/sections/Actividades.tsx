@@ -7,20 +7,22 @@ import WaterParticles from "@/components/ui/WaterParticles";
 import { ACTIVITY_IMAGES } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
 
-type ActivityItem = { name: string };
+type ActivityItem = { name: string; price?: string; capacity?: string };
 type ActividadesDict = {
   pill: string; title1: string; title2: string; discover: string; star: string;
   items: Record<string, ActivityItem>;
 };
 
-const KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut"] as const;
+const KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut", "big-paddle-surf", "aquamarina"] as const;
 const EMOJIS: Record<string, string> = {
   "banana-boat": "🍌", kayak: "🛶", "alquiler-windsurf": "🏄",
   "alquiler-surf": "🌊", "paseos-barco": "🚤", donut: "🍩",
+  "big-paddle-surf": "🛟", aquamarina: "💎",
 };
 const IMG_MAP: Record<string, string> = {
   "banana-boat": "banana", kayak: "kayak", "alquiler-windsurf": "windsurf_rental",
   "alquiler-surf": "surf_rental", "paseos-barco": "boat_rides", donut: "donut",
+  "big-paddle-surf": "big_paddle_surf", aquamarina: "aquamarina",
 };
 
 export default function Actividades({ dict, locale }: { dict: ActividadesDict; locale: Locale }) {
@@ -39,13 +41,14 @@ export default function Actividades({ dict, locale }: { dict: ActividadesDict; l
             {dict.title1} <span className="gradient-text-gold">{dict.title2}</span>
           </h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-[18px]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-[18px]">
           {KEYS.map((key, i) => {
             const item = dict.items[key];
             return (
               <ActivityCard
                 key={key} slug={key} name={item.name} emoji={EMOJIS[key]}
-                img={ACTIVITY_IMAGES[IMG_MAP[key]]} vis={vis} delay={i * 0.08}
+                price={item.price} capacity={item.capacity}
+                img={ACTIVITY_IMAGES[IMG_MAP[key]]} vis={vis} delay={i * 0.07}
                 locale={locale} label={dict.discover}
               />
             );
@@ -56,8 +59,9 @@ export default function Actividades({ dict, locale }: { dict: ActividadesDict; l
   );
 }
 
-function ActivityCard({ slug, name, emoji, img, vis, delay, locale, label }: {
+function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, locale, label }: {
   slug: string; name: string; emoji: string;
+  price?: string; capacity?: string;
   img: string; vis: boolean; delay: number; locale: Locale; label: string;
 }) {
   const [h, setH] = useState(false);
@@ -92,12 +96,20 @@ function ActivityCard({ slug, name, emoji, img, vis, delay, locale, label }: {
             : "linear-gradient(to top, rgba(0,20,40,0.8) 0%, transparent 55%)",
         }}
       />
+      {price && price !== "Consultar" && price !== "Ask for prices" && (
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-turq/90 backdrop-blur-sm text-white py-1 sm:py-1.5 px-3 sm:px-4 rounded-full font-body font-bold text-[10px] sm:text-xs shadow-lg z-[3]">
+          {price.split("·")[0].trim()}
+        </div>
+      )}
       <div
         className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-7 z-[2] transition-transform duration-500 ease-expo"
         style={{ transform: h ? "translateY(-10px)" : "translateY(0)" }}
       >
         <span className="text-2xl sm:text-3xl md:text-4xl">{emoji}</span>
         <h3 className="font-display text-white mt-1.5 sm:mt-2 m-0 text-[18px] sm:text-[22px] md:text-[26px] leading-tight">{name}</h3>
+        {capacity && (
+          <p className="font-body text-[10px] sm:text-xs text-white/50 mt-0.5">{capacity}</p>
+        )}
         <div
           className="font-body text-xs sm:text-sm font-semibold text-white/85 mt-1.5 sm:mt-2.5 flex items-center gap-1.5 transition-all duration-[350ms] ease-expo"
           style={{ opacity: h ? 1 : 0, transform: h ? "translateY(0)" : "translateY(12px)", transitionDelay: "80ms" }}
