@@ -146,7 +146,6 @@ export default async function ActividadPage({
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-[0_8px_32px_rgba(0,104,214,0.06)]">
 
-          {/* Price & capacity box */}
           {item.price && item.price !== "Consultar" && item.price !== "Ask for prices" ? (
             <div className="bg-gradient-to-br from-turq/[0.06] to-ocean/[0.04] rounded-xl sm:rounded-2xl p-5 sm:p-7 mb-6 sm:mb-8 border border-turq/15 text-center">
               <p className="font-display text-2xl sm:text-3xl text-midnight mb-1">{item.price}</p>
