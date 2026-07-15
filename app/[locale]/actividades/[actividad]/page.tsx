@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { ACTIVITY_IMAGES, SITE } from "@/lib/constants";
+import { ACTIVITY_IMAGES, ACTIVITY_LOCATION, SITE } from "@/lib/constants";
+import { buildActivityJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const ITEM_KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut", "big-paddle-surf", "aquamarina"] as const;
@@ -33,7 +34,7 @@ export async function generateMetadata({
   if (!item) return {};
 
   const img = ACTIVITY_IMAGES[IMG_MAP[actividad]] || ACTIVITY_IMAGES["banana"];
-  const description = item.seoDesc || `${item.name} en Playa Larga, Tarragona`;
+  const description = item.seoDesc || `${item.name} en Tarragona`;
 
   const languageAlternates: Record<string, string> = {
     "x-default": `https://windsurftarragona.com/es/actividades/${actividad}`,
@@ -89,35 +90,14 @@ export default async function ActividadPage({
       ? "Reserva ara"
       : "Reservar ahora";
 
-  const activityJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TouristAttraction",
+  const activityJsonLd = buildActivityJsonLd({
+    locale,
+    slug: actividad,
     name: item.name,
-    description: item.seoDesc || `${item.name} en Playa Larga, Tarragona`,
-    url: pageUrl,
+    description: item.seoDesc || `${item.name} en Tarragona`,
     image: img,
-    isAccessibleForFree: false,
-    availableLanguage: ["es", "ca", "en"],
-    touristType: ["Adventure tourism", "Beach tourism", "Water sports"],
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE.coords.lat,
-      longitude: SITE.coords.lng,
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
-      addressLocality: "Tarragona",
-      addressRegion: "Cataluña",
-      postalCode: "43007",
-      addressCountry: "ES",
-    },
-    containedInPlace: {
-      "@type": "SportsActivityLocation",
-      "@id": "https://windsurftarragona.com/#business",
-      name: "Windsurf Tarragona",
-    },
-  };
+    location: ACTIVITY_LOCATION[actividad] ?? "playa",
+  });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Windsurf Tarragona", url: `https://windsurftarragona.com/${locale}` },
