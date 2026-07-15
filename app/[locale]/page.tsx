@@ -27,7 +27,7 @@ export default async function HomePage({
       <Stats dict={dict.stats} />
       <Escuela dict={dict.escuela} locale={locale} />
       <Wave color="#001428" />
-      <Actividades dict={dict.actividades} locale={locale} />
+      <Actividades dict={dict.actividades} locDict={dict.locations} locale={locale} />
       <Wave color="#FFF8EF" />
       <Grupos dict={dict.grupos} locale={locale} />
       <Wave color="#002B5C" />
