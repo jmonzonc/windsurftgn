@@ -1,3 +1,5 @@
+export type LocationKey = "playa" | "puerto" | "ambas";
+
 export const SITE = {
   name: "Windsurf Tarragona",
   phone: "977 23 27 15",
@@ -16,6 +18,51 @@ export const SITE = {
   facebook: "https://facebook.com/windsurftarragona",
   url: "https://windsurftarragona.com",
 } as const;
+
+export const LOCATIONS = {
+  playa: {
+    id: "https://windsurftarragona.com/#playa-larga",
+    slug: "playa-larga",
+    streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
+    postalCode: "43007",
+    coords: { lat: 41.13006, lng: 1.3171216 },
+    mapsUrl: SITE.mapsUrl,
+    mapsEmbed: SITE.mapsEmbed,
+  },
+  puerto: {
+    id: "https://windsurftarragona.com/#puerto-tarragona",
+    slug: "puerto-tarragona",
+    streetAddress: "Moll de Costa, amarre 3, Port de Tarragona",
+    // TODO ❓ confirmar código postal y coordenadas exactas (pegar URL de Google Maps del amarre)
+    postalCode: "43004",
+    coords: { lat: 41.1075, lng: 1.253 },
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Moll+de+Costa%2C+Port+de+Tarragona",
+    mapsEmbed:
+      "https://www.google.com/maps?q=Moll+de+Costa,+Port+de+Tarragona&output=embed",
+  },
+} as const;
+
+export const ACTIVITY_LOCATION: Record<string, LocationKey> = {
+  "banana-boat": "puerto",
+  kayak: "playa",
+  "alquiler-windsurf": "playa",
+  "alquiler-surf": "playa",
+  "paseos-barco": "puerto",
+  donut: "puerto", // ❓ arrastrado por lancha → asumo puerto; confirmar
+  "big-paddle-surf": "playa",
+  aquamarina: "playa",
+};
+
+export const COURSE_LOCATION: Record<string, LocationKey> = {
+  windsurf: "playa",
+  "wing-foil": "ambas", // fases 1 y 3 en Playa Larga · fase 2 (training-foil) en el Puerto
+  "paddle-surf": "playa",
+  "esqui-wake": "puerto",
+  vela: "playa",
+  catamaran: "playa",
+  "patin-catalan": "playa",
+};
 
 export const COURSE_IMAGES: Record<string, string> = {
   windsurf:
