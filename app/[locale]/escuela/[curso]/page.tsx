@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { COURSE_IMAGES, SITE } from "@/lib/constants";
+import { COURSE_IMAGES, COURSE_LOCATION, SITE } from "@/lib/constants";
+import { buildCourseJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 
 const COURSE_KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"] as const;
@@ -92,40 +93,14 @@ export default async function CursoPage({
       ? "Dl-Dv 10h-14h · Cap de setmana 11h-14h / 16h-19h"
       : "L-V 10h-14h · Finde 11h-14h / 16h-19h";
 
-  const courseJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Course",
+  const courseJsonLd = buildCourseJsonLd({
+    locale,
+    slug: curso,
     name: course.name,
     description: course.seoDesc || course.desc,
-    url: pageUrl,
     image: img,
-    provider: {
-      "@type": "SportsActivityLocation",
-      "@id": "https://windsurftarragona.com/#business",
-      name: "Windsurf Tarragona",
-      sameAs: SITE.url,
-    },
-    courseMode: "onsite",
-    availableLanguage: ["es", "ca", "en"],
-    inLanguage: locale === "ca" ? "ca" : locale === "en" ? "en" : "es",
-    locationCreated: {
-      "@type": "Place",
-      name: "Playa Larga",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
-        addressLocality: "Tarragona",
-        addressRegion: "Cataluña",
-        postalCode: "43007",
-        addressCountry: "ES",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: SITE.coords.lat,
-        longitude: SITE.coords.lng,
-      },
-    },
-  };
+    location: COURSE_LOCATION[curso] ?? "playa",
+  });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Windsurf Tarragona", url: `https://windsurftarragona.com/${locale}` },
