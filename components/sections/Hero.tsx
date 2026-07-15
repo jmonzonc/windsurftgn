@@ -102,7 +102,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         </div>
 
         <div
-          className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidden sm:flex"
+className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidden sm:flex pointer-events-none"
           style={{ bottom: "clamp(60px, 10vh, 130px)", opacity: loaded ? 0.5 : 0, transition: "opacity 2s ease 2s" }}
         >
           <span className="font-body text-[11px] text-white tracking-[3px] uppercase">{dict.scroll}</span>
