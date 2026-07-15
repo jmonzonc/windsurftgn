@@ -71,19 +71,19 @@
       "windsurf": {
         "name": "Windsurf",
         "desc": "El clàssic. Tu, una taula i el vent. Domina l'equilibri i navega amb total llibertat.",
-        "price": "25€/h",
+        "price": "50€/h (curs amb monitor) · Lloguer 25€/h",
         "seoDesc": "Curs de windsurf a Platja Llarga, Tarragona. Monitors titulats FVE/RFEV, tots els nivells. Aprèn a navegar a la Costa Daurada amb +20 anys d'experiència."
       },
       "wing-foil": {
         "name": "Wing-Foil",
         "desc": "Nou! Vola sobre l'aigua amb un wing i un foil. Curs en 3 fases: wing + taula gran, foil + llanxa (training-foil), wing + foil. Fases 1 i 3 a Platja Llarga, fase 2 al Port de Tarragona.",
-        "price": "Consultar · Training-foil 200€/h",
-        "seoDesc": "Curs de wing-foil a Tarragona. Aprèn wing-foil en 3 fases progressives amb monitors titulats: Platja Llarga i Port de Tarragona. Training-foil 200€/h. +20 anys a la Costa Daurada."
+        "price": "Consultar",
+        "seoDesc": "Curs de wing-foil a Tarragona. Aprèn wing-foil en 3 fases progressives amb monitors titulats: Platja Llarga i Port de Tarragona. +20 anys a la Costa Daurada."
       },
       "paddle-surf": {
         "name": "Paddle Surf / Surf",
         "desc": "Descobreix el paddle surf, l'esport de moda. També classes de surf i body-surf. Per a tots els nivells a Platja Llarga.",
-        "price": "Consultar",
+        "price": "50€/h (curs amb monitor) · Lloguer 25€/h",
         "seoDesc": "Classes de paddle surf i surf a Platja Llarga, Tarragona. Cursos de SUP, surf i body-surf per a tots els nivells amb material inclòs. +20 anys a la Costa Daurada."
       },
       "esqui-wake": {
@@ -149,23 +149,11 @@
         "capacity": "Fins a 6 persones · Amb patró",
         "seoDesc": "Passejades en vaixell des del Port de Tarragona. 200€/hora, fins a 6 persones amb patró. Excursions en llanxa per la costa de Tarragona i la Costa Daurada."
       },
-      "donut": {
-        "name": "Donut",
-        "price": "Consultar",
-        "capacity": "",
-        "seoDesc": "Donut aquàtic a Tarragona. Diversió i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
-      },
       "big-paddle-surf": {
         "name": "Big Paddle Surf",
         "price": "100€/h",
-        "capacity": "Fins a 12 persones",
-        "seoDesc": "Big Paddle Surf a Platja Llarga, Tarragona. 100€/hora per a fins a 12 persones. Activitat grupal perfecta per a amics, empreses i comiats a la Costa Daurada."
-      },
-      "aquamarina": {
-        "name": "Aquamarina",
-        "price": "75€/h",
-        "capacity": "5 persones",
-        "seoDesc": "Aquamarina a Platja Llarga, Tarragona. 75€/hora per a 5 persones. Diversió aquàtica per a grups a la Costa Daurada. Totes les edats."
+        "capacity": "Fins a 12 persones · També format reduït fins a 5 persones",
+        "seoDesc": "Big Paddle Surf a Platja Llarga, Tarragona. Fins a 12 persones (també format reduït fins a 5). Activitat grupal perfecta per a amics, empreses i comiats a la Costa Daurada."
       }
     }
   },
@@ -175,10 +163,22 @@
     "title3": "? 🎊",
     "cta": "Demana pressupost 🤙",
     "items": {
-      "colegios": { "title": "Col·legis", "desc": "Sortides de fi de curs pedagògiques i divertides" },
-      "team-building": { "title": "Team Building", "desc": "Reforça el teu equip amb el desafiament del mar" },
-      "amigos": { "title": "Amics", "desc": "Aventura nàutica a mida per al grup" },
-      "despedidas": { "title": "Comiats", "desc": "El comiat més diferent i memorable" }
+      "colegios": {
+        "title": "Col·legis",
+        "desc": "Sortides de fi de curs pedagògiques i divertides"
+      },
+      "team-building": {
+        "title": "Team Building",
+        "desc": "Reforça el teu equip amb el desafiament del mar"
+      },
+      "amigos": {
+        "title": "Amics",
+        "desc": "Aventura nàutica a mida per al grup"
+      },
+      "despedidas": {
+        "title": "Comiats",
+        "desc": "El comiat més diferent i memorable"
+      }
     }
   },
   "reviews": {
@@ -189,10 +189,30 @@
     "more": "Llegir més",
     "less": "Menys",
     "items": [
-      { "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals són francesos. El tracte de gestió previ a l'activitat fantàstic, confiança al 100%. L'activitat espectacular, molt bon tracte, molt bons professionals i l'activitat molt divertida! La recomano al 100%", "name": "Anna López", "from": "Barcelona", "emoji": "🏄" },
-      { "text": "Vam fer amb ells diverses activitats en família amb els nens: Banana Boat i pàdel surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose és una passada!! Enhorabona pel vostre equip!! Repetirem!!!!", "name": "Olivia Pereda", "from": "Tarragona", "emoji": "🍌" },
-      { "text": "Vam passar un matí fantàstic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprenguéssim al màxim, molt recomanable!", "name": "artoleta", "from": "Tarragona", "emoji": "✈️" },
-      { "text": "Excellent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l'Eneko, molt amable, m'ho va explicar tot genial i ens va recomanar on aparcar. Un tracte excellent. En arribar ens vam trobar un equip fantàstic que ens va tractar súper bé. Vam passar una estona súper divertida, recomano moltíssim el Big Paddle, tal com em va recomanar l'Eneko, va ser genial. Vam tenir la sort de trobar l'Eneko al mar, el qual ens va gravar un súper vídeo que portarem al record. Un comiat de soltera per tot el alt gràcies a ells. Gràcies nois, amb ganes de repetir.", "name": "Gloria González", "from": "Madrid", "emoji": "💍" }
+      {
+        "text": "Hem sigut un grup escolar de 40 persones. 16 dels quals són francesos. El tracte de gestió previ a l'activitat fantàstic, confiança al 100%. L'activitat espectacular, molt bon tracte, molt bons professionals i l'activitat molt divertida! La recomano al 100%",
+        "name": "Anna López",
+        "from": "Barcelona",
+        "emoji": "🏄"
+      },
+      {
+        "text": "Vam fer amb ells diverses activitats en família amb els nens: Banana Boat i pàdel surf i genial! Molt ben organitzat, les explicacions, tot! Els nois supermacos!!! En Jose és una passada!! Enhorabona pel vostre equip!! Repetirem!!!!",
+        "name": "Olivia Pereda",
+        "from": "Tarragona",
+        "emoji": "🍌"
+      },
+      {
+        "text": "Vam passar un matí fantàstic practicant foil amb la llanxa, els monitors molt professionals i sempre molt atents a que tots aprenguéssim al màxim, molt recomanable!",
+        "name": "artoleta",
+        "from": "Tarragona",
+        "emoji": "✈️"
+      },
+      {
+        "text": "Excellent equip, vaig contactar amb ells buscant a Google, vaig enviar un missatge i em va contestar l'Eneko, molt amable, m'ho va explicar tot genial i ens va recomanar on aparcar. Un tracte excellent. En arribar ens vam trobar un equip fantàstic que ens va tractar súper bé. Vam passar una estona súper divertida, recomano moltíssim el Big Paddle, tal com em va recomanar l'Eneko, va ser genial. Vam tenir la sort de trobar l'Eneko al mar, el qual ens va gravar un súper vídeo que portarem al record. Un comiat de soltera per tot el alt gràcies a ells. Gràcies nois, amb ganes de repetir.",
+        "name": "Gloria González",
+        "from": "Madrid",
+        "emoji": "💍"
+      }
     ]
   },
   "contacto": {
@@ -200,11 +220,31 @@
     "title2": "VEIEM",
     "title3": "? 🌊",
     "subtitle": "T'esperem a Platja Llarga i al Port de Tarragona.",
-    "phone": { "title": "Truca'ns", "text": "977 23 27 15", "sub": "Dl-Dv 10h-14h · Cap de setmana 11h-14h / 16h-19h" },
-    "location": { "title": "Platja Llarga", "text": "Camping Las Palmeras", "sub": "Cursos, lloguer i activitats" },
-    "location2": { "title": "Port de Tarragona", "text": "Moll de Costa, amarratge 3", "sub": "Banana · Esquí/Wake · Passejades" },
-    "social": { "title": "Segueix-nos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
-    "whatsapp": { "title": "WhatsApp", "text": "609 874 869", "sub": "Resposta ràpida" },
+    "phone": {
+      "title": "Truca'ns",
+      "text": "977 23 27 15",
+      "sub": "Dl-Dv 10h-14h · Cap de setmana 11h-14h / 16h-19h"
+    },
+    "location": {
+      "title": "Platja Llarga",
+      "text": "Camping Las Palmeras",
+      "sub": "Cursos, lloguer i activitats"
+    },
+    "location2": {
+      "title": "Port de Tarragona",
+      "text": "Moll de Costa, amarratge 3",
+      "sub": "Banana · Esquí/Wake · Passejades"
+    },
+    "social": {
+      "title": "Segueix-nos",
+      "text": "@windsurftarragona",
+      "sub": "Instagram & Facebook"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "text": "609 874 869",
+      "sub": "Resposta ràpida"
+    },
     "mapLabel": "📍 Windsurf Tarragona",
     "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
     "mapLabel2": "⚓ Port de Tarragona",
