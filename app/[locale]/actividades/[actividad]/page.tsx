@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
-import { ACTIVITY_IMAGES, ACTIVITY_LOCATION, SITE } from "@/lib/constants";
+import { ACTIVITY_IMAGES, ACTIVITY_HEADER_IMAGES, ACTIVITY_LOCATION, SITE } from "@/lib/constants";
 import { buildActivityJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import LocationBadge from "@/components/ui/LocationBadge";
@@ -92,6 +92,10 @@ export default async function ActividadPage({
       ? "Reserva ara"
       : "Reservar ahora";
 
+  const header = ACTIVITY_HEADER_IMAGES[actividad];
+  const headerSrc = header?.src ?? img;
+  const headerPosition = header?.position ?? "center";
+
   const activityJsonLd = buildActivityJsonLd({
     locale,
     slug: actividad,
@@ -118,11 +122,18 @@ export default async function ActividadPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="relative h-[40vh] sm:h-[45vh] md:h-[50vh] min-h-[280px] sm:min-h-[320px] md:min-h-[360px] overflow-hidden">
-        <img src={img} alt={item.name} width={600} height={400} className="w-full h-full object-cover brightness-[0.4]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 to-transparent" />
+        <img
+          src={headerSrc}
+          alt={item.name}
+          width={1600}
+          height={1067}
+          className="w-full h-full object-cover brightness-[0.55]"
+          style={{ objectPosition: headerPosition }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-abyss/85 via-abyss/25 to-abyss/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
-          <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">{emoji}</span>
-          <h1 className="font-display text-white" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{item.name}</h1>
+          <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 drop-shadow-lg">{emoji}</span>
+          <h1 className="font-display text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{item.name}</h1>
           <div className="mt-3 sm:mt-4">
             <LocationBadge location={location} dict={dict.locations} className="text-[11px] sm:text-xs" />
           </div>
