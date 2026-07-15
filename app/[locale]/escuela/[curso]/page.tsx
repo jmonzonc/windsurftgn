@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { COURSE_IMAGES, COURSE_LOCATION, SITE } from "@/lib/constants";
 import { buildCourseJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import LocationBadge from "@/components/ui/LocationBadge";
 
 const COURSE_KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"] as const;
 const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "paddle-surf": "🏄", "esqui-wake": "🎿", vela: "⛵", catamaran: "🛥️", "patin-catalan": "🚩" };
@@ -79,6 +80,7 @@ export default async function CursoPage({
 
   const img = COURSE_IMAGES[curso] || COURSE_IMAGES["windsurf"];
   const emoji = EMOJIS[curso] || "🏄";
+  const location = COURSE_LOCATION[curso] ?? "playa";
   const pageUrl = `https://windsurftarragona.com/${locale}/escuela/${curso}`;
 
   const backLabel = locale === "en" ? "Back to courses" : locale === "ca" ? "Tornar als cursos" : "Volver a cursos";
@@ -99,7 +101,7 @@ export default async function CursoPage({
     name: course.name,
     description: course.seoDesc || course.desc,
     image: img,
-    location: COURSE_LOCATION[curso] ?? "playa",
+    location,
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -125,6 +127,9 @@ export default async function CursoPage({
           <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">{emoji}</span>
           <h1 className="font-display text-white" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{course.name}</h1>
           <p className="font-body text-white/60 mt-3 sm:mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-relaxed">{course.desc}</p>
+          <div className="mt-3 sm:mt-4">
+            <LocationBadge location={location} dict={dict.locations} className="text-[11px] sm:text-xs" />
+          </div>
         </div>
       </div>
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
