@@ -26,7 +26,7 @@ export default function BananaBoat({ dict, locale }: { dict: BananaDict; locale:
         >
           <div className="flex-[1_1_auto] sm:flex-[1_1_400px] h-[220px] sm:h-auto sm:min-h-[320px] relative overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=900"
+              src="/images/actividad-banana.jpg"
               alt="Banana Boat en el Puerto de Tarragona"
               width={900} height={600}
               className="w-full h-full object-cover transition-transform duration-[1000ms] ease-expo"

@@ -29,7 +29,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       <video
         autoPlay muted loop playsInline
         preload="metadata"
-        poster="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        poster="/images/base-playa-larga.jpg"
         onCanPlay={() => setVidLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover brightness-[0.38] saturate-[1.3] contrast-[1.1] transition-opacity duration-[1500ms]"
         style={{ transform: `translateY(${scrollY * 0.25}px) scale(1.15)`, opacity: vidLoaded ? 1 : 0 }}
@@ -39,7 +39,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       <div
         className="absolute inset-0 bg-cover bg-center brightness-[0.35] saturate-[1.3] transition-opacity duration-[1500ms]"
         style={{
-          backgroundImage: `url("https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=1920")`,
+          backgroundImage: `url("/images/base-playa-larga.jpg")`,
           opacity: vidLoaded ? 0 : 1,
         }}
       />
