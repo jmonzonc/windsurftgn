@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { locales, isValidLocale, type Locale } from "@/lib/i18n";
+import { locales, isValidLocale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionary";
+import { buildJsonLd } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import SetHtmlLang from "@/components/ui/SetHtmlLang";
-import { SITE } from "@/lib/constants";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -57,175 +57,6 @@ export async function generateMetadata({
       description: dict.meta.description,
       images: ["https://windsurftarragona.com/og-image.jpg"],
     },
-  };
-}
-
-function buildJsonLd(locale: Locale, dict: Record<string, any>) {
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "SportsActivityLocation"],
-        "@id": "https://windsurftarragona.com/#business",
-        name: "Windsurf Tarragona",
-        alternateName: ["Escola Nàutica Tarragona", "Escuela Náutica Tarragona"],
-        description: dict.meta.description,
-        url: `${SITE.url}/${locale}`,
-        telephone: "+34977232715",
-        email: SITE.email,
-        foundingDate: "2004",
-        priceRange: "€€",
-        currenciesAccepted: "EUR",
-        paymentAccepted: "Cash, Credit Card",
-        inLanguage: locale === "ca" ? "ca" : locale === "en" ? "en" : "es",
-        availableLanguage: ["es", "ca", "en"],
-        logo: {
-          "@type": "ImageObject",
-          url: "https://windsurftarragona.com/logo.png",
-        },
-        image: [
-          "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg",
-          "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg",
-        ],
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Ctra. N-340, Km 1168, Camping Las Palmeras",
-          addressLocality: "Tarragona",
-          addressRegion: "Cataluña",
-          postalCode: "43007",
-          addressCountry: "ES",
-        },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: SITE.coords.lat,
-          longitude: SITE.coords.lng,
-        },
-        hasMap: SITE.mapsUrl,
-        sameAs: [SITE.instagram, SITE.facebook, SITE.mapsUrl],
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            opens: "10:00",
-            closes: "14:00",
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Saturday", "Sunday"],
-            opens: "11:00",
-            closes: "14:00",
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Saturday", "Sunday"],
-            opens: "16:00",
-            closes: "19:00",
-          },
-        ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.8",
-          reviewCount: "150",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name:
-            locale === "ca"
-              ? "Activitats i Cursos Nàutics"
-              : locale === "en"
-                ? "Nautical Activities & Courses"
-                : "Actividades y Cursos Náuticos",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Curso de Windsurf",
-                url: `https://windsurftarragona.com/${locale}/escuela/windsurf`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Curso de Wing-Foil",
-                url: `https://windsurftarragona.com/${locale}/escuela/wing-foil`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Paddle Surf / Surf",
-                url: `https://windsurftarragona.com/${locale}/escuela/paddle-surf`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Esquí Náutico / Wakeboard",
-                description: "75€/estirada 10 min · Micro-curso 150€",
-                url: `https://windsurftarragona.com/${locale}/escuela/esqui-wake`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Banana Boat",
-                description: "18€/persona, 12 minutos, hasta 10 personas",
-                url: `https://windsurftarragona.com/${locale}/actividades/banana-boat`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Kayak",
-                description: "25€/hora, hasta 4 plazas",
-                url: `https://windsurftarragona.com/${locale}/actividades/kayak`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Big Paddle Surf",
-                description: "100€/hora, hasta 12 personas",
-                url: `https://windsurftarragona.com/${locale}/actividades/big-paddle-surf`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Paseos en Barco",
-                description: "185€/hora, hasta 6 personas con patrón",
-                url: `https://windsurftarragona.com/${locale}/actividades/paseos-barco`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Catamarán",
-                url: `https://windsurftarragona.com/${locale}/escuela/catamaran`,
-              },
-            },
-          ],
-        },
-        areaServed: [
-          { "@type": "City", name: "Tarragona" },
-          { "@type": "City", name: "Salou" },
-          { "@type": "City", name: "Cambrils" },
-          { "@type": "AdministrativeArea", name: "Costa Daurada" },
-          { "@type": "AdministrativeArea", name: "Costa Dorada" },
-        ],
-      },
-    ],
   };
 }
 
