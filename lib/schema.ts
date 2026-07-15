@@ -113,8 +113,9 @@ export function buildJsonLd(locale: Locale, dict: Record<string, any>) {
         availableLanguage: ["es", "ca", "en"],
         logo: { "@type": "ImageObject", url: `${SITE.url}/logo.png` },
         image: [
-          "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg",
-          "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg",
+          `${SITE.url}/images/base-playa-larga.jpg`,
+          `${SITE.url}/images/actividad-banana.jpg`,
+          `${SITE.url}/images/actividad-paseos-barco.jpg`,
         ],
         address: addressNode("playa"),
         geo: geoNode("playa"),
