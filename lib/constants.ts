@@ -32,14 +32,13 @@ export const LOCATIONS = {
   puerto: {
     id: "https://windsurftarragona.com/#puerto-tarragona",
     slug: "puerto-tarragona",
-    streetAddress: "Moll de Costa, amarre 3, Port de Tarragona",
-    // TODO ❓ confirmar código postal y coordenadas exactas (pegar URL de Google Maps del amarre)
+    streetAddress: "Moll de Costa, Port de Tarragona",
     postalCode: "43004",
-    coords: { lat: 41.1075, lng: 1.253 },
+    coords: { lat: 41.1096568, lng: 1.2464933 },
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Moll+de+Costa%2C+Port+de+Tarragona",
+      "https://www.google.com/maps/place/Moll+de+la+Costa,+43004,+Tarragona/@41.1096568,1.2464933,17z/data=!3m1!4b1!4m6!3m5!1s0x12a3e2d4728afe5b:0xaa7c881fdd4d7cab!8m2!3d41.1096568!4d1.2464933!16s%2Fg%2F12vtjxtms",
     mapsEmbed:
-      "https://www.google.com/maps?q=Moll+de+Costa,+Port+de+Tarragona&output=embed",
+      "https://www.google.com/maps?q=Moll+de+la+Costa,+43004+Tarragona&ll=41.1096568,1.2464933&z=16&output=embed",
   },
 } as const;
 
@@ -49,9 +48,7 @@ export const ACTIVITY_LOCATION: Record<string, LocationKey> = {
   "alquiler-windsurf": "playa",
   "alquiler-surf": "playa",
   "paseos-barco": "puerto",
-  donut: "puerto", // ❓ arrastrado por lancha → asumo puerto; confirmar
   "big-paddle-surf": "playa",
-  aquamarina: "playa",
 };
 
 export const COURSE_LOCATION: Record<string, LocationKey> = {
@@ -64,37 +61,56 @@ export const COURSE_LOCATION: Record<string, LocationKey> = {
   "patin-catalan": "playa",
 };
 
-export const COURSE_IMAGES: Record<string, string> = {
-  windsurf:
-    "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=900",
-  "wing-foil":
-    "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=900",
-  "paddle-surf":
-    "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=900",
-  "esqui-wake":
-    "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=900",
-  vela: "https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=900",
-  catamaran:
-    "https://images.pexels.com/photos/163236/pexels-photo-163236.jpeg?auto=compress&cs=tinysrgb&w=900",
-  "patin-catalan":
-    "https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=900",
-};
+// Sistema de imágenes local. Sube los archivos a /public/images/ con estos nombres exactos.
+// Mientras no existan, se usa el fallback de Pexels (FALLBACK_*) para no romper el render.
+const IMG = (name: string) => `/images/${name}`;
 
-export const ACTIVITY_IMAGES: Record<string, string> = {
-  banana:
-    "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=600",
-  kayak:
-    "https://images.pexels.com/photos/1497582/pexels-photo-1497582.jpeg?auto=compress&cs=tinysrgb&w=600",
-  windsurf_rental:
-    "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=600",
-  surf_rental:
-    "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=600",
-  boat_rides:
-    "https://images.pexels.com/photos/163236/pexels-photo-163236.jpeg?auto=compress&cs=tinysrgb&w=600",
-  donut:
-    "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=600",
-  big_paddle_surf:
-    "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=600",
-  aquamarina:
-    "https://images.pexels.com/photos/1497582/pexels-photo-1497582.jpeg?auto=compress&cs=tinysrgb&w=600",
-};
+const FALLBACK = {
+  windsurf: "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=900",
+  surf: "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=900",
+  wake: "https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=900",
+  vela: "https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=900",
+  boat: "https://images.pexels.com/photos/163236/pexels-photo-163236.jpeg?auto=compress&cs=tinysrgb&w=900",
+  kayak: "https://images.pexels.com/photos/1497582/pexels-photo-1497582.jpeg?auto=compress&cs=tinysrgb&w=900",
+} as const;
+
+// Cambia USE_LOCAL_IMAGES a true cuando hayas subido las fotos reales a /public/images/.
+export const USE_LOCAL_IMAGES = false;
+
+export const COURSE_IMAGES: Record<string, string> = USE_LOCAL_IMAGES
+  ? {
+      windsurf: IMG("curso-windsurf.jpg"),
+      "wing-foil": IMG("curso-wing-foil.jpg"),
+      "paddle-surf": IMG("curso-paddle-surf.jpg"),
+      "esqui-wake": IMG("curso-esqui-wake.jpg"),
+      vela: IMG("curso-vela.jpg"),
+      catamaran: IMG("curso-catamaran.jpg"),
+      "patin-catalan": IMG("curso-patin-catalan.jpg"),
+    }
+  : {
+      windsurf: FALLBACK.windsurf,
+      "wing-foil": FALLBACK.windsurf,
+      "paddle-surf": FALLBACK.surf,
+      "esqui-wake": FALLBACK.wake,
+      vela: FALLBACK.vela,
+      catamaran: FALLBACK.boat,
+      "patin-catalan": FALLBACK.vela,
+    };
+
+export const ACTIVITY_IMAGES: Record<string, string> = USE_LOCAL_IMAGES
+  ? {
+      banana: IMG("actividad-banana.jpg"),
+      kayak: IMG("actividad-kayak.jpg"),
+      windsurf_rental: IMG("actividad-alquiler-windsurf.jpg"),
+      surf_rental: IMG("actividad-alquiler-surf.jpg"),
+      boat_rides: IMG("actividad-paseos-barco.jpg"),
+      big_paddle_surf: IMG("actividad-big-paddle-surf.jpg"),
+    }
+  : {
+      banana: FALLBACK.wake,
+      kayak: FALLBACK.kayak,
+      windsurf_rental: FALLBACK.windsurf,
+      surf_rental: FALLBACK.surf,
+      boat_rides: FALLBACK.boat,
+      big_paddle_surf: FALLBACK.surf,
+    };
