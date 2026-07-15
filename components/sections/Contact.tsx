@@ -2,24 +2,26 @@
 
 import { useState } from "react";
 import { useReveal } from "@/lib/hooks";
-import { SITE } from "@/lib/constants";
+import { SITE, LOCATIONS } from "@/lib/constants";
 
 type ContactItem = { title: string; text: string; sub: string };
 type ContactDict = {
   title1: string; title2: string; title3: string; subtitle: string;
-  phone: ContactItem; location: ContactItem; social: ContactItem; whatsapp: ContactItem;
-  mapLabel: string; mapAddress: string; mapCta: string;
+  phone: ContactItem; location: ContactItem; location2: ContactItem;
+  social: ContactItem; whatsapp: ContactItem;
+  mapLabel: string; mapAddress: string;
+  mapLabel2: string; mapAddress2: string; mapCta: string;
 };
 
-const ICONS = ["📞", "📍", "📸", "💬"];
+const ICONS = ["📞", "📍", "⚓", "💬"];
 
 export default function Contact({ dict }: { dict: ContactDict }) {
   const [ref, vis] = useReveal();
-  const items = [dict.phone, dict.location, dict.social, dict.whatsapp];
+  const items = [dict.phone, dict.location, dict.location2, dict.whatsapp];
   const hrefs = [
     SITE.phoneHref,
-    SITE.mapsUrl,
-    "https://instagram.com/windsurftarragona",
+    LOCATIONS.playa.mapsUrl,
+    LOCATIONS.puerto.mapsUrl,
     SITE.whatsapp,
   ];
 
@@ -40,31 +42,59 @@ export default function Contact({ dict }: { dict: ContactDict }) {
             <ContactCard key={i} icon={ICONS[i]} href={hrefs[i]} {...item} />
           ))}
         </div>
+
+        {/* Dos mapas: Playa Larga + Puerto de Tarragona */}
         <div
-          className="mt-8 md:mt-12 rounded-[20px] sm:rounded-[28px] overflow-hidden h-[200px] sm:h-[240px] md:h-[280px] relative bg-gradient-to-br from-ocean/[0.08] to-turq/[0.06] border border-ocean/[0.06]"
+          className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5"
           style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s" }}
         >
-          <iframe
-            src={SITE.mapsEmbed}
-            width="100%"
-            height="100%"
-            className="border-0 saturate-[0.7] brightness-[1.05]"
-            allowFullScreen
-            loading="lazy"
-            title="Ubicación Windsurf Tarragona"
+          <MapCard
+            embed={LOCATIONS.playa.mapsEmbed}
+            title={dict.mapLabel}
+            address={dict.mapAddress}
+            mapsUrl={LOCATIONS.playa.mapsUrl}
+            cta={dict.mapCta}
+            iframeTitle="Windsurf Tarragona · Playa Larga"
           />
-          <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 bg-white/[0.92] backdrop-blur-[16px] rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 flex justify-between items-center shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex-wrap gap-2 sm:gap-3">
-            <div className="text-left">
-              <div className="font-body font-bold text-[13px] sm:text-[15px] text-midnight">{dict.mapLabel}</div>
-              <div className="font-body text-[11px] sm:text-[13px] text-gray-400">{dict.mapAddress}</div>
-            </div>
-            <a href={SITE.mapsUrl} target="_blank" rel="noreferrer" className="btn-primary py-2 sm:py-2.5 px-4 sm:px-[22px] text-[11px] sm:text-[13px] no-underline">
-              {dict.mapCta}
-            </a>
-          </div>
+          <MapCard
+            embed={LOCATIONS.puerto.mapsEmbed}
+            title={dict.mapLabel2}
+            address={dict.mapAddress2}
+            mapsUrl={LOCATIONS.puerto.mapsUrl}
+            cta={dict.mapCta}
+            iframeTitle="Windsurf Tarragona · Puerto de Tarragona"
+          />
         </div>
       </div>
     </section>
+  );
+}
+
+function MapCard({ embed, title, address, mapsUrl, cta, iframeTitle }: {
+  embed: string; title: string; address: string; mapsUrl: string; cta: string; iframeTitle: string;
+}) {
+  return (
+    <div className="rounded-[20px] sm:rounded-[28px] overflow-hidden h-[200px] sm:h-[240px] md:h-[280px] relative bg-gradient-to-br from-ocean/[0.08] to-turq/[0.06] border border-ocean/[0.06]">
+      <iframe
+        src={embed}
+        width="100%"
+        height="100%"
+        className="border-0 saturate-[0.7] brightness-[1.05]"
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title={iframeTitle}
+      />
+      <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 right-3 sm:right-5 bg-white/[0.92] backdrop-blur-[16px] rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 flex justify-between items-center shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex-wrap gap-2 sm:gap-3">
+        <div className="text-left min-w-0">
+          <div className="font-body font-bold text-[13px] sm:text-[15px] text-midnight truncate">{title}</div>
+          <div className="font-body text-[11px] sm:text-[13px] text-gray-400 truncate">{address}</div>
+        </div>
+        <a href={mapsUrl} target="_blank" rel="noreferrer" className="btn-primary py-2 sm:py-2.5 px-4 sm:px-[22px] text-[11px] sm:text-[13px] no-underline shrink-0">
+          {cta}
+        </a>
+      </div>
+    </div>
   );
 }
 

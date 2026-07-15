@@ -4,28 +4,32 @@ import { useState } from "react";
 import Link from "next/link";
 import { useReveal } from "@/lib/hooks";
 import WaterParticles from "@/components/ui/WaterParticles";
-import { ACTIVITY_IMAGES } from "@/lib/constants";
+import LocationBadge from "@/components/ui/LocationBadge";
+import { ACTIVITY_IMAGES, ACTIVITY_LOCATION, type LocationKey } from "@/lib/constants";
 import type { Locale } from "@/lib/i18n";
 
 type ActivityItem = { name: string; price?: string; capacity?: string };
+type LocDict = {
+  playa: { label: string };
+  puerto: { label: string };
+  ambas: { label: string };
+};
 type ActividadesDict = {
   pill: string; title1: string; title2: string; discover: string; star: string;
   items: Record<string, ActivityItem>;
 };
 
-const KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut", "big-paddle-surf", "aquamarina"] as const;
+const KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "big-paddle-surf"] as const;
 const EMOJIS: Record<string, string> = {
   "banana-boat": "🍌", kayak: "🛶", "alquiler-windsurf": "🏄",
-  "alquiler-surf": "🌊", "paseos-barco": "🚤", donut: "🍩",
-  "big-paddle-surf": "🛟", aquamarina: "💎",
+  "alquiler-surf": "🌊", "paseos-barco": "🚤", "big-paddle-surf": "🛟",
 };
 const IMG_MAP: Record<string, string> = {
   "banana-boat": "banana", kayak: "kayak", "alquiler-windsurf": "windsurf_rental",
-  "alquiler-surf": "surf_rental", "paseos-barco": "boat_rides", donut: "donut",
-  "big-paddle-surf": "big_paddle_surf", aquamarina: "aquamarina",
+  "alquiler-surf": "surf_rental", "paseos-barco": "boat_rides", "big-paddle-surf": "big_paddle_surf",
 };
 
-export default function Actividades({ dict, locale }: { dict: ActividadesDict; locale: Locale }) {
+export default function Actividades({ dict, locDict, locale }: { dict: ActividadesDict; locDict: LocDict; locale: Locale }) {
   const [ref, vis] = useReveal();
 
   return (
@@ -41,7 +45,7 @@ export default function Actividades({ dict, locale }: { dict: ActividadesDict; l
             {dict.title1} <span className="gradient-text-gold">{dict.title2}</span>
           </h2>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-[18px]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-[18px]">
           {KEYS.map((key, i) => {
             const item = dict.items[key];
             return (
@@ -50,6 +54,7 @@ export default function Actividades({ dict, locale }: { dict: ActividadesDict; l
                 price={item.price} capacity={item.capacity}
                 img={ACTIVITY_IMAGES[IMG_MAP[key]]} vis={vis} delay={i * 0.07}
                 locale={locale} label={dict.discover}
+                location={ACTIVITY_LOCATION[key] ?? "playa"} locDict={locDict}
               />
             );
           })}
@@ -59,10 +64,11 @@ export default function Actividades({ dict, locale }: { dict: ActividadesDict; l
   );
 }
 
-function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, locale, label }: {
+function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, locale, label, location, locDict }: {
   slug: string; name: string; emoji: string;
   price?: string; capacity?: string;
   img: string; vis: boolean; delay: number; locale: Locale; label: string;
+  location: LocationKey; locDict: LocDict;
 }) {
   const [h, setH] = useState(false);
 
@@ -73,7 +79,6 @@ function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, loc
       onMouseLeave={() => setH(false)}
       className="relative rounded-[18px] sm:rounded-[24px] md:rounded-[28px] overflow-hidden cursor-pointer block no-underline transition-all duration-[800ms] ease-expo"
       style={{
-        height: undefined,
         aspectRatio: "3 / 4",
         border: "1px solid rgba(255,255,255,0.06)",
         opacity: vis ? 1 : 0,
@@ -83,7 +88,7 @@ function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, loc
     >
       <img
         src={img}
-        alt={name}
+        alt={`${name} · ${locDict[location === "ambas" ? "playa" : location].label}, Tarragona`}
         width={600} height={800}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[800ms] ease-expo"
         style={{ transform: h ? "scale(1.1)" : "scale(1)" }}
@@ -96,6 +101,9 @@ function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, loc
             : "linear-gradient(to top, rgba(0,20,40,0.8) 0%, transparent 55%)",
         }}
       />
+      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-[3]">
+        <LocationBadge location={location} dict={locDict} className="backdrop-blur-sm shadow-lg" />
+      </div>
       {price && price !== "Consultar" && price !== "Ask for prices" && (
         <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-turq/90 backdrop-blur-sm text-white py-1 sm:py-1.5 px-3 sm:px-4 rounded-full font-body font-bold text-[10px] sm:text-xs shadow-lg z-[3]">
           {price.split("·")[0].trim()}

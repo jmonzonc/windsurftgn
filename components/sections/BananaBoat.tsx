@@ -8,7 +8,7 @@ import type { Locale } from "@/lib/i18n";
 
 type BananaDict = {
   pill: string; title1: string; title2: string;
-  desc: string; allAges: string; cta: string; price: string;
+  desc: string; allAges: string; location: string; cta: string; price: string;
 };
 
 export default function BananaBoat({ dict, locale }: { dict: BananaDict; locale: Locale }) {
@@ -27,7 +27,7 @@ export default function BananaBoat({ dict, locale }: { dict: BananaDict; locale:
           <div className="flex-[1_1_auto] sm:flex-[1_1_400px] h-[220px] sm:h-auto sm:min-h-[320px] relative overflow-hidden">
             <img
               src="https://images.pexels.com/photos/1430672/pexels-photo-1430672.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Banana Boat en Playa Larga, Tarragona"
+              alt="Banana Boat en el Puerto de Tarragona"
               width={900} height={600}
               className="w-full h-full object-cover transition-transform duration-[1000ms] ease-expo"
               style={{ transform: hovered ? "scale(1.06)" : "scale(1)" }}
@@ -42,10 +42,13 @@ export default function BananaBoat({ dict, locale }: { dict: BananaDict; locale:
               {dict.title1}<br />{dict.title2}
             </h2>
             <p
-              className="font-body text-white/[0.92] leading-[1.55] sm:leading-[1.65] mb-5 sm:mb-8 max-w-[420px]"
+              className="font-body text-white/[0.92] leading-[1.55] sm:leading-[1.65] mb-2 sm:mb-3 max-w-[420px]"
               style={{ fontSize: "clamp(14px, 1.8vw, 18px)" }}
             >
               {dict.desc} <strong>{dict.allAges}</strong>
+            </p>
+            <p className="font-body text-white font-semibold text-[12px] sm:text-sm mb-5 sm:mb-8">
+              {dict.location}
             </p>
             <div className="flex gap-2.5 sm:gap-3 flex-wrap">
               <a

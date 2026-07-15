@@ -29,6 +29,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
       <video
         autoPlay muted loop playsInline
         preload="metadata"
+        poster="https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=1920"
         onCanPlay={() => setVidLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover brightness-[0.38] saturate-[1.3] contrast-[1.1] transition-opacity duration-[1500ms]"
         style={{ transform: `translateY(${scrollY * 0.25}px) scale(1.15)`, opacity: vidLoaded ? 1 : 0 }}
@@ -102,7 +103,7 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
         </div>
 
         <div
-className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidden sm:flex pointer-events-none"
+          className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidden sm:flex pointer-events-none"
           style={{ bottom: "clamp(60px, 10vh, 130px)", opacity: loaded ? 0.5 : 0, transition: "opacity 2s ease 2s" }}
         >
           <span className="font-body text-[11px] text-white tracking-[3px] uppercase">{dict.scroll}</span>
@@ -112,7 +113,7 @@ className="absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2.5 hidd
         </div>
       </div>
 
-      <div className="absolute -bottom-0.5 left-0 right-0 z-20">
+      <div className="absolute -bottom-0.5 left-0 right-0 z-20 pointer-events-none">
         <svg viewBox="0 0 1440 90" preserveAspectRatio="none" className="w-full block" style={{ height: "clamp(30px, 5vw, 80px)" }}>
           <path fill="#F4FAFF" opacity="0.4">
             <animate attributeName="d" dur="6s" repeatCount="indefinite"
