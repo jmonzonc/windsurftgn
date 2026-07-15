@@ -86,3 +86,10 @@ export const ACTIVITY_IMAGES: Record<string, string> = {
   boat_rides: IMG("actividad-paseos-barco.jpg"),
   big_paddle_surf: IMG("actividad-big-paddle-surf.jpg"),
 };
+
+// Imágenes específicas para el header (hero) de la página de detalle, por slug.
+// Si un slug no está aquí, el header usa la misma imagen de la card (ACTIVITY_IMAGES).
+// [src, objectPosition] — objectPosition mantiene visible el sujeto bajo el título.
+export const ACTIVITY_HEADER_IMAGES: Record<string, { src: string; position: string }> = {
+  "banana-boat": { src: IMG("header-banana-boat.jpg"), position: "center 62%" },
+};
