@@ -6,10 +6,11 @@ import { getDictionary } from "@/lib/dictionary";
 import { ACTIVITY_IMAGES, ACTIVITY_LOCATION, SITE } from "@/lib/constants";
 import { buildActivityJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import LocationBadge from "@/components/ui/LocationBadge";
 
-const ITEM_KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "donut", "big-paddle-surf", "aquamarina"] as const;
-const EMOJIS: Record<string, string> = { "banana-boat": "🍌", kayak: "🛶", "alquiler-windsurf": "🏄", "alquiler-surf": "🌊", "paseos-barco": "🚤", donut: "🍩", "big-paddle-surf": "🛟", aquamarina: "💎" };
-const IMG_MAP: Record<string, string> = { "banana-boat": "banana", kayak: "kayak", "alquiler-windsurf": "windsurf_rental", "alquiler-surf": "surf_rental", "paseos-barco": "boat_rides", donut: "donut", "big-paddle-surf": "big_paddle_surf", aquamarina: "aquamarina" };
+const ITEM_KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "big-paddle-surf"] as const;
+const EMOJIS: Record<string, string> = { "banana-boat": "🍌", kayak: "🛶", "alquiler-windsurf": "🏄", "alquiler-surf": "🌊", "paseos-barco": "🚤", "big-paddle-surf": "🛟" };
+const IMG_MAP: Record<string, string> = { "banana-boat": "banana", kayak: "kayak", "alquiler-windsurf": "windsurf_rental", "alquiler-surf": "surf_rental", "paseos-barco": "boat_rides", "big-paddle-surf": "big_paddle_surf" };
 
 export async function generateStaticParams() {
   const params: { locale: string; actividad: string }[] = [];
@@ -76,6 +77,7 @@ export default async function ActividadPage({
 
   const img = ACTIVITY_IMAGES[IMG_MAP[actividad]] || ACTIVITY_IMAGES["banana"];
   const emoji = EMOJIS[actividad] || "🎉";
+  const location = ACTIVITY_LOCATION[actividad] ?? "playa";
   const pageUrl = `https://windsurftarragona.com/${locale}/actividades/${actividad}`;
 
   const backLabel = locale === "en" ? "Back to activities" : locale === "ca" ? "Tornar a activitats" : "Volver a actividades";
@@ -96,7 +98,7 @@ export default async function ActividadPage({
     name: item.name,
     description: item.seoDesc || `${item.name} en Tarragona`,
     image: img,
-    location: ACTIVITY_LOCATION[actividad] ?? "playa",
+    location,
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -121,6 +123,9 @@ export default async function ActividadPage({
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
           <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4">{emoji}</span>
           <h1 className="font-display text-white" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{item.name}</h1>
+          <div className="mt-3 sm:mt-4">
+            <LocationBadge location={location} dict={dict.locations} className="text-[11px] sm:text-xs" />
+          </div>
         </div>
       </div>
       <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-16">
