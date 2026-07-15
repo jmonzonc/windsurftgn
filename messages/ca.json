@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Windsurf Tarragona · Escola Nàutica & Activitats Aquàtiques a Platja Llarga",
-    "description": "Escola nàutica i centre d'activitats aquàtiques a Platja Llarga, Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarà, patí català, esquí nàutic i wake. Banana boat, caiac, passejades en vaixell. +20 anys a la Costa Daurada.",
+    "description": "Escola nàutica i centre d'activitats aquàtiques a Platja Llarga i al Port de Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarà, patí català, esquí nàutic i wake. Banana boat, caiac, passejades en vaixell. +20 anys a la Costa Daurada.",
     "ogTitle": "Windsurf Tarragona · Viu l'Aigua"
   },
   "nav": {
@@ -10,8 +10,25 @@
     "grupos": "Grups",
     "contacto": "Contacte"
   },
+  "locations": {
+    "playa": {
+      "label": "Platja Llarga",
+      "address": "Camping Las Palmeras · Ctra. N-340, Km 1168",
+      "sub": "Cursos, lloguer i activitats de platja"
+    },
+    "puerto": {
+      "label": "Port de Tarragona",
+      "address": "Moll de Costa, amarratge 3",
+      "sub": "Banana · Esquí/Wake · Training-foil · Passejades en llanxa"
+    },
+    "ambas": {
+      "label": "Platja Llarga + Port"
+    },
+    "badgeTitle": "Ubicació",
+    "whereTitle": "On?"
+  },
   "hero": {
-    "location": "Platja Llarga · Tarragona · Costa Daurada",
+    "location": "Platja Llarga · Port de Tarragona · Costa Daurada",
     "pre": "Escola Nàutica & Centre d'Activitats Aquàtiques",
     "title1": "VIU",
     "title2": "L'AIGUA",
@@ -29,8 +46,9 @@
     "title2": "BOAT",
     "desc": "L'experiència més divertida del Mediterrani. Agafa't fort, riu sense parar i crea records que duren tota la vida.",
     "allAges": "Totes les edats.",
+    "location": "📍 Sortida des del Port de Tarragona (Moll de Costa)",
     "cta": "El vull! 🎉",
-    "price": "18€/pers · 12 min"
+    "price": "20€/pers · 12 min"
   },
   "stats": {
     "years": "+20",
@@ -58,9 +76,9 @@
       },
       "wing-foil": {
         "name": "Wing-Foil",
-        "desc": "Nou! Vola sobre l'aigua amb un wing i un foil. Curs en 3 fases: wing + taula gran, foil + llanxa, wing + foil. La sensació més nova del mar.",
-        "price": "Consultar",
-        "seoDesc": "Curs de wing-foil a Platja Llarga, Tarragona. Aprèn wing-foil en 3 fases progressives amb monitors titulats. Escola nàutica amb +20 anys a la Costa Daurada."
+        "desc": "Nou! Vola sobre l'aigua amb un wing i un foil. Curs en 3 fases: wing + taula gran, foil + llanxa (training-foil), wing + foil. Fases 1 i 3 a Platja Llarga, fase 2 al Port de Tarragona.",
+        "price": "Consultar · Training-foil 200€/h",
+        "seoDesc": "Curs de wing-foil a Tarragona. Aprèn wing-foil en 3 fases progressives amb monitors titulats: Platja Llarga i Port de Tarragona. Training-foil 200€/h. +20 anys a la Costa Daurada."
       },
       "paddle-surf": {
         "name": "Paddle Surf / Surf",
@@ -71,8 +89,8 @@
       "esqui-wake": {
         "name": "Esquí / Wake",
         "desc": "Esquí nàutic i wakeboard arrossegat per la nostra llanxa. Adrenalina pura sobre l'aigua, per a principiants i avançats.",
-        "price": "75€/estirada 10 min · Micro-curs 150€",
-        "seoDesc": "Esquí nàutic i wakeboard a Platja Llarga, Tarragona. Estirades de 10 min i micro-cursos amb llanxa professional. Tots els nivells a la Costa Daurada."
+        "price": "75€/estirada 12 min · Micro-curs sortida de l'aigua 150€",
+        "seoDesc": "Esquí nàutic i wakeboard al Port de Tarragona. Estirades de 12 min i micro-cursos de sortida de l'aigua amb llanxa professional. Tots els nivells a la Costa Daurada."
       },
       "vela": {
         "name": "Navegació / Vela",
@@ -103,9 +121,9 @@
     "items": {
       "banana-boat": {
         "name": "Banana Boat",
-        "price": "18€/pers · 12 min",
+        "price": "20€/pers · 12 min",
         "capacity": "Fins a 10 persones",
-        "seoDesc": "Banana boat a Platja Llarga, Tarragona. 18€/persona, 12 minuts de diversió. Fins a 10 persones. L'activitat aquàtica més divertida de la Costa Daurada."
+        "seoDesc": "Banana boat des del Port de Tarragona (Moll de Costa). 20€/persona, 12 minuts de diversió. Fins a 10 persones. L'activitat aquàtica més divertida de la Costa Daurada."
       },
       "kayak": {
         "name": "Caiac",
@@ -121,21 +139,21 @@
       },
       "alquiler-surf": {
         "name": "Lloguer Paddle Surf / Surf",
-        "price": "22€/h · Mig dia 70€ · 1 dia 100€",
+        "price": "25€/h · Mig dia 70€ · 1 dia 100€",
         "capacity": "",
-        "seoDesc": "Lloguer de paddle surf i taules de surf a Platja Llarga, Tarragona. Des de 22€/hora. Material de qualitat per a SUP, surf i body-surf a la Costa Daurada."
+        "seoDesc": "Lloguer de paddle surf i taules de surf a Platja Llarga, Tarragona. Des de 25€/hora. Material de qualitat per a SUP, surf i body-surf a la Costa Daurada."
       },
       "paseos-barco": {
         "name": "Passejades en Vaixell",
-        "price": "185€/h",
+        "price": "200€/h",
         "capacity": "Fins a 6 persones · Amb patró",
-        "seoDesc": "Passejades en vaixell a Tarragona. 185€/hora, fins a 6 persones amb patró. Excursions en llanxa per Platja Llarga i la Costa Daurada."
+        "seoDesc": "Passejades en vaixell des del Port de Tarragona. 200€/hora, fins a 6 persones amb patró. Excursions en llanxa per la costa de Tarragona i la Costa Daurada."
       },
       "donut": {
         "name": "Donut",
         "price": "Consultar",
         "capacity": "",
-        "seoDesc": "Donut aquàtic a Platja Llarga, Tarragona. Diversió i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
+        "seoDesc": "Donut aquàtic a Tarragona. Diversió i adrenalina arrossegat per llanxa a la Costa Daurada. Totes les edats."
       },
       "big-paddle-surf": {
         "name": "Big Paddle Surf",
@@ -181,17 +199,20 @@
     "title1": "ENS",
     "title2": "VEIEM",
     "title3": "? 🌊",
-    "subtitle": "Vine a Platja Llarga. T'estem esperant.",
+    "subtitle": "T'esperem a Platja Llarga i al Port de Tarragona.",
     "phone": { "title": "Truca'ns", "text": "977 23 27 15", "sub": "Dl-Dv 10h-14h · Cap de setmana 11h-14h / 16h-19h" },
-    "location": { "title": "Vine a veure'ns", "text": "Camping Las Palmeras", "sub": "Platja Llarga, Tarragona" },
+    "location": { "title": "Platja Llarga", "text": "Camping Las Palmeras", "sub": "Cursos, lloguer i activitats" },
+    "location2": { "title": "Port de Tarragona", "text": "Moll de Costa, amarratge 3", "sub": "Banana · Esquí/Wake · Passejades" },
     "social": { "title": "Segueix-nos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
     "whatsapp": { "title": "WhatsApp", "text": "609 874 869", "sub": "Resposta ràpida" },
     "mapLabel": "📍 Windsurf Tarragona",
     "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapLabel2": "⚓ Port de Tarragona",
+    "mapAddress2": "Moll de Costa, amarratge 3",
     "mapCta": "Com arribar →"
   },
   "footer": {
-    "tagline": "Platja Llarga, Tarragona · Costa Daurada · Des de 2004",
+    "tagline": "Platja Llarga & Port de Tarragona · Costa Daurada · Des de 2004",
     "copy": "© 2026 Windsurf Tarragona · Fet amb aigua, sol i passió pel mar 🌊☀️",
     "privacy": "Privacitat",
     "legal": "Avís Legal"
@@ -207,7 +228,7 @@
   },
   "contactoPage": {
     "title": "Contacte",
-    "subtitle": "Som a Platja Llarga, Tarragona",
+    "subtitle": "Som a Platja Llarga i al Port de Tarragona",
     "formName": "Nom",
     "formEmail": "Email",
     "formPhone": "Telèfon",

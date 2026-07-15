@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Windsurf Tarragona · Escuela Náutica & Actividades Acuáticas en Playa Larga",
-    "description": "Escuela náutica y centro de actividades acuáticas en Playa Larga, Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarán, patín catalán, esquí náutico y wake. Banana boat, kayak, paseos en barco. +20 años en la Costa Dorada.",
+    "description": "Escuela náutica y centro de actividades acuáticas en Playa Larga y el Puerto de Tarragona. Cursos de windsurf, wing-foil, paddle surf, vela, catamarán, patín catalán, esquí náutico y wake. Banana boat, kayak, paseos en barco. +20 años en la Costa Dorada.",
     "ogTitle": "Windsurf Tarragona · Vive el Agua"
   },
   "nav": {
@@ -10,8 +10,25 @@
     "grupos": "Grupos",
     "contacto": "Contacto"
   },
+  "locations": {
+    "playa": {
+      "label": "Playa Larga",
+      "address": "Camping Las Palmeras · Ctra. N-340, Km 1168",
+      "sub": "Cursos, alquiler y actividades de playa"
+    },
+    "puerto": {
+      "label": "Puerto de Tarragona",
+      "address": "Moll de Costa, amarre 3",
+      "sub": "Banana · Esquí/Wake · Training-foil · Paseos en lancha"
+    },
+    "ambas": {
+      "label": "Playa Larga + Puerto"
+    },
+    "badgeTitle": "Ubicación",
+    "whereTitle": "¿Dónde?"
+  },
   "hero": {
-    "location": "Playa Larga · Tarragona · Costa Dorada",
+    "location": "Playa Larga · Puerto de Tarragona · Costa Dorada",
     "pre": "Escuela Náutica & Centro de Actividades Acuáticas",
     "title1": "VIVE EL",
     "title2": "AGUA",
@@ -29,8 +46,9 @@
     "title2": "BOAT",
     "desc": "La experiencia más divertida del Mediterráneo. Agárrate fuerte, ríe sin parar y crea recuerdos que duran toda la vida.",
     "allAges": "Todas las edades.",
+    "location": "📍 Salida desde el Puerto de Tarragona (Moll de Costa)",
     "cta": "¡Lo quiero! 🎉",
-    "price": "18€/pers · 12 min"
+    "price": "20€/pers · 12 min"
   },
   "stats": {
     "years": "+20",
@@ -58,9 +76,9 @@
       },
       "wing-foil": {
         "name": "Wing-Foil",
-        "desc": "¡Nuevo! Vuela sobre el agua con un wing y un foil. Curso en 3 fases: wing + tabla grande, foil + lancha, wing + foil. La sensación más nueva del mar.",
-        "price": "Consultar",
-        "seoDesc": "Curso de wing-foil en Playa Larga, Tarragona. Aprende wing-foil en 3 fases progresivas con monitores titulados. Escuela náutica con +20 años en la Costa Dorada."
+        "desc": "¡Nuevo! Vuela sobre el agua con un wing y un foil. Curso en 3 fases: wing + tabla grande, foil + lancha (training-foil), wing + foil. Fases 1 y 3 en Playa Larga, fase 2 en el Puerto de Tarragona.",
+        "price": "Consultar · Training-foil 200€/h",
+        "seoDesc": "Curso de wing-foil en Tarragona. Aprende wing-foil en 3 fases progresivas con monitores titulados: Playa Larga y Puerto de Tarragona. Training-foil 200€/h. +20 años en la Costa Dorada."
       },
       "paddle-surf": {
         "name": "Paddle Surf / Surf",
@@ -71,8 +89,8 @@
       "esqui-wake": {
         "name": "Esquí / Wake",
         "desc": "Esquí náutico y wakeboard arrastrado por nuestra lancha. Adrenalina pura sobre el agua, para principiantes y avanzados.",
-        "price": "75€/estirada 10 min · Micro-curso 150€",
-        "seoDesc": "Esquí náutico y wakeboard en Playa Larga, Tarragona. Estiradas de 10 min y micro-cursos con lancha profesional. Todos los niveles en la Costa Dorada."
+        "price": "75€/estirada 12 min · Micro-curso salida del agua 150€",
+        "seoDesc": "Esquí náutico y wakeboard en el Puerto de Tarragona. Estiradas de 12 min y micro-cursos de salida del agua con lancha profesional. Todos los niveles en la Costa Dorada."
       },
       "vela": {
         "name": "Navegación / Vela",
@@ -103,9 +121,9 @@
     "items": {
       "banana-boat": {
         "name": "Banana Boat",
-        "price": "18€/pers · 12 min",
+        "price": "20€/pers · 12 min",
         "capacity": "Hasta 10 personas",
-        "seoDesc": "Banana boat en Playa Larga, Tarragona. 18€/persona, 12 minutos de diversión. Hasta 10 personas. La actividad acuática más divertida de la Costa Dorada."
+        "seoDesc": "Banana boat desde el Puerto de Tarragona (Moll de Costa). 20€/persona, 12 minutos de diversión. Hasta 10 personas. La actividad acuática más divertida de la Costa Dorada."
       },
       "kayak": {
         "name": "Kayak",
@@ -121,21 +139,21 @@
       },
       "alquiler-surf": {
         "name": "Alquiler Paddle Surf / Surf",
-        "price": "22€/h · Medio día 70€ · 1 día 100€",
+        "price": "25€/h · Medio día 70€ · 1 día 100€",
         "capacity": "",
-        "seoDesc": "Alquiler de paddle surf y tablas de surf en Playa Larga, Tarragona. Desde 22€/hora. Material de calidad para SUP, surf y body-surf en la Costa Dorada."
+        "seoDesc": "Alquiler de paddle surf y tablas de surf en Playa Larga, Tarragona. Desde 25€/hora. Material de calidad para SUP, surf y body-surf en la Costa Dorada."
       },
       "paseos-barco": {
         "name": "Paseos en Barco",
-        "price": "185€/h",
+        "price": "200€/h",
         "capacity": "Hasta 6 personas · Con patrón",
-        "seoDesc": "Paseos en barco en Tarragona. 185€/hora, hasta 6 personas con patrón. Excursiones en lancha por Playa Larga y la Costa Dorada. Grupos, familias y despedidas."
+        "seoDesc": "Paseos en barco desde el Puerto de Tarragona. 200€/hora, hasta 6 personas con patrón. Excursiones en lancha por la costa de Tarragona y la Costa Dorada. Grupos, familias y despedidas."
       },
       "donut": {
         "name": "Donut",
         "price": "Consultar",
         "capacity": "",
-        "seoDesc": "Donut acuático en Playa Larga, Tarragona. Diversión y adrenalina arrastrado por lancha en la Costa Dorada. Todas las edades."
+        "seoDesc": "Donut acuático en Tarragona. Diversión y adrenalina arrastrado por lancha en la Costa Dorada. Todas las edades."
       },
       "big-paddle-surf": {
         "name": "Big Paddle Surf",
@@ -181,17 +199,20 @@
     "title1": "¿NOS",
     "title2": "VEMOS",
     "title3": "? 🌊",
-    "subtitle": "Ven a Playa Larga. Te estamos esperando.",
+    "subtitle": "Te esperamos en Playa Larga y en el Puerto de Tarragona.",
     "phone": { "title": "Llámanos", "text": "977 23 27 15", "sub": "L-V 10h-14h · Finde 11h-14h / 16h-19h" },
-    "location": { "title": "Ven a vernos", "text": "Camping Las Palmeras", "sub": "Playa Larga, Tarragona" },
+    "location": { "title": "Playa Larga", "text": "Camping Las Palmeras", "sub": "Cursos, alquiler y actividades" },
+    "location2": { "title": "Puerto de Tarragona", "text": "Moll de Costa, amarre 3", "sub": "Banana · Esquí/Wake · Paseos" },
     "social": { "title": "Síguenos", "text": "@windsurftarragona", "sub": "Instagram & Facebook" },
     "whatsapp": { "title": "WhatsApp", "text": "609 874 869", "sub": "Respuesta rápida" },
     "mapLabel": "📍 Windsurf Tarragona",
     "mapAddress": "Ctra. N-340, Km 1168 · Camping Las Palmeras",
+    "mapLabel2": "⚓ Puerto de Tarragona",
+    "mapAddress2": "Moll de Costa, amarre 3",
     "mapCta": "Cómo llegar →"
   },
   "footer": {
-    "tagline": "Playa Larga, Tarragona · Costa Dorada · Desde 2004",
+    "tagline": "Playa Larga & Puerto de Tarragona · Costa Dorada · Desde 2004",
     "copy": "© 2026 Windsurf Tarragona · Hecho con agua, sol y pasión por el mar 🌊☀️",
     "privacy": "Privacidad",
     "legal": "Aviso Legal"
@@ -207,7 +228,7 @@
   },
   "contactoPage": {
     "title": "Contacto",
-    "subtitle": "Estamos en Playa Larga, Tarragona",
+    "subtitle": "Estamos en Playa Larga y en el Puerto de Tarragona",
     "formName": "Nombre",
     "formEmail": "Email",
     "formPhone": "Teléfono",
