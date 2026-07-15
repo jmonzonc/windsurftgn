@@ -18,6 +18,16 @@ const nextConfig = {
         destination: "/:locale/escuela/esqui-wake",
         permanent: true,
       },
+      {
+        source: "/:locale/actividades/aquamarina",
+        destination: "/:locale/actividades/big-paddle-surf",
+        permanent: true,
+      },
+      {
+        source: "/:locale/actividades/donut",
+        destination: "/:locale/actividades",
+        permanent: true,
+      },
     ];
   },
 };
