@@ -97,14 +97,17 @@ export const ACTIVITY_HEADER_IMAGES: Record<string, { src: string; position: str
 // Galería "clientes felices" — marquee horizontal auto + manual.
 // Selección sin caras reconocibles de terceros/menores (blur suave por cara donde aplica).
 export const GALLERY_IMAGES: { src: string; alt: string }[] = [
-  { src: IMG("gal-banana.jpeg"), alt: "Grupo disfrutando del banana boat en Tarragona" },
-  { src: IMG("gal-windsurf-1.jpg"), alt: "Windsurfistas navegando en la Costa Dorada" },
+  { src: IMG("gal-banana.jpg"), alt: "Grupo disfrutando del banana boat en Tarragona" },
+  { src: IMG("gal-windsurf.jpg"), alt: "Windsurf en la Costa Dorada" },
+  { src: IMG("gal-bigpaddle.jpg"), alt: "Big paddle surf en grupo en Playa Larga" },
   { src: IMG("gal-foil-2.jpg"), alt: "Wing-foil en el Puerto de Tarragona" },
   { src: IMG("gal-monitores.jpg"), alt: "Equipo de monitores de Windsurf Tarragona" },
   { src: IMG("gal-windsurf-salto.jpg"), alt: "Windsurf con salto de ola en Tarragona" },
+  { src: IMG("gal-grupo1.jpg"), alt: "Grupo disfrutando de las actividades de Windsurf Tarragona" },
   { src: IMG("gal-paddle-orilla.jpg"), alt: "Clase de paddle surf en Playa Larga" },
+  { src: IMG("gal-banana-kayak.jpg"), alt: "Banana boat y kayak en aguas de la Costa Dorada" },
+  { src: IMG("gal-windsurf-1.jpg"), alt: "Windsurfistas navegando en la Costa Dorada" },
   { src: IMG("gal-generica-corro.jpg"), alt: "Actividad de grupo en el agua en la Costa Dorada" },
-  { src: IMG("gal-banana-kayak.jpeg"), alt: "Banana boat y kayak en aguas de la Costa Dorada" },
   { src: IMG("gal-windsurf-doble.jpg"), alt: "Windsurf en la Costa Dorada" },
   { src: IMG("gal-atardecer.jpg"), alt: "Atardecer en Playa Larga, Tarragona" },
 ];
