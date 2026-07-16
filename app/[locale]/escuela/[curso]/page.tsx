@@ -128,7 +128,7 @@ export default async function CursoPage({
           <h1 className="font-display text-white" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{course.name}</h1>
           <p className="font-body text-white/60 mt-3 sm:mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-relaxed">{course.desc}</p>
           <div className="mt-3 sm:mt-4">
-            <LocationBadge location={location} dict={dict.locations} className="text-[11px] sm:text-xs" />
+            <LocationBadge location={location} dict={dict.locations} onImage className="text-[11px] sm:text-xs shadow-lg" />
           </div>
         </div>
       </div>
