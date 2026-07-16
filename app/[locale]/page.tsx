@@ -8,6 +8,7 @@ import Escuela from "@/components/sections/Escuela";
 import Actividades from "@/components/sections/Actividades";
 import Grupos from "@/components/sections/Grupos";
 import Reviews from "@/components/sections/Reviews";
+import Gallery from "@/components/sections/Gallery";
 import Contact from "@/components/sections/Contact";
 import Wave from "@/components/ui/Wave";
 
@@ -32,6 +33,7 @@ export default async function HomePage({
       <Grupos dict={dict.grupos} locale={locale} />
       <Wave color="#002B5C" />
       <Reviews dict={dict.reviews} />
+      <Gallery dict={dict.gallery} />
       <Wave color="#F4FAFF" />
       <Contact dict={dict.contacto} />
     </div>
