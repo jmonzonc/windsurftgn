@@ -69,9 +69,9 @@ const IMG = (name: string) => `/images/${name}`;
 const BASE = IMG("base-playa-larga.jpg");
 
 export const COURSE_IMAGES: Record<string, string> = {
-  windsurf: BASE,
-  "wing-foil": BASE,
-  "paddle-surf": IMG("actividad-alquiler-surf.jpg"), // foto real de paddle en Playa Larga
+  windsurf: IMG("curso-windsurf.jpg"),
+  "wing-foil": IMG("curso-wing-foil.jpg"),
+  "paddle-surf": IMG("curso-paddle-surf.jpg"),
   "esqui-wake": IMG("actividad-paseos-barco.jpg"), // lancha (arrastre esquí/wake)
   vela: BASE,
   catamaran: BASE,
@@ -91,5 +91,19 @@ export const ACTIVITY_IMAGES: Record<string, string> = {
 // Si un slug no está aquí, el header usa la misma imagen de la card (ACTIVITY_IMAGES).
 // [src, objectPosition] — objectPosition mantiene visible el sujeto bajo el título.
 export const ACTIVITY_HEADER_IMAGES: Record<string, { src: string; position: string }> = {
-  "banana-boat": { src: IMG("header-banana-boat.jpg"), position: "center 62%" },
+  "banana-boat": { src: IMG("actividad-banana.jpg"), position: "center 35%" },
 };
+
+// Galería "clientes felices" — marquee horizontal auto + manual.
+// Selección sin caras reconocibles de terceros/menores (blur suave por cara donde aplica).
+export const GALLERY_IMAGES: { src: string; alt: string }[] = [
+  { src: IMG("gal-windsurf-1.jpg"), alt: "Windsurfistas navegando en la Costa Dorada" },
+  { src: IMG("gal-foil-2.jpg"), alt: "Wing-foil en el Puerto de Tarragona" },
+  { src: IMG("gal-monitores.jpg"), alt: "Equipo de monitores de Windsurf Tarragona" },
+  { src: IMG("gal-windsurf-salto.jpg"), alt: "Windsurf con salto de ola en Tarragona" },
+  { src: IMG("gal-paddle-orilla.jpg"), alt: "Clase de paddle surf en Playa Larga" },
+  { src: IMG("gal-generica-corro.jpg"), alt: "Actividad de grupo en el agua en la Costa Dorada" },
+  { src: IMG("gal-banana-kayak.jpg"), alt: "Banana boat y kayak en aguas de la Costa Dorada" },
+  { src: IMG("gal-windsurf-doble.jpg"), alt: "Windsurf en la Costa Dorada" },
+  { src: IMG("gal-atardecer.jpg"), alt: "Atardecer en Playa Larga, Tarragona" },
+];
