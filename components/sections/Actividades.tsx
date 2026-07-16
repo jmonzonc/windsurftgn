@@ -97,30 +97,41 @@ function ActivityCard({ slug, name, emoji, price, capacity, img, vis, delay, loc
         className="absolute inset-0 transition-all duration-500"
         style={{
           background: h
-            ? "linear-gradient(to top, rgba(0,20,40,0.85) 0%, rgba(0,20,40,0.3) 50%, transparent 100%)"
-            : "linear-gradient(to top, rgba(0,20,40,0.8) 0%, transparent 55%)",
+            ? "linear-gradient(to top, rgba(0,18,36,0.92) 0%, rgba(0,18,36,0.45) 45%, rgba(0,18,36,0.15) 100%)"
+            : "linear-gradient(to top, rgba(0,18,36,0.9) 0%, rgba(0,18,36,0.3) 45%, rgba(0,18,36,0.1) 100%)",
         }}
       />
-      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-[3]">
-        <LocationBadge location={location} dict={locDict} className="backdrop-blur-sm shadow-lg" />
+      {/* Fila superior: ubicación (izq) + precio (der), sin solaparse */}
+      <div className="absolute top-2.5 left-2.5 right-2.5 sm:top-3.5 sm:left-3.5 sm:right-3.5 z-[3] flex items-start justify-between gap-2">
+        <LocationBadge location={location} dict={locDict} onImage className="backdrop-blur-md shadow-lg min-w-0 max-w-[62%]" />
+        {price && price !== "Consultar" && price !== "Ask for prices" && (
+          <span className="shrink-0 bg-turq/95 backdrop-blur-md text-white py-1 px-2.5 sm:px-3.5 rounded-full font-body font-bold text-[10px] sm:text-xs shadow-lg whitespace-nowrap">
+            {price.split("·")[0].trim()}
+          </span>
+        )}
       </div>
-      {price && price !== "Consultar" && price !== "Ask for prices" && (
-        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-turq/90 backdrop-blur-sm text-white py-1 sm:py-1.5 px-3 sm:px-4 rounded-full font-body font-bold text-[10px] sm:text-xs shadow-lg z-[3]">
-          {price.split("·")[0].trim()}
-        </div>
-      )}
       <div
-        className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-7 z-[2] transition-transform duration-500 ease-expo"
+        className="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 md:p-7 z-[2] transition-transform duration-500 ease-expo"
         style={{ transform: h ? "translateY(-10px)" : "translateY(0)" }}
       >
-        <span className="text-2xl sm:text-3xl md:text-4xl">{emoji}</span>
-        <h3 className="font-display text-white mt-1.5 sm:mt-2 m-0 text-[18px] sm:text-[22px] md:text-[26px] leading-tight">{name}</h3>
+        <span className="text-2xl sm:text-3xl md:text-4xl drop-shadow-lg">{emoji}</span>
+        <h3
+          className="font-display text-white mt-1 sm:mt-2 m-0 text-[17px] sm:text-[22px] md:text-[26px] leading-tight"
+          style={{ textShadow: "0 2px 12px rgba(0,10,25,0.7)" }}
+        >
+          {name}
+        </h3>
         {capacity && (
-          <p className="font-body text-[10px] sm:text-xs text-white/50 mt-0.5">{capacity}</p>
+          <p
+            className="font-body text-[10px] sm:text-xs text-white/75 mt-0.5"
+            style={{ textShadow: "0 1px 8px rgba(0,10,25,0.7)" }}
+          >
+            {capacity}
+          </p>
         )}
         <div
-          className="font-body text-xs sm:text-sm font-semibold text-white/85 mt-1.5 sm:mt-2.5 flex items-center gap-1.5 transition-all duration-[350ms] ease-expo"
-          style={{ opacity: h ? 1 : 0, transform: h ? "translateY(0)" : "translateY(12px)", transitionDelay: "80ms" }}
+          className="font-body text-xs sm:text-sm font-semibold text-white mt-1.5 sm:mt-2.5 flex items-center gap-1.5 transition-all duration-[350ms] ease-expo"
+          style={{ opacity: h ? 1 : 0, transform: h ? "translateY(0)" : "translateY(12px)", transitionDelay: "80ms", textShadow: "0 1px 8px rgba(0,10,25,0.7)" }}
         >
           <span>{label}</span>
           <span className="text-base sm:text-lg transition-transform duration-300" style={{ transform: h ? "translateX(4px)" : "none" }}>→</span>
