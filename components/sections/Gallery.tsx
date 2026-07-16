@@ -1,12 +1,12 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import { GALLERY_IMAGES } from "@/lib/constants";
 import { useReveal } from "@/lib/hooks";
 
 type GalleryDict = { title1: string; title2: string; subtitle: string };
 
-// Duplicamos la lista para dar sensación de loop infinito.
+// Duplicamos la lista para el loop infinito.
 const SLIDES = [...GALLERY_IMAGES, ...GALLERY_IMAGES];
 
 export default function Gallery({ dict }: { dict: GalleryDict }) {
@@ -14,20 +14,28 @@ export default function Gallery({ dict }: { dict: GalleryDict }) {
   const scroller = useRef<HTMLDivElement | null>(null);
   const rafId = useRef<number | null>(null);
   const paused = useRef(false);
-  const dragging = useRef(false);
-  const startX = useRef(0);
-  const startScroll = useRef(0);
-  const [isDown, setIsDown] = useState(false);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const SPEED = 0.5; // px por frame
 
+  // Pausa el auto-scroll y programa reanudación tras inactividad.
+  const pauseThenResume = useCallback((ms: number) => {
+    paused.current = true;
+    if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    resumeTimer.current = setTimeout(() => {
+      paused.current = false;
+    }, ms);
+  }, []);
+
   const tick = useCallback(() => {
     const el = scroller.current;
-    if (el && !paused.current && !dragging.current) {
-      el.scrollLeft += SPEED;
-      // reset invisible al llegar a la mitad (lista duplicada)
+    if (el && !paused.current) {
       const half = el.scrollWidth / 2;
-      if (el.scrollLeft >= half) el.scrollLeft -= half;
+      if (el.scrollLeft >= half) {
+        // reset sin salto perceptible
+        el.scrollLeft -= half;
+      }
+      el.scrollLeft += SPEED;
     }
     rafId.current = requestAnimationFrame(tick);
   }, []);
@@ -36,40 +44,18 @@ export default function Gallery({ dict }: { dict: GalleryDict }) {
     rafId.current = requestAnimationFrame(tick);
     return () => {
       if (rafId.current) cancelAnimationFrame(rafId.current);
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
     };
   }, [tick]);
 
-  const onPointerDown = (e: React.PointerEvent) => {
+  // Loop al hacer swipe manual hacia el inicio (el avance lo gestiona tick).
+  const onScroll = useCallback(() => {
     const el = scroller.current;
     if (!el) return;
-    dragging.current = true;
-    setIsDown(true);
-    startX.current = e.clientX;
-    startScroll.current = el.scrollLeft;
-    el.setPointerCapture(e.pointerId);
-  };
-
-  const onPointerMove = (e: React.PointerEvent) => {
-    const el = scroller.current;
-    if (!el || !dragging.current) return;
-    el.scrollLeft = startScroll.current - (e.clientX - startX.current);
-    const half = el.scrollWidth / 2;
-    if (el.scrollLeft >= half) el.scrollLeft -= half;
-    if (el.scrollLeft < 0) el.scrollLeft += half;
-  };
-
-  const endDrag = (e: React.PointerEvent) => {
-    const el = scroller.current;
-    dragging.current = false;
-    setIsDown(false);
-    if (el) {
-      try {
-        el.releasePointerCapture(e.pointerId);
-      } catch {
-        /* noop */
-      }
+    if (el.scrollLeft <= 0) {
+      el.scrollLeft += el.scrollWidth / 2;
     }
-  };
+  }, []);
 
   return (
     <section
@@ -93,19 +79,19 @@ export default function Gallery({ dict }: { dict: GalleryDict }) {
 
       <div
         ref={scroller}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={endDrag}
-        onPointerCancel={endDrag}
+        onScroll={onScroll}
         onMouseEnter={() => (paused.current = true)}
         onMouseLeave={() => (paused.current = false)}
-        onTouchStart={() => (paused.current = true)}
-        onTouchEnd={() => (paused.current = false)}
-        className="flex gap-3 sm:gap-4 overflow-x-scroll no-scrollbar select-none px-4 sm:px-5"
+        onTouchStart={() => pauseThenResume(4000)}
+        onTouchMove={() => pauseThenResume(4000)}
+        onTouchEnd={() => pauseThenResume(2500)}
+        className="gallery-scroller flex gap-3 sm:gap-4 overflow-x-auto no-scrollbar px-4 sm:px-5"
         style={{
-          cursor: isDown ? "grabbing" : "grab",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
+          WebkitOverflowScrolling: "touch",
+          touchAction: "pan-x",
+          overscrollBehaviorX: "contain",
         }}
       >
         {SLIDES.map((img, i) => (
@@ -124,7 +110,7 @@ export default function Gallery({ dict }: { dict: GalleryDict }) {
               height={420}
               loading="lazy"
               draggable={false}
-              className="w-full h-full object-cover pointer-events-none"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
