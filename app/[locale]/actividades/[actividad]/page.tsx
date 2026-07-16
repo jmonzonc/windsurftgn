@@ -135,7 +135,7 @@ export default async function ActividadPage({
           <span className="text-4xl sm:text-5xl md:text-6xl mb-3 sm:mb-4 drop-shadow-lg">{emoji}</span>
           <h1 className="font-display text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style={{ fontSize: "clamp(32px, 8vw, 80px)" }}>{item.name}</h1>
           <div className="mt-3 sm:mt-4">
-            <LocationBadge location={location} dict={dict.locations} className="text-[11px] sm:text-xs" />
+            <LocationBadge location={location} dict={dict.locations} onImage className="text-[11px] sm:text-xs shadow-lg" />
           </div>
         </div>
       </div>
