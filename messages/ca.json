@@ -275,5 +275,10 @@
     "formMessage": "Missatge",
     "formSend": "Enviar missatge",
     "formSuccess": "Missatge enviat correctament"
+  },
+  "gallery": {
+    "title1": "MOMENTS",
+    "title2": "REALS",
+    "subtitle": "Clients gaudint a Platja Llarga i el Port de Tarragona"
   }
 }
