@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useScroll } from "@/lib/hooks";
 import WaterParticles from "@/components/ui/WaterParticles";
@@ -14,6 +14,7 @@ type HeroDict = {
 
 export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale }) {
   const scrollY = useScroll();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [loaded, setLoaded] = useState(false);
   const [vidLoaded, setVidLoaded] = useState(false);
 
@@ -22,16 +23,45 @@ export default function Hero({ dict, locale }: { dict: HeroDict; locale: Locale 
     return () => clearTimeout(t);
   }, []);
 
+  // iOS Safari a veces no autoplaya pese a muted+playsInline: forzamos play().
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    };
+    tryPlay();
+    // reintenta en la primera interacción por si el navegador lo bloqueó
+    const onFirstTouch = () => {
+      tryPlay();
+      window.removeEventListener("touchstart", onFirstTouch);
+      window.removeEventListener("click", onFirstTouch);
+    };
+    window.addEventListener("touchstart", onFirstTouch, { passive: true });
+    window.addEventListener("click", onFirstTouch);
+    return () => {
+      window.removeEventListener("touchstart", onFirstTouch);
+      window.removeEventListener("click", onFirstTouch);
+    };
+  }, []);
+
   const tr = (delay: string) => `all 0.9s cubic-bezier(0.16,1,0.3,1) ${delay}`;
 
   return (
     <section className="relative min-h-svh min-h-[600px] overflow-hidden bg-abyss">
       <video
-        autoPlay muted loop playsInline
-        preload="metadata"
-        poster="/images/base-playa-larga.jpg"
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        webkit-playsinline="true"
+        preload="auto"
         onCanPlay={() => setVidLoaded(true)}
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.38] saturate-[1.3] contrast-[1.1] transition-opacity duration-[1500ms]"
+        onLoadedData={() => setVidLoaded(true)}
+        className="absolute inset-0 w-full h-full object-cover brightness-[0.38] saturate-[1.3] contrast-[1.1] transition-opacity duration-[1500ms] pointer-events-none"
         style={{ transform: `translateY(${scrollY * 0.25}px) scale(1.15)`, opacity: vidLoaded ? 1 : 0 }}
       >
         <source src="https://videos.pexels.com/video-files/1093662/1093662-hd_1920_1080_30fps.mp4" type="video/mp4" />
