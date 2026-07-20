@@ -43,7 +43,7 @@ export default function Contact({ dict }: { dict: ContactDict }) {
           ))}
         </div>
 
-        {/* Dos mapas: Playa Larga + Puerto de Tarragona */}
+        {/* Dos mapas: Playa Larga + Puerto Deportivo de Tarragona */}
         <div
           className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5"
           style={{ opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s" }}
@@ -62,7 +62,7 @@ export default function Contact({ dict }: { dict: ContactDict }) {
             address={dict.mapAddress2}
             mapsUrl={LOCATIONS.puerto.mapsUrl}
             cta={dict.mapCta}
-            iframeTitle="Windsurf Tarragona · Puerto de Tarragona"
+            iframeTitle="Windsurf Tarragona · Puerto Deportivo de Tarragona"
           />
         </div>
       </div>

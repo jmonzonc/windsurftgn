@@ -13,11 +13,11 @@ type ReviewsDict = {
 
 const MAX_CHARS = 170;
 
-function ReviewCard({ r, vis, delay, expanded, onToggle, moreLabel, lessLabel }: {
+function ReviewCard({ r, vis, delay, moreLabel, lessLabel }: {
   r: ReviewItem; vis: boolean; delay: number;
-  expanded: boolean; onToggle: () => void;
   moreLabel: string; lessLabel: string;
 }) {
+  const [expanded, setExpanded] = useState(false);
   const isLong = r.text.length > MAX_CHARS;
   const displayText = isLong && !expanded
     ? r.text.slice(0, MAX_CHARS).trimEnd() + "..."
@@ -33,7 +33,18 @@ function ReviewCard({ r, vis, delay, expanded, onToggle, moreLabel, lessLabel }:
       }}
     >
       <div className="flex justify-between items-center mb-3 sm:mb-4">
-        <span className="text-sm sm:text-base">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+        <span className="flex gap-0.5" role="img" aria-label="5 de 5 estrellas">
+          {[0, 1, 2, 3, 4].map((s) => (
+            <svg
+              key={s}
+              className="w-4 h-4 sm:w-[18px] sm:h-[18px] fill-[#FBBF24]"
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.79L10 14.77l-5.2 2.73.99-5.79L1.58 7.62l5.82-.85L10 1.5z" />
+            </svg>
+          ))}
+        </span>
         <span className="text-[22px] sm:text-[28px]">{r.emoji}</span>
       </div>
       <p className="font-body text-[13px] sm:text-[15px] text-white/[0.78] leading-[1.5] sm:leading-[1.6] mb-1 flex-1">
@@ -41,7 +52,7 @@ function ReviewCard({ r, vis, delay, expanded, onToggle, moreLabel, lessLabel }:
       </p>
       {isLong ? (
         <button
-          onClick={onToggle}
+          onClick={() => setExpanded((v) => !v)}
           className="font-body text-[12px] sm:text-[13px] font-semibold text-turq bg-transparent border-none cursor-pointer text-left p-0 mb-4 sm:mb-5 hover:text-aqua transition-colors"
         >
           {expanded ? lessLabel : moreLabel}
@@ -64,7 +75,6 @@ function ReviewCard({ r, vis, delay, expanded, onToggle, moreLabel, lessLabel }:
 
 export default function Reviews({ dict }: { dict: ReviewsDict }) {
   const [ref, vis] = useReveal();
-  const [expanded, setExpanded] = useState(false);
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="bg-gradient-to-b from-deep to-midnight py-14 sm:py-20 md:py-28 px-4 sm:px-5 relative overflow-hidden">
@@ -83,8 +93,6 @@ export default function Reviews({ dict }: { dict: ReviewsDict }) {
               r={r}
               vis={vis}
               delay={0.15 + i * 0.1}
-              expanded={expanded}
-              onToggle={() => setExpanded(!expanded)}
               moreLabel={dict.more}
               lessLabel={dict.less}
             />

@@ -13,9 +13,9 @@ type EscuelaDict = {
   courses: Record<string, CourseData>;
 };
 
-const KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"] as const;
-const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "paddle-surf": "🏄", "esqui-wake": "🎿", vela: "⛵", catamaran: "🛥️", "patin-catalan": "🚩" };
-const ACCENT: Record<string, string> = { windsurf: "from-turq to-ocean", "wing-foil": "from-cyan to-turq", "paddle-surf": "from-blue-500 to-ocean", "esqui-wake": "from-coral to-sun", vela: "from-ocean to-deep", catamaran: "from-gold to-sun", "patin-catalan": "from-sun to-coral" };
+const KEYS = ["windsurf", "wing-foil", "esqui-wake"] as const;
+const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "esqui-wake": "🎿" };
+const ACCENT: Record<string, string> = { windsurf: "from-turq to-ocean", "wing-foil": "from-cyan to-turq", "esqui-wake": "from-coral to-sun" };
 
 export default function Escuela({ dict, locale }: { dict: EscuelaDict; locale: Locale }) {
   const [ref, vis] = useReveal();
