@@ -3,7 +3,7 @@ import { locales } from "@/lib/i18n";
 
 const BASE = "https://windsurftarragona.com";
 
-const COURSE_KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"];
+const COURSE_KEYS = ["windsurf", "wing-foil", "esqui-wake"];
 const ACTIVITY_KEYS = ["banana-boat", "kayak", "alquiler-windsurf", "alquiler-surf", "paseos-barco", "big-paddle-surf"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
