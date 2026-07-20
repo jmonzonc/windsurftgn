@@ -57,7 +57,7 @@ function placeNode(key: "playa" | "puerto", locale: Locale) {
       en: "Windsurf Tarragona · Playa Larga",
     },
     puerto: {
-      es: "Windsurf Tarragona · Puerto de Tarragona",
+      es: "Windsurf Tarragona · Puerto Deportivo de Tarragona",
       ca: "Windsurf Tarragona · Port de Tarragona",
       en: "Windsurf Tarragona · Port of Tarragona",
     },
@@ -66,7 +66,7 @@ function placeNode(key: "playa" | "puerto", locale: Locale) {
     "@type": "SportsActivityLocation",
     "@id": L.id,
     name: names[key][locale],
-    telephone: "+34977232715",
+    telephone: "+34609874869",
     address: addressNode(key),
     geo: geoNode(key),
     hasMap: L.mapsUrl,
@@ -103,7 +103,7 @@ export function buildJsonLd(locale: Locale, dict: Record<string, any>) {
         alternateName: ["Escola Nàutica Tarragona", "Escuela Náutica Tarragona"],
         description: dict.meta.description,
         url: `${SITE.url}/${locale}`,
-        telephone: "+34977232715",
+        telephone: "+34609874869",
         email: SITE.email,
         foundingDate: "2004",
         priceRange: "€€",
@@ -125,7 +125,7 @@ export function buildJsonLd(locale: Locale, dict: Record<string, any>) {
         openingHoursSpecification: OPENING_HOURS,
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "4.8",
+          ratingValue: "4.9",
           reviewCount: "150",
           bestRating: "5",
           worstRating: "1",
@@ -139,14 +139,13 @@ export function buildJsonLd(locale: Locale, dict: Record<string, any>) {
                 ? "Nautical Activities & Courses"
                 : "Actividades y Cursos Náuticos",
           itemListElement: [
-            offer("Curso de Windsurf", "escuela/windsurf", "playa"),
+            offer("Curso de Windsurf", "escuela/windsurf", "playa", "Curso individual 90€/h · Pack 3 personas 50€/h por persona"),
             offer(
               "Curso de Wing-Foil",
               "escuela/wing-foil",
               "ambas",
-              "3 fases: fases 1 y 3 en Playa Larga, fase 2 (training-foil) en el Puerto de Tarragona · Training-foil 200€/h"
+              "3 fases: fases 1 y 3 en Playa Larga, fase 2 (training-foil) en el Puerto Deportivo de Tarragona · Training-foil 200€/h"
             ),
-            offer("Paddle Surf / Surf", "escuela/paddle-surf", "playa"),
             offer(
               "Esquí Náutico / Wakeboard",
               "escuela/esqui-wake",
@@ -177,7 +176,6 @@ export function buildJsonLd(locale: Locale, dict: Record<string, any>) {
               "puerto",
               "200€/hora, hasta 6 personas con patrón"
             ),
-            offer("Catamarán", "escuela/catamaran", "playa"),
           ],
         },
         areaServed: [

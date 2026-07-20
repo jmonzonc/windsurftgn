@@ -2,8 +2,8 @@ export type LocationKey = "playa" | "puerto" | "ambas";
 
 export const SITE = {
   name: "Windsurf Tarragona",
-  phone: "977 23 27 15",
-  phoneHref: "tel:+34977232715",
+  phone: "609 87 48 69",
+  phoneHref: "tel:+34609874869",
   whatsapp: "https://wa.me/34609874869",
   whatsappHref: "https://wa.me/34609874869",
   email: "info@windsurftarragona.com",
@@ -54,11 +54,7 @@ export const ACTIVITY_LOCATION: Record<string, LocationKey> = {
 export const COURSE_LOCATION: Record<string, LocationKey> = {
   windsurf: "playa",
   "wing-foil": "ambas", // fases 1 y 3 en Playa Larga · fase 2 (training-foil) en el Puerto
-  "paddle-surf": "playa",
   "esqui-wake": "puerto",
-  vela: "playa",
-  catamaran: "playa",
-  "patin-catalan": "playa",
 };
 
 // Sistema de imágenes local. Archivos en /public/images/.
@@ -66,16 +62,11 @@ const IMG = (name: string) => `/images/${name}`;
 
 // Imagen base real (stand de Playa Larga). Se usa como placeholder para los
 // cursos que aún no tienen foto propia. Sustituye cada curso-*.jpg cuando lleguen.
-const BASE = IMG("base-playa-larga.jpg");
 
 export const COURSE_IMAGES: Record<string, string> = {
   windsurf: IMG("curso-windsurf.jpg"),
   "wing-foil": IMG("curso-wing-foil.jpg"),
-  "paddle-surf": IMG("curso-paddle-surf.jpg"),
   "esqui-wake": IMG("actividad-paseos-barco.jpg"), // lancha (arrastre esquí/wake)
-  vela: BASE,
-  catamaran: BASE,
-  "patin-catalan": BASE,
 };
 
 export const ACTIVITY_IMAGES: Record<string, string> = {
@@ -100,7 +91,7 @@ export const GALLERY_IMAGES: { src: string; alt: string }[] = [
   { src: IMG("gal-banana.jpg"), alt: "Grupo disfrutando del banana boat en Tarragona" },
   { src: IMG("gal-windsurf.jpg"), alt: "Windsurf en la Costa Dorada" },
   { src: IMG("gal-bigpaddle.jpg"), alt: "Big paddle surf en grupo en Playa Larga" },
-  { src: IMG("gal-foil-2.jpg"), alt: "Wing-foil en el Puerto de Tarragona" },
+  { src: IMG("gal-foil-2.jpg"), alt: "Wing-foil en el Puerto Deportivo de Tarragona" },
   { src: IMG("gal-monitores.jpg"), alt: "Equipo de monitores de Windsurf Tarragona" },
   { src: IMG("gal-windsurf-salto.jpg"), alt: "Windsurf con salto de ola en Tarragona" },
   { src: IMG("gal-grupo1.jpg"), alt: "Grupo disfrutando de las actividades de Windsurf Tarragona" },
