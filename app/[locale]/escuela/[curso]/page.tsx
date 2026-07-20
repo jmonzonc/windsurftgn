@@ -8,8 +8,8 @@ import { buildCourseJsonLd } from "@/lib/schema";
 import { buildBreadcrumbJsonLd } from "@/lib/breadcrumb";
 import LocationBadge from "@/components/ui/LocationBadge";
 
-const COURSE_KEYS = ["windsurf", "wing-foil", "paddle-surf", "esqui-wake", "vela", "catamaran", "patin-catalan"] as const;
-const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "paddle-surf": "🏄", "esqui-wake": "🎿", vela: "⛵", catamaran: "🛥️", "patin-catalan": "🚩" };
+const COURSE_KEYS = ["windsurf", "wing-foil", "esqui-wake"] as const;
+const EMOJIS: Record<string, string> = { windsurf: "🏄", "wing-foil": "🪁", "esqui-wake": "🎿" };
 
 export async function generateStaticParams() {
   const params: { locale: string; curso: string }[] = [];
