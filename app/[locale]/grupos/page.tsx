@@ -53,12 +53,16 @@ export default async function GruposPage({
           })}
         </div>
 
-        {dict.grupos.custom && (
-          <div className="mt-8 sm:mt-12 bg-gradient-to-br from-ocean to-deep rounded-2xl sm:rounded-3xl p-7 sm:p-10 text-center text-white">
-            <h2 className="font-display text-2xl sm:text-3xl mb-2 sm:mb-3">{dict.grupos.custom.title}</h2>
-            <p className="font-body text-sm sm:text-base text-white/85 leading-relaxed max-w-[640px] mx-auto">{dict.grupos.custom.text}</p>
-          </div>
-        )}
+        {(() => {
+          const custom = (dict.grupos as { custom?: { title: string; text: string } }).custom;
+          if (!custom) return null;
+          return (
+            <div className="mt-8 sm:mt-12 bg-gradient-to-br from-ocean to-deep rounded-2xl sm:rounded-3xl p-7 sm:p-10 text-center text-white">
+              <h2 className="font-display text-2xl sm:text-3xl mb-2 sm:mb-3">{custom.title}</h2>
+              <p className="font-body text-sm sm:text-base text-white/85 leading-relaxed max-w-[640px] mx-auto">{custom.text}</p>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
