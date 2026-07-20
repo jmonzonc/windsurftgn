@@ -141,20 +141,29 @@
     "items": {
       "colegios": {
         "title": "Colegios",
-        "desc": "Salidas de fin de curso pedagógicas y divertidas"
+        "desc": "Salidas de fin de curso pedagógicas y divertidas",
+        "long": "Actividades rotativas simultáneas pensadas para grupos escolares: distintas estaciones náuticas funcionando a la vez para que nadie espere. Salidas de fin de curso pedagógicas, seguras y divertidas.",
+        "highlight": "Hasta 50 personas a la vez en el agua · +100 rotando agua/tierra"
       },
       "team-building": {
-        "title": "Team Building",
-        "desc": "Refuerza tu equipo con el desafío del mar"
+        "title": "Empresas / Team Building",
+        "desc": "Refuerza tu equipo con el desafío del mar",
+        "long": "Jornadas de team building en el mar para reforzar la comunicación y la confianza del equipo. Programas a medida para empresas de cualquier tamaño, con actividades para todos los niveles."
       },
       "amigos": {
         "title": "Amigos",
-        "desc": "Aventura náutica a medida para el grupo"
+        "desc": "Aventura náutica a medida para el grupo",
+        "long": "Un plan diferente para pasarlo en grande con tu grupo. Elegís las actividades y nosotros montamos la aventura náutica perfecta. Lo importante: disfrutar del agua juntos."
       },
       "despedidas": {
         "title": "Despedidas",
-        "desc": "La despedida más diferente y memorable"
+        "desc": "La despedida más diferente y memorable",
+        "long": "La despedida de soltero/a más divertida y original de la Costa Dorada. Diversión asegurada en el agua para que el día sea absolutamente inolvidable."
       }
+    },
+    "custom": {
+      "title": "Diseña tu propia experiencia",
+      "text": "Tú decides qué actividades hacéis según os apetezca. Combinamos cursos, alquiler y actividades a medida, y nos adaptamos a cualquier grupo, edad y nivel."
     }
   },
   "reviews": {

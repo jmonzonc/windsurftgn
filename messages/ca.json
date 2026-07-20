@@ -141,20 +141,29 @@
     "items": {
       "colegios": {
         "title": "Col·legis",
-        "desc": "Sortides de fi de curs pedagògiques i divertides"
+        "desc": "Sortides de fi de curs pedagògiques i divertides",
+        "long": "Activitats rotatives simultànies pensades per a grups escolars: diferents estacions nàutiques funcionant alhora perquè ningú esperi. Sortides de fi de curs pedagògiques, segures i divertides.",
+        "highlight": "Fins a 50 persones alhora a l'aigua · +100 rotant aigua/terra"
       },
       "team-building": {
-        "title": "Team Building",
-        "desc": "Reforça el teu equip amb el desafiament del mar"
+        "title": "Empreses / Team Building",
+        "desc": "Reforça el teu equip amb el desafiament del mar",
+        "long": "Jornades de team building al mar per reforçar la comunicació i la confiança de l'equip. Programes a mida per a empreses de qualsevol mida, amb activitats per a tots els nivells."
       },
       "amigos": {
         "title": "Amics",
-        "desc": "Aventura nàutica a mida per al grup"
+        "desc": "Aventura nàutica a mida per al grup",
+        "long": "Un pla diferent per passar-ho d'allò més bé amb el teu grup. Trieu les activitats i nosaltres muntem l'aventura nàutica perfecta. L'important: gaudir de l'aigua junts."
       },
       "despedidas": {
         "title": "Comiats",
-        "desc": "El comiat més diferent i memorable"
+        "desc": "El comiat més diferent i memorable",
+        "long": "El comiat de solter/a més divertit i original de la Costa Daurada. Diversió assegurada a l'aigua perquè el dia sigui absolutament inoblidable."
       }
+    },
+    "custom": {
+      "title": "Dissenya la teva pròpia experiència",
+      "text": "Tu decideixes quines activitats feu segons us abelleixi. Combinem cursos, lloguer i activitats a mida, i ens adaptem a qualsevol grup, edat i nivell."
     }
   },
   "reviews": {

@@ -141,20 +141,29 @@
     "items": {
       "colegios": {
         "title": "Schools",
-        "desc": "Fun and educational end-of-year outings"
+        "desc": "Fun and educational end-of-year outings",
+        "long": "Simultaneous rotating activities designed for school groups: several nautical stations running at once so nobody waits. Educational, safe and fun end-of-year trips.",
+        "highlight": "Up to 50 people in the water at once · 100+ rotating water/land"
       },
       "team-building": {
-        "title": "Team Building",
-        "desc": "Strengthen your team with the challenge of the sea"
+        "title": "Companies / Team Building",
+        "desc": "Strengthen your team with the challenge of the sea",
+        "long": "Team-building days at sea to strengthen your team's communication and trust. Tailor-made programs for companies of any size, with activities for all levels."
       },
       "amigos": {
         "title": "Friends",
-        "desc": "Custom nautical adventure for your group"
+        "desc": "Custom nautical adventure for your group",
+        "long": "A different plan to have a great time with your group. You choose the activities and we build the perfect water adventure. What matters: enjoying the water together."
       },
       "despedidas": {
-        "title": "Hen & Stag Parties",
-        "desc": "The most different and memorable party"
+        "title": "Stag & Hen Parties",
+        "desc": "The most different and memorable party",
+        "long": "The most fun and original stag/hen party on the Costa Dorada. Guaranteed fun on the water for a truly unforgettable day."
       }
+    },
+    "custom": {
+      "title": "Design your own experience",
+      "text": "You decide which activities you do, based on what you fancy. We mix courses, rentals and custom activities, adapting to any group, age and level."
     }
   },
   "reviews": {
