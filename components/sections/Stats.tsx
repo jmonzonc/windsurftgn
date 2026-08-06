@@ -14,17 +14,24 @@ type StatsDict = {
 const ICONS = ["⚓", "😄", "🏄", "☀️"];
 
 function useCounter(target: number, duration: number, active: boolean): number {
-  const [count, setCount] = useState(0);
+  // Arranca en el valor final: el HTML del servidor y el primer paint muestran el
+  // número real (bueno para SEO/GEO). La animación de conteo solo corre en cliente
+  // cuando la sección entra en viewport.
+  const [count, setCount] = useState(target);
+  const hasAnimated = useRef(false);
   const raf = useRef<number>(0);
 
   useEffect(() => {
-    if (!active) return;
+    if (!active || hasAnimated.current) return;
+    hasAnimated.current = true;
+    setCount(0);
     const start = performance.now();
     const step = (now: number) => {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.floor(eased * target));
       if (progress < 1) raf.current = requestAnimationFrame(step);
+      else setCount(target);
     };
     raf.current = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf.current);
