@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useEffect } from "react";
 
 const ANIM_CLASSES = [
   "animate-float-0",
@@ -11,19 +11,33 @@ const ANIM_CLASSES = [
 
 const COLORS = ["bg-aqua", "bg-turq", "bg-cyan"];
 
+type Particle = {
+  x: number;
+  y: number;
+  size: number;
+  delay: number;
+  opacity: number;
+};
+
 export default function WaterParticles({ count = 20 }: { count?: number }) {
-  const particles = useRef(
-    [...Array(count)].map(() => ({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: 2 + Math.random() * 5,
-      delay: Math.random() * 8,
-      opacity: 0.05 + Math.random() * 0.15,
-    }))
-  ).current;
+  // Se generan en el cliente tras el montaje para evitar hydration mismatch
+  // (Math.random produce valores distintos en servidor y cliente).
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(
+      [...Array(count)].map(() => ({
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: 2 + Math.random() * 5,
+        delay: Math.random() * 8,
+        opacity: 0.05 + Math.random() * 0.15,
+      }))
+    );
+  }, [count]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {particles.map((p, i) => (
         <div
           key={i}
