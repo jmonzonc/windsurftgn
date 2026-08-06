@@ -2,7 +2,7 @@ export type LocationKey = "playa" | "puerto" | "ambas";
 
 export const SITE = {
   name: "Windsurf Tarragona",
-  phone: "609 87 48 69",
+  phone: "609 874 869",
   phoneHref: "tel:+34609874869",
   whatsapp: "https://wa.me/34609874869",
   whatsappHref: "https://wa.me/34609874869",
